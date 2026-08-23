@@ -5,12 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nuova apertura Acton Point Rimini</title>
 <meta name="description" content="Nuova apertura Acton Point a Rimini - 19 Settembre 2025. Luce, Gas, Fotovoltaico, Fibra e Carta Carburante in un unico punto.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/img/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <style>
     *{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
+    #servizi, #concorso, #contatti{scroll-margin-top:90px;}
     body{-webkit-font-smoothing:antialiased;}
     a{color:#3F7A0A;}
     a:hover{color:#6BCB00;}
@@ -22,6 +27,7 @@
       .apr3-prizes-row{grid-template-columns:1fr !important;}
       .apr3-footer-row{grid-template-columns:1fr !important;gap:26px !important;text-align:left !important;}
       .apr3-nav-links{display:none !important;}
+      .apr3-form-row{grid-template-columns:1fr !important;}
     }
     @keyframes apr3In{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
     .apr3-badge-spin{animation:apr3Spin 18s linear infinite;}
@@ -47,7 +53,7 @@
         <a href="#concorso" style="color:#16140F;text-decoration:none;font-size:13.5px;font-weight:800;">Concorso</a>
         <a href="#contatti" style="color:#16140F;text-decoration:none;font-size:13.5px;font-weight:800;">Contatti</a>
       </div>
-      <a href="#concorso" style="font-weight:900;font-size:13px;border-radius:999px;padding:12px 24px;border:3px solid #16140F;background:#6BCB00;color:#16140F;text-decoration:none;box-shadow:4px 4px 0 #16140F;">Vieni a trovarci</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Via+Flaminia+175c%2C+Rimini" target="_blank" rel="noopener" style="font-weight:900;font-size:13px;border-radius:999px;padding:12px 24px;border:3px solid #16140F;background:#6BCB00;color:#16140F;text-decoration:none;box-shadow:4px 4px 0 #16140F;">Vieni a trovarci</a>
     </div>
   </nav>
 
@@ -104,7 +110,7 @@
           </svg>
         </div>
         <div style="border-radius:4px 28px 4px 28px;overflow:hidden;border:3px solid #16140F;box-shadow:10px 10px 0 #8B5A2E;">
-          <div style="height:420px;background-image:url(&#39;storefront-photo.jpg&#39;);background-size:cover;background-position:center 42%;"></div>
+          <div style="height:420px;background-image:url('assets/img/storefront-photo.jpg');background-size:cover;background-position:center 42%;"></div>
         </div>
       </div>
     </div>
@@ -221,7 +227,64 @@
     </div>
   </section>
 
-  <footer id="contatti" style="padding:0 0 44px;">
+  <section id="contatti" style="padding:0 0 92px;">
+    <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
+      <div style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#FBF6EF;box-shadow:10px 10px 0 #16140F;display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;" class="apr3-contest-grid">
+        <div>
+          <div style="font-weight:900;font-size:clamp(26px,3vw,34px);line-height:1;color:#16140F;">Scrivici</div>
+          <div class="apr3-script" style="font-weight:700;font-size:clamp(32px,3.6vw,42px);color:#8B5A2E;line-height:1.1;">una parola!</div>
+          <p style="font-size:14px;color:#4A453D;line-height:1.65;margin-top:16px;max-width:360px;">Hai domande su luce, gas, fotovoltaico, fibra o carta carburante? Scrivici e ti risponderemo il prima possibile, oppure passa direttamente dal nostro punto vendita.</p>
+
+          <div style="display:flex;align-items:center;gap:12px;margin-top:26px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:#6BCB00;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div style="font-size:13.5px;color:#16140F;font-weight:700;">Via Flaminia 175c, Rimini</div>
+          </div>
+        </div>
+
+        <div>
+          <form id="apr3-contact-form" action="contact.php" method="POST" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true">
+
+            <div style="grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:14px;" class="apr3-form-row">
+              <div>
+                <label style="display:block;font-size:11.5px;font-weight:800;color:#16140F;margin-bottom:6px;">Nome *</label>
+                <input type="text" name="nome" required style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
+              </div>
+              <div>
+                <label style="display:block;font-size:11.5px;font-weight:800;color:#16140F;margin-bottom:6px;">Cognome *</label>
+                <input type="text" name="cognome" required style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
+              </div>
+            </div>
+
+            <div style="grid-column:1 / -1;">
+              <label style="display:block;font-size:11.5px;font-weight:800;color:#16140F;margin-bottom:6px;">Email *</label>
+              <input type="email" name="email" required style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
+            </div>
+
+            <div style="grid-column:1 / -1;">
+              <label style="display:block;font-size:11.5px;font-weight:800;color:#16140F;margin-bottom:6px;">Telefono</label>
+              <input type="tel" name="telefono" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
+            </div>
+
+            <div style="grid-column:1 / -1;">
+              <label style="display:block;font-size:11.5px;font-weight:800;color:#16140F;margin-bottom:6px;">Messaggio *</label>
+              <textarea name="messaggio" required rows="4" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;resize:vertical;"></textarea>
+            </div>
+
+            <div style="grid-column:1 / -1;">
+              <button type="submit" style="font-weight:900;font-size:15px;border-radius:999px;padding:15px 30px;background:#16140F;color:#fff;border:none;cursor:pointer;box-shadow:5px 5px 0 #6BCB00;">Invia messaggio</button>
+            </div>
+
+            <div id="apr3-form-feedback" style="grid-column:1 / -1;display:none;padding:12px 16px;border-radius:10px;font-size:13.5px;font-weight:700;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:0 0 44px;">
     <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
       <div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px;padding:34px 0;border-top:3px solid #16140F;" class="apr3-footer-row">
         <div style="display:flex;align-items:flex-start;gap:12px;">
@@ -261,5 +324,25 @@
       <div style="border-top:1px solid #E4DDCF;padding-top:18px;font-size:11px;color:#9C9184;">Regolamento completo disponibile presso il punto vendita e su acton.it</div>
     </div>
   </footer>
+
+  <script>
+    (function(){
+      var params = new URLSearchParams(window.location.search);
+      var sent = params.get('sent');
+      var box = document.getElementById('apr3-form-feedback');
+      if (!box || !sent) return;
+      box.style.display = 'block';
+      if (sent === '1') {
+        box.style.background = '#6BCB00';
+        box.style.color = '#16140F';
+        box.textContent = 'Grazie! Il tuo messaggio è stato inviato, ti risponderemo al più presto.';
+      } else {
+        box.style.background = '#F3D9D9';
+        box.style.color = '#8A2222';
+        box.textContent = 'Si è verificato un errore nell\'invio. Riprova o scrivici direttamente.';
+      }
+      document.getElementById('contatti').scrollIntoView({behavior:'smooth'});
+    })();
+  </script>
 </body>
 </html>
