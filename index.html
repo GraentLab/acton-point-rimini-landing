@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nuova apertura Acton Point Rimini</title>
+<title>Acton Point Rimini</title>
 <meta name="description" content="Nuova apertura Acton Point a Rimini - 19 Settembre 2025. Luce, Gas, Fotovoltaico, Fibra e Carta Carburante in un unico punto.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/img/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -30,6 +30,23 @@
       .apr3-form-row{grid-template-columns:1fr !important;}
     }
     @keyframes apr3In{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .apr3-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);}
+    .apr3-reveal.is-visible{opacity:1;transform:translateY(0);}
+    @keyframes apr3Pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.35);}}
+    .apr3-pulse-dot{animation:apr3Pulse 1.8s ease-in-out infinite;}
+    @keyframes apr3PriceGlow{0%,100%{box-shadow:0 0 0 0 rgba(107,203,0,0.55);}50%{box-shadow:0 0 0 10px rgba(107,203,0,0);}}
+    .apr3-price-glow{animation:apr3PriceGlow 2.4s ease-in-out infinite;}
+    .apr3-btn-lift{transition:transform .22s ease, box-shadow .22s ease;}
+    .apr3-btn-lift:hover{transform:translate(-2px,-2px);}
+    .apr3-arrow{transition:transform .22s ease;display:inline-flex;}
+    .apr3-btn-lift:hover .apr3-arrow{transform:translateX(4px);}
+    .apr3-card-lift{transition:transform .25s ease, box-shadow .25s ease;}
+    .apr3-card-lift:hover{transform:translateY(-5px);}
+    @keyframes apr3Float{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-5px) rotate(-3deg);}}
+    .apr3-svc-icon{display:inline-flex;animation:apr3Float 3s ease-in-out infinite;transition:transform .25s ease;}
+    .apr3-svc-card{transition:transform .25s ease;}
+    .apr3-svc-card:hover{transform:translateY(-4px);}
+    .apr3-svc-card:hover .apr3-svc-icon{transform:scale(1.15) rotate(6deg);animation-play-state:paused;}
     .apr3-badge-spin{animation:apr3Spin 18s linear infinite;}
     @keyframes apr3Spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
     @keyframes apr3Shine{from{background-position:-200% 0;}to{background-position:200% 0;}}
@@ -43,7 +60,14 @@
 </style>
 </head>
 <body>
-<div style="background:#FFFFFF;color:#16140F;font-family:&#39;Montserrat&#39;,sans-serif;overflow-x:hidden;">
+<div style="background:
+    radial-gradient(ellipse 900px 600px at 8% 0%, rgba(107,203,0,0.16) 0%, rgba(107,203,0,0) 60%),
+    radial-gradient(ellipse 800px 700px at 95% 18%, rgba(139,90,46,0.13) 0%, rgba(139,90,46,0) 60%),
+    radial-gradient(ellipse 1000px 800px at 15% 55%, rgba(107,203,0,0.10) 0%, rgba(107,203,0,0) 55%),
+    radial-gradient(ellipse 900px 700px at 100% 75%, rgba(139,90,46,0.11) 0%, rgba(139,90,46,0) 55%),
+    radial-gradient(ellipse 1000px 700px at 0% 100%, rgba(107,203,0,0.14) 0%, rgba(107,203,0,0) 55%),
+    linear-gradient(180deg, #FFFFFF 0%, #FBF6EF 35%, #F3ECDD 70%, #EFE6D2 100%);
+    color:#16140F;font-family:&#39;Montserrat&#39;,sans-serif;overflow-x:hidden;">
 
   <nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:3px solid #16140F;">
     <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 32px;max-width:1240px;margin:0 auto;">
@@ -53,7 +77,7 @@
         <a href="#concorso" style="color:#16140F;text-decoration:none;font-size:13.5px;font-weight:800;">Concorso</a>
         <a href="#contatti" style="color:#16140F;text-decoration:none;font-size:13.5px;font-weight:800;">Contatti</a>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Via+Flaminia+175c%2C+Rimini" target="_blank" rel="noopener" style="font-weight:900;font-size:13px;border-radius:999px;padding:12px 24px;border:3px solid #16140F;background:#6BCB00;color:#16140F;text-decoration:none;box-shadow:4px 4px 0 #16140F;">Vieni a trovarci</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Via+Flaminia+175c%2C+Rimini" target="_blank" rel="noopener" class="apr3-btn-lift" style="font-weight:900;font-size:13px;border-radius:999px;padding:12px 24px;border:3px solid #16140F;background:#6BCB00;color:#16140F;text-decoration:none;box-shadow:4px 4px 0 #16140F;">Vieni a trovarci</a>
     </div>
   </nav>
 
@@ -61,7 +85,7 @@
     <div style="max-width:1240px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;" class="apr3-hero-grid">
       <div>
         <div style="display:inline-flex;align-items:center;gap:8px;background:#16140F;color:#fff;font-weight:800;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:7px 14px;border-radius:999px;">
-          <span style="width:7px;height:7px;border-radius:50%;background:#6BCB00;display:inline-block;"></span>
+          <span class="apr3-pulse-dot" style="width:7px;height:7px;border-radius:50%;background:#6BCB00;display:inline-block;"></span>
           Multiutility al tuo servizio
         </div>
         <h1 style="line-height:0.87;margin-top:16px;">
@@ -93,9 +117,9 @@
           </div>
         </div>
 
-        <a href="#concorso" style="display:inline-flex;align-items:center;gap:9px;margin-top:30px;font-weight:900;font-size:15px;border-radius:999px;padding:15px 30px;background:#16140F;color:#fff;text-decoration:none;box-shadow:5px 5px 0 #6BCB00;">
+        <a href="#concorso" class="apr3-btn-lift" style="display:inline-flex;align-items:center;gap:9px;margin-top:30px;font-weight:900;font-size:15px;border-radius:999px;padding:15px 30px;background:#16140F;color:#fff;text-decoration:none;box-shadow:5px 5px 0 #6BCB00;">
           Scopri il concorso
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <span class="apr3-arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
         </a>
       </div>
 
@@ -122,30 +146,54 @@
         <div style="font-weight:900;font-size:clamp(21px,2.4vw,26px);color:#16140F;">Tutta l'energia di cui hai bisogno, <span style="background:#6BCB00;padding:0 6px;">in un solo punto.</span></div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;" class="apr3-services-row">
-        <div style="border:2.5px solid #16140F;border-radius:18px;padding:24px 20px;background:#FBF6EF;box-shadow:6px 6px 0 #16140F;">
-          <div style="width:50px;height:50px;border-radius:50%;background:#6BCB00;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        <div class="apr3-svc-card apr3-reveal apr3-card-lift" style="border:2.5px solid #16140F;border-radius:18px;padding:24px 20px;background:#FBF6EF;box-shadow:6px 6px 0 #16140F;">
+          <div class="apr3-svc-icon" style="animation-delay:0s;margin-bottom:12px;">
+            <svg width="46" height="46" viewBox="0 0 48 48" fill="none">
+              <polygon points="27 3 8 27 22 27 20 45 40 20 25 20 27 3" fill="#DFF5B0" stroke="#3F9B00" stroke-width="2.6" stroke-linejoin="round"></polygon>
+            </svg>
           </div>
           <h3 style="font-weight:900;font-size:15.5px;color:#16140F;">Luce e gas</h3>
           <p style="margin-top:6px;font-size:13px;color:#6C6459;line-height:1.5;">Offerte chiare, energia trasparente.</p>
         </div>
-        <div style="border:2.5px solid #16140F;border-radius:18px;padding:24px 20px;background:#FBF6EF;box-shadow:6px 6px 0 #16140F;">
-          <div style="width:50px;height:50px;border-radius:50%;background:#8B5A2E;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"></rect><rect x="13" y="3" width="8" height="8" rx="1"></rect><rect x="3" y="13" width="8" height="8" rx="1"></rect><rect x="13" y="13" width="8" height="8" rx="1"></rect></svg>
+        <div class="apr3-svc-card apr3-reveal apr3-card-lift" style="border:2.5px solid #16140F;border-radius:18px;padding:24px 20px;background:#FBF6EF;box-shadow:6px 6px 0 #16140F;">
+          <div class="apr3-svc-icon" style="animation-delay:0.3s;margin-bottom:12px;">
+            <svg width="46" height="46" viewBox="0 0 48 48" fill="none">
+              <path d="M18 6l1.6 3.2M12 10l2.8 2.2M25 4.5l-.6 3.5" stroke="#4FA6E0" stroke-width="2.2" stroke-linecap="round"></path>
+              <g transform="rotate(-18 24 27)">
+                <rect x="8" y="15" width="32" height="22" rx="2" fill="#DCEFFB" stroke="#1F7ABF" stroke-width="2.4"></rect>
+                <line x1="8" y1="22" x2="40" y2="22" stroke="#1F7ABF" stroke-width="1.8"></line>
+                <line x1="8" y1="29" x2="40" y2="29" stroke="#1F7ABF" stroke-width="1.8"></line>
+                <line x1="18" y1="15" x2="18" y2="37" stroke="#1F7ABF" stroke-width="1.8"></line>
+                <line x1="29" y1="15" x2="29" y2="37" stroke="#1F7ABF" stroke-width="1.8"></line>
+              </g>
+            </svg>
           </div>
           <h3 style="font-weight:900;font-size:15.5px;color:#16140F;">Fotovoltaico</h3>
           <p style="margin-top:6px;font-size:13px;color:#6C6459;line-height:1.5;">Soluzioni su misura per casa e azienda.</p>
         </div>
-        <div style="border:2.5px solid #16140F;border-radius:18px;padding:24px 20px;background:#FBF6EF;box-shadow:6px 6px 0 #16140F;">
-          <div style="width:50px;height:50px;border-radius:50%;background:#6BCB00;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a10 10 0 0 1 14 0"></path><path d="M8.5 16.5a5 5 0 0 1 7 0"></path><circle cx="12" cy="20" r="1.3" fill="#16140F" stroke="none"></circle></svg>
+        <div class="apr3-svc-card apr3-reveal apr3-card-lift" style="border:2.5px solid #16140F;border-radius:18px;padding:24px 20px;background:#FBF6EF;box-shadow:6px 6px 0 #16140F;">
+          <div class="apr3-svc-icon" style="animation-delay:0.6s;margin-bottom:12px;">
+            <svg width="46" height="46" viewBox="0 0 48 48" fill="none">
+              <path d="M8 20a24 24 0 0 1 32 0" stroke="#DCEFFB" stroke-width="5" stroke-linecap="round"></path>
+              <path d="M8 20a24 24 0 0 1 32 0" stroke="#2C8FD6" stroke-width="2.6" stroke-linecap="round"></path>
+              <path d="M14 27a15 15 0 0 1 20 0" stroke="#DCEFFB" stroke-width="5" stroke-linecap="round"></path>
+              <path d="M14 27a15 15 0 0 1 20 0" stroke="#2C8FD6" stroke-width="2.6" stroke-linecap="round"></path>
+              <path d="M20 34a7 7 0 0 1 8 0" stroke="#2C8FD6" stroke-width="2.6" stroke-linecap="round"></path>
+              <circle cx="24" cy="40" r="2.6" fill="#2C8FD6"></circle>
+            </svg>
           </div>
           <h3 style="font-weight:900;font-size:15.5px;color:#16140F;">Fibra</h3>
           <p style="margin-top:6px;font-size:13px;color:#6C6459;line-height:1.5;">Connessione veloce e stabile, sempre.</p>
         </div>
-        <div style="border:2.5px solid #16140F;border-radius:18px;padding:24px 20px;background:#FBF6EF;box-shadow:6px 6px 0 #16140F;">
-          <div style="width:50px;height:50px;border-radius:50%;background:#8B5A2E;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="15" y2="22"></line><line x1="4" y1="9" x2="14" y2="9"></line><path d="M4 22V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v18"></path><path d="M14 9h2a2 2 0 0 1 2 2v3a2 2 0 0 0 2 2v0a2 2 0 0 0 2-2V7a1 1 0 0 0-.29-.71L18 3"></path></svg>
+        <div class="apr3-svc-card apr3-reveal apr3-card-lift" style="border:2.5px solid #16140F;border-radius:18px;padding:24px 20px;background:#FBF6EF;box-shadow:6px 6px 0 #16140F;">
+          <div class="apr3-svc-icon" style="animation-delay:0.9s;margin-bottom:12px;">
+            <svg width="46" height="46" viewBox="0 0 48 48" fill="none">
+              <rect x="7" y="9" width="19" height="32" rx="2.5" fill="#FBE0DA" stroke="#D8492A" stroke-width="2.4"></rect>
+              <rect x="11" y="13" width="11" height="9" rx="1.2" fill="#fff" stroke="#D8492A" stroke-width="1.8"></rect>
+              <line x1="11" y1="30" x2="22" y2="30" stroke="#D8492A" stroke-width="1.8" stroke-linecap="round"></line>
+              <line x1="11" y1="35" x2="18" y2="35" stroke="#D8492A" stroke-width="1.8" stroke-linecap="round"></line>
+              <path d="M26 18h5.5a2.5 2.5 0 0 1 2.5 2.5v13a2.2 2.2 0 0 0 2.2 2.2v0a2.2 2.2 0 0 0 2.2-2.2v-13.7a1.4 1.4 0 0 0-.4-1L34.5 15.5" stroke="#D8492A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
           </div>
           <h3 style="font-weight:900;font-size:15.5px;color:#16140F;">Carta carburante</h3>
           <p style="margin-top:6px;font-size:13px;color:#6C6459;line-height:1.5;">La libertà di viaggiare, costi sotto controllo.</p>
@@ -156,15 +204,15 @@
 
   <section style="padding:0 0 92px;" id="concorso">
     <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#16140F;box-shadow:10px 10px 0 #6BCB00;">
+      <div class="apr3-reveal" style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#16140F;box-shadow:10px 10px 0 #6BCB00;">
         <div style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;" class="apr3-contest-grid">
           <div>
             <div style="font-weight:900;font-size:clamp(28px,3.2vw,38px);line-height:0.95;color:#fff;">IL <span style="color:#6BCB00;">GRANDE</span></div>
             <div class="apr3-script" style="font-weight:700;font-size:clamp(40px,4.6vw,56px);color:#fff;line-height:0.95;">Concorso</div>
-            <div style="font-size:11.5px;letter-spacing:0.08em;color:#6BCB00;font-weight:800;margin-top:14px;text-transform:uppercase;">Dal 19 settembre al 19 ottobre 2025</div>
+            <div style="font-size:11.5px;letter-spacing:0.08em;color:#6BCB00;font-weight:800;margin-top:14px;text-transform:uppercase;">Dal 19 settembre al 19 ottobre 2026</div>
             <p style="font-size:13.5px;color:#B9B2A5;margin-top:12px;line-height:1.6;">Sottoscrivi un contratto presso il nuovo Acton Point di Rimini e ricevi subito un buono spesa Acton.</p>
 
-            <div style="background:#6BCB00;border:2px solid #fff;border-radius:18px;padding:22px 24px;margin-top:20px;color:#16140F;">
+            <div class="apr3-price-glow" style="background:#6BCB00;border:2px solid #fff;border-radius:18px;padding:22px 24px;margin-top:20px;color:#16140F;">
               <div style="font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;font-weight:800;">Buono spesa Acton</div>
               <div style="font-weight:900;font-size:44px;line-height:1.1;margin-top:2px;">100€ <span style="font-size:15px;font-weight:700;">subito per te</span></div>
             </div>
@@ -177,7 +225,7 @@
           <div>
             <div style="font-weight:800;letter-spacing:0.12em;text-transform:uppercase;font-size:11.5px;color:#6BCB00;margin-bottom:14px;">Puoi vincere</div>
             <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;" class="apr3-prizes-row">
-              <div style="border-radius:16px;overflow:hidden;background:#fff;border:2px solid #16140F;">
+              <div class="apr3-reveal apr3-card-lift" style="border-radius:16px;overflow:hidden;background:#fff;border:2px solid #16140F;">
                 <div style="height:110px;position:relative;background-image:url('assets/img/premio-borgobrufa.jpg');background-size:cover;background-position:center;">
                   <div style="position:absolute;top:8px;left:8px;width:26px;height:26px;border-radius:50%;background:#6BCB00;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
@@ -189,7 +237,7 @@
                   <p style="font-size:11px;color:#6C6459;margin-top:3px;">Borgo Brufa Resort 5*.</p>
                 </div>
               </div>
-              <div style="border-radius:16px;overflow:hidden;background:#fff;border:2px solid #16140F;">
+              <div class="apr3-reveal apr3-card-lift" style="border-radius:16px;overflow:hidden;background:#fff;border:2px solid #16140F;">
                 <div style="height:110px;position:relative;background-image:url('assets/img/premio-mirabilandia.jpg');background-size:cover;background-position:center;">
                   <div style="position:absolute;top:8px;left:8px;width:26px;height:26px;border-radius:50%;background:#6BCB00;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
@@ -201,7 +249,7 @@
                   <p style="font-size:11px;color:#6C6459;margin-top:3px;">Ristorante Pippo, 1 Stella Michelin.</p>
                 </div>
               </div>
-              <div style="border-radius:16px;overflow:hidden;background:#fff;border:2px solid #16140F;">
+              <div class="apr3-reveal apr3-card-lift" style="border-radius:16px;overflow:hidden;background:#fff;border:2px solid #16140F;">
                 <div style="height:110px;position:relative;background-image:url('assets/img/premio-ristorante.jpg');background-size:cover;background-position:center;">
                   <div style="position:absolute;top:8px;left:8px;width:26px;height:26px;border-radius:50%;background:#6BCB00;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
@@ -229,7 +277,7 @@
 
   <section id="contatti" style="padding:0 0 92px;">
     <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#FBF6EF;box-shadow:10px 10px 0 #16140F;display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;" class="apr3-contest-grid">
+      <div class="apr3-reveal" style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#FBF6EF;box-shadow:10px 10px 0 #16140F;display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;">
         <div>
           <div style="font-weight:900;font-size:clamp(26px,3vw,34px);line-height:1;color:#16140F;">Scrivici</div>
           <div class="apr3-script" style="font-weight:700;font-size:clamp(32px,3.6vw,42px);color:#8B5A2E;line-height:1.1;">una parola!</div>
@@ -318,12 +366,31 @@
               <svg width="15" height="15" viewBox="0 0 24 24" fill="#6BCB00" stroke="none"><path d="M6.94 8.5H4.06V20h2.88V8.5zM5.5 4a1.68 1.68 0 1 0 0 3.36A1.68 1.68 0 0 0 5.5 4zM20 13.4c0-3-1.6-4.4-3.74-4.4a3.23 3.23 0 0 0-2.93 1.6V8.5H10.5c.04.86 0 11.5 0 11.5h2.83v-6.4c0-.34.02-.68.12-.93.28-.68.9-1.4 1.96-1.4 1.38 0 1.93 1.05 1.93 2.6V20H20v-6.6z"></path></svg>
             </a>
           </div>
-          <a href="https://acton.it/" class="brand-link" style="display:inline-block;margin-top:14px;font-weight:800;font-size:14px;color:#16140F;text-decoration:none;">acton.it</a>
+          <a href="https://actonenergia.forini.com/" class="brand-link" style="display:inline-block;margin-top:14px;font-weight:800;font-size:14px;color:#16140F;text-decoration:none;">actonenergia.forini.com</a>
         </div>
       </div>
       <div style="border-top:1px solid #E4DDCF;padding-top:18px;font-size:11px;color:#9C9184;">Regolamento completo disponibile presso il punto vendita e su acton.it</div>
     </div>
   </footer>
+
+  <script>
+    (function(){
+      var revealEls = document.querySelectorAll('.apr3-reveal');
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+        revealEls.forEach(function(el){ observer.observe(el); });
+      } else {
+        revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+      }
+    })();
+  </script>
 
   <script>
     (function(){
