@@ -42,6 +42,20 @@
     .apr3-btn-lift:hover .apr3-arrow{transform:translateX(4px);}
     .apr3-card-lift{transition:transform .25s ease, box-shadow .25s ease;}
     .apr3-card-lift:hover{transform:translateY(-5px);}
+    .apr3-cd-box{background:#16140F;color:#fff;border-radius:12px;padding:10px 4px;width:60px;text-align:center;flex-shrink:0;}
+    .apr3-cd-num{font-weight:900;font-size:22px;line-height:1;color:#6BCB00;}
+    .apr3-cd-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#B9B2A5;margin-top:3px;}
+    .apr3-btn-lift{position:relative;overflow:hidden;}
+    .apr3-btn-lift::after{content:'';position:absolute;top:0;left:-60%;width:35%;height:100%;background:linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.65) 50%, rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:apr3Shine2 3.4s ease-in-out infinite;pointer-events:none;}
+    @keyframes apr3Shine2{0%{left:-60%;}45%{left:130%;}100%{left:130%;}}
+    #apr3-sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#16140F;color:#fff;padding:13px 22px;display:flex;align-items:center;justify-content:center;gap:18px;transform:translateY(120%);transition:transform .45s cubic-bezier(.22,.61,.36,1);box-shadow:0 -8px 24px rgba(0,0,0,0.28);}
+    #apr3-sticky-cta.is-shown{transform:translateY(0);}
+    #apr3-sticky-cta .apr3-sticky-msg{font-weight:800;font-size:13.5px;}
+    #apr3-sticky-close{background:none;border:none;color:#B9B2A5;font-size:20px;cursor:pointer;line-height:1;padding:2px 6px;}
+    @media (max-width:700px){
+      #apr3-sticky-cta{flex-wrap:wrap;justify-content:space-between;padding:12px 16px;}
+      #apr3-sticky-cta .apr3-sticky-msg{font-size:12px;flex-basis:100%;text-align:center;}
+    }
     @keyframes apr3Float{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-5px) rotate(-3deg);}}
     .apr3-svc-icon{display:inline-flex;animation:apr3Float 3s ease-in-out infinite;transition:transform .25s ease;}
     .apr3-svc-card{transition:transform .25s ease;}
@@ -115,6 +129,11 @@
               <div style="font-size:11.5px;color:#B9B2A5;font-weight:600;">Inaugurazione</div>
             </div>
           </div>
+        </div>
+
+        <div style="margin-top:26px;">
+          <div style="font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#8B5A2E;margin-bottom:9px;">Mancano solo</div>
+          <div id="apr3-countdown" style="display:flex;gap:10px;flex-wrap:wrap;"></div>
         </div>
 
         <a href="#concorso" class="apr3-btn-lift" style="display:inline-flex;align-items:center;gap:9px;margin-top:30px;font-weight:900;font-size:15px;border-radius:999px;padding:15px 30px;background:#16140F;color:#fff;text-decoration:none;box-shadow:5px 5px 0 #6BCB00;">
@@ -238,7 +257,7 @@
                 </div>
               </div>
               <div class="apr3-reveal apr3-card-lift" style="border-radius:16px;overflow:hidden;background:#fff;border:2px solid #16140F;">
-                <div style="height:110px;position:relative;background-image:url('assets/img/premio-mirabilandia.jpg');background-size:cover;background-position:center;">
+                <div style="height:110px;position:relative;background-image:url('assets/img/premio-ristorante.jpg');background-size:cover;background-position:center;">
                   <div style="position:absolute;top:8px;left:8px;width:26px;height:26px;border-radius:50%;background:#6BCB00;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
                   </div>
@@ -250,7 +269,7 @@
                 </div>
               </div>
               <div class="apr3-reveal apr3-card-lift" style="border-radius:16px;overflow:hidden;background:#fff;border:2px solid #16140F;">
-                <div style="height:110px;position:relative;background-image:url('assets/img/premio-ristorante.jpg');background-size:cover;background-position:center;">
+                <div style="height:110px;position:relative;background-image:url('assets/img/premio-mirabilandia.jpg');background-size:cover;background-position:center;">
                   <div style="position:absolute;top:8px;left:8px;width:26px;height:26px;border-radius:50%;background:#6BCB00;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
                   </div>
@@ -277,7 +296,7 @@
 
   <section id="contatti" style="padding:0 0 92px;">
     <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div class="apr3-reveal" style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#FBF6EF;box-shadow:10px 10px 0 #16140F;display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;">
+      <div class="apr3-reveal apr3-contest-grid" style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#FBF6EF;box-shadow:10px 10px 0 #16140F;display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;">
         <div>
           <div style="font-weight:900;font-size:clamp(26px,3vw,34px);line-height:1;color:#16140F;">Scrivici</div>
           <div class="apr3-script" style="font-weight:700;font-size:clamp(32px,3.6vw,42px);color:#8B5A2E;line-height:1.1;">una parola!</div>
@@ -369,7 +388,7 @@
           <a href="https://actonenergia.forini.com/" class="brand-link" style="display:inline-block;margin-top:14px;font-weight:800;font-size:14px;color:#16140F;text-decoration:none;">actonenergia.forini.com</a>
         </div>
       </div>
-      <div style="border-top:1px solid #E4DDCF;padding-top:18px;font-size:11px;color:#9C9184;">Regolamento completo disponibile presso il punto vendita e su acton.it</div>
+      <div style="border-top:1px solid #E4DDCF;padding-top:18px;font-size:11px;color:#9C9184;">Regolamento completo disponibile presso il punto vendita e su actonenergia.forini.com</div>
     </div>
   </footer>
 
@@ -409,6 +428,69 @@
         box.textContent = 'Si è verificato un errore nell\'invio. Riprova o scrivici direttamente.';
       }
       document.getElementById('contatti').scrollIntoView({behavior:'smooth'});
+    })();
+  </script>
+  <div id="apr3-sticky-cta">
+    <span class="apr3-sticky-msg">🎁 100€ di buono subito per te alla nuova apertura!</span>
+    <a href="https://www.google.com/maps/search/?api=1&query=Via+Flaminia+175c%2C+Rimini" target="_blank" rel="noopener" class="apr3-btn-lift" style="font-weight:900;font-size:12.5px;border-radius:999px;padding:9px 18px;border:2px solid #6BCB00;background:#6BCB00;color:#16140F;text-decoration:none;white-space:nowrap;">Vieni a trovarci</a>
+    <button id="apr3-sticky-close" aria-label="Chiudi">&times;</button>
+  </div>
+
+  <script>
+    (function(){
+      var target = new Date('2026-09-19T12:00:00').getTime();
+      var el = document.getElementById('apr3-countdown');
+      if (!el) return;
+
+      function unit(num, label){
+        return '<div class="apr3-cd-box"><div class="apr3-cd-num">' + num + '</div><div class="apr3-cd-label">' + label + '</div></div>';
+      }
+
+      function render(){
+        var now = new Date().getTime();
+        var diff = target - now;
+        if (diff <= 0) {
+          el.innerHTML = '<div style="font-weight:900;font-size:15px;color:#3F7A0A;">Siamo aperti! Vieni a trovarci 🎉</div>';
+          clearInterval(timer);
+          return;
+        }
+        var d = Math.floor(diff / (1000*60*60*24));
+        var h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+        var m = Math.floor((diff % (1000*60*60)) / (1000*60));
+        var s = Math.floor((diff % (1000*60)) / 1000);
+        el.innerHTML = unit(d,'Giorni') + unit(h,'Ore') + unit(m,'Min') + unit(s,'Sec');
+      }
+
+      render();
+      var timer = setInterval(render, 1000);
+    })();
+  </script>
+
+  <script>
+    (function(){
+      var bar = document.getElementById('apr3-sticky-cta');
+      var closeBtn = document.getElementById('apr3-sticky-close');
+      if (!bar) return;
+
+      if (sessionStorage.getItem('apr3StickyDismissed') === '1') return;
+
+      function onScroll(){
+        var scrolled = window.scrollY || document.documentElement.scrollTop;
+        var pastHero = scrolled > 480;
+        var nearBottom = (window.innerHeight + scrolled) > (document.body.scrollHeight - 200);
+        if (pastHero && !nearBottom) {
+          bar.classList.add('is-shown');
+        } else {
+          bar.classList.remove('is-shown');
+        }
+      }
+      window.addEventListener('scroll', onScroll, {passive:true});
+      onScroll();
+
+      closeBtn.addEventListener('click', function(){
+        bar.classList.remove('is-shown');
+        sessionStorage.setItem('apr3StickyDismissed', '1');
+      });
     })();
   </script>
 </body>
