@@ -42,6 +42,8 @@
     .apr3-btn-lift:hover .apr3-arrow{transform:translateX(4px);}
     .apr3-card-lift{transition:transform .25s ease, box-shadow .25s ease;}
     .apr3-card-lift:hover{transform:translateY(-5px);}
+    .apr3-input{transition:border-color .2s ease, box-shadow .2s ease;}
+    .apr3-input:focus{outline:none;border-color:#3F9B00 !important;box-shadow:0 0 0 4px rgba(107,203,0,0.22);}
     .apr3-cd-box{background:#16140F;color:#fff;border-radius:12px;padding:10px 4px;width:60px;text-align:center;flex-shrink:0;}
     .apr3-cd-num{font-weight:900;font-size:22px;line-height:1;color:#6BCB00;}
     .apr3-cd-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#B9B2A5;margin-top:3px;}
@@ -85,7 +87,7 @@
 
   <nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:3px solid #16140F;">
     <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 32px;max-width:1240px;margin:0 auto;">
-      <img src="assets/img/acton-logo.png" alt="Acton Point" style="height:44px;width:auto;display:block;">
+      <img src="assets/img/acton-logo.png" alt="Acton Point" style="height:62px;width:auto;display:block;">
       <div style="display:flex;gap:30px;align-items:center;" class="apr3-nav-links">
         <a href="#servizi" style="color:#16140F;text-decoration:none;font-size:13.5px;font-weight:800;">Servizi</a>
         <a href="#concorso" style="color:#16140F;text-decoration:none;font-size:13.5px;font-weight:800;">Concorso</a>
@@ -162,7 +164,7 @@
   <section style="padding:92px 0 84px;" id="servizi">
     <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
       <div style="text-align:center;margin-bottom:34px;">
-        <div style="font-weight:900;font-size:clamp(21px,2.4vw,26px);color:#16140F;">Tutta l'energia di cui hai bisogno, <span style="background:#6BCB00;padding:0 6px;">in un solo punto.</span></div>
+        <div class="apr3-reveal" style="font-weight:900;font-size:clamp(21px,2.4vw,26px);color:#16140F;">Tutta l'energia di cui hai bisogno, <span class="apr3-btn-lift" style="background:#6BCB00;padding:0 6px;border-radius:4px;">in un solo punto.</span></div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;" class="apr3-services-row">
         <div class="apr3-svc-card apr3-reveal apr3-card-lift" style="border:2.5px solid #16140F;border-radius:18px;padding:24px 20px;background:#FBF6EF;box-shadow:6px 6px 0 #16140F;">
@@ -317,31 +319,32 @@
             <div style="grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:14px;" class="apr3-form-row">
               <div>
                 <label style="display:block;font-size:11.5px;font-weight:800;color:#16140F;margin-bottom:6px;">Nome *</label>
-                <input type="text" name="nome" required style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
+                <input type="text" name="nome" required class="apr3-input" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
               </div>
               <div>
                 <label style="display:block;font-size:11.5px;font-weight:800;color:#16140F;margin-bottom:6px;">Cognome *</label>
-                <input type="text" name="cognome" required style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
+                <input type="text" name="cognome" required class="apr3-input" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
               </div>
             </div>
 
             <div style="grid-column:1 / -1;">
               <label style="display:block;font-size:11.5px;font-weight:800;color:#16140F;margin-bottom:6px;">Email *</label>
-              <input type="email" name="email" required style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
+              <input type="email" name="email" required class="apr3-input" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
             </div>
 
             <div style="grid-column:1 / -1;">
               <label style="display:block;font-size:11.5px;font-weight:800;color:#16140F;margin-bottom:6px;">Telefono</label>
-              <input type="tel" name="telefono" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
+              <input type="tel" name="telefono" class="apr3-input" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
             </div>
 
             <div style="grid-column:1 / -1;">
               <label style="display:block;font-size:11.5px;font-weight:800;color:#16140F;margin-bottom:6px;">Messaggio *</label>
-              <textarea name="messaggio" required rows="4" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;resize:vertical;"></textarea>
+              <textarea name="messaggio" required rows="4" class="apr3-input" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;resize:vertical;"></textarea>
             </div>
 
             <div style="grid-column:1 / -1;">
-              <button type="submit" style="font-weight:900;font-size:15px;border-radius:999px;padding:15px 30px;background:#16140F;color:#fff;border:none;cursor:pointer;box-shadow:5px 5px 0 #6BCB00;">Invia messaggio</button>
+              <button type="submit" class="apr3-btn-lift" style="font-weight:900;font-size:15px;border-radius:999px;padding:15px 30px;background:#16140F;color:#fff;border:none;cursor:pointer;box-shadow:5px 5px 0 #6BCB00;">Invia messaggio</button>
+              <div style="display:flex;align-items:center;gap:7px;margin-top:12px;font-size:12px;color:#6C6459;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3F9B00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>I tuoi dati sono trattati con riservatezza.</div>
             </div>
 
             <div id="apr3-form-feedback" style="grid-column:1 / -1;display:none;padding:12px 16px;border-radius:10px;font-size:13.5px;font-weight:700;"></div>
