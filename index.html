@@ -15,7 +15,7 @@
 <style>
     *{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
-    #servizi, #concorso, #contatti{scroll-margin-top:90px;}
+    #servizi, #concorso, #contatti{scroll-margin-top:120px;}
     body{-webkit-font-smoothing:antialiased;}
     a{color:#3F7A0A;}
     a:hover{color:#6BCB00;}
@@ -44,6 +44,22 @@
     .apr3-card-lift:hover{transform:translateY(-5px);}
     .apr3-input{transition:border-color .2s ease, box-shadow .2s ease;}
     .apr3-input:focus{outline:none;border-color:#3F9B00 !important;box-shadow:0 0 0 4px rgba(107,203,0,0.22);}
+    .apr3-neon-wrap{filter:brightness(0.97) saturate(0.95);transition:filter .5s ease;cursor:pointer;}
+    .apr3-neon-wrap:hover{filter:brightness(1.06) saturate(1.18);}
+    .apr3-neon-glow{position:absolute;left:83%;top:49%;width:120px;height:120px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle, rgba(180,255,120,0.95) 0%, rgba(140,255,80,0.55) 35%, rgba(140,255,80,0) 70%);opacity:0;pointer-events:none;mix-blend-mode:screen;}
+    .apr3-neon-wrap:hover .apr3-neon-glow{animation:apr3NeonFlicker 1.2s steps(1) 1 forwards, apr3NeonSteady 1.8s ease-in-out infinite 1.2s;}
+    @keyframes apr3NeonFlicker{
+      0%{opacity:0;}
+      8%{opacity:1;}
+      15%{opacity:0.15;}
+      22%{opacity:1;}
+      30%{opacity:0.1;}
+      38%{opacity:1;}
+      48%{opacity:0.25;}
+      58%{opacity:1;}
+      100%{opacity:1;}
+    }
+    @keyframes apr3NeonSteady{0%,100%{opacity:1;}50%{opacity:0.82;}}
     .apr3-cd-box{background:#16140F;color:#fff;border-radius:12px;padding:10px 4px;width:60px;text-align:center;flex-shrink:0;}
     .apr3-cd-num{font-weight:900;font-size:22px;line-height:1;color:#6BCB00;}
     .apr3-cd-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#B9B2A5;margin-top:3px;}
@@ -86,8 +102,8 @@
     color:#16140F;font-family:&#39;Montserrat&#39;,sans-serif;overflow-x:hidden;">
 
   <nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:3px solid #16140F;">
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 32px;max-width:1240px;margin:0 auto;">
-      <img src="assets/img/acton-logo.png" alt="Acton Point" style="height:62px;width:auto;display:block;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 32px;max-width:1240px;margin:0 auto;">
+      <img src="assets/img/acton-logo.png" alt="Acton Point" style="height:100px;width:auto;display:block;">
       <div style="display:flex;gap:30px;align-items:center;" class="apr3-nav-links">
         <a href="#servizi" style="color:#16140F;text-decoration:none;font-size:13.5px;font-weight:800;">Servizi</a>
         <a href="#concorso" style="color:#16140F;text-decoration:none;font-size:13.5px;font-weight:800;">Concorso</a>
@@ -155,7 +171,9 @@
           </svg>
         </div>
         <div style="border-radius:4px 28px 4px 28px;overflow:hidden;border:3px solid #16140F;box-shadow:10px 10px 0 #8B5A2E;">
-          <div style="height:420px;background-image:url('assets/img/storefront-photo.jpg');background-size:cover;background-position:center 42%;"></div>
+          <div class="apr3-neon-wrap" style="height:420px;background-image:url('assets/img/storefront-photo.jpg');background-size:cover;background-position:center 42%;position:relative;">
+            <div class="apr3-neon-glow"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -434,7 +452,7 @@
     })();
   </script>
   <div id="apr3-sticky-cta">
-    <span class="apr3-sticky-msg">🎁 100€ di buono subito per te alla nuova apertura!</span>
+    <span class="apr3-sticky-msg">100€ di buono subito per te alla nuova apertura!</span>
     <a href="https://www.google.com/maps/search/?api=1&query=Via+Flaminia+175c%2C+Rimini" target="_blank" rel="noopener" class="apr3-btn-lift" style="font-weight:900;font-size:12.5px;border-radius:999px;padding:9px 18px;border:2px solid #6BCB00;background:#6BCB00;color:#16140F;text-decoration:none;white-space:nowrap;">Vieni a trovarci</a>
     <button id="apr3-sticky-close" aria-label="Chiudi">&times;</button>
   </div>
