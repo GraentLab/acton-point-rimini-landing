@@ -202,7 +202,6 @@
             <img src="assets/img/icon-gas.png" alt="Gas" class="apr3-neon-icon icon-gas">
             <img src="assets/img/icon-eco.png" alt="Green energy" class="apr3-neon-icon icon-eco">
           </div>
-          <img id="apr3-mascot" src="assets/img/atto-cammina.png" alt="Atto, la mascotte Acton" style="position:absolute;left:-22px;bottom:-14px;height:150px;width:auto;z-index:3;animation:apr3MascotBob 2.4s ease-in-out infinite;filter:drop-shadow(0 10px 14px rgba(0,0,0,0.35));">
         </div>
       </div>
     </div>
@@ -329,7 +328,7 @@
     </div>
 
 
-  <section style="padding:0 0 92px;" id="buoni">
+  <section style="padding:48px 0 92px;" id="buoni">
     <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
       <div class="apr3-reveal" style="position:relative;border:3px solid #16140F;border-radius:26px;padding:44px;overflow:hidden;background:linear-gradient(100deg, #16140F 0%, #1c1a14 32%, #9EDB20 70%, #6EA617 100%);box-shadow:10px 10px 0 #B9E75B;">
         <div class="apr3-tag-red" style="top:26px;right:-34px;">Ad ogni contratto</div>
@@ -351,8 +350,9 @@
           </div>
 
           <div style="display:flex;align-items:center;justify-content:center;position:relative;min-height:260px;">
-            <div style="width:230px;height:230px;position:relative;z-index:2;" class="apr3-badge-spin">
-              <svg viewBox="0 0 100 100" width="230" height="230">
+            <img src="assets/img/atto-saluta.png" alt="Atto la mascotte Acton" style="position:absolute;height:230px;width:auto;left:6%;bottom:-10px;z-index:1;animation:apr3MascotBob 2.8s ease-in-out infinite;animation-delay:0.3s;filter:drop-shadow(0 10px 14px rgba(0,0,0,0.4));">
+            <div style="width:210px;height:210px;position:relative;z-index:2;margin-left:auto;" class="apr3-badge-spin">
+              <svg viewBox="0 0 100 100" width="210" height="210">
                 <defs><path id="apr3circle2" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"></path></defs>
                 <circle cx="50" cy="50" r="48" fill="#B9E75B" stroke="#fff" stroke-width="3"></circle>
                 <text font-family="Montserrat,sans-serif" font-weight="800" font-size="8.6" fill="#16140F" letter-spacing="1.5">
@@ -556,19 +556,6 @@
 
       render();
       var timer = setInterval(render, 1000);
-    })();
-  </script>
-
-  <script>
-    (function(){
-      var mascot = document.getElementById('apr3-mascot');
-      if (!mascot) return;
-      var frames = ['assets/img/atto-cammina.png', 'assets/img/atto-indica.png', 'assets/img/atto-saluta.png'];
-      var i = 0;
-      setInterval(function(){
-        i = (i + 1) % frames.length;
-        mascot.src = frames[i];
-      }, 1800);
     })();
   </script>
 
