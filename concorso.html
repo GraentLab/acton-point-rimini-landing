@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Il Grande Concorso - Acton Point Rimini</title>
+<meta name="description" content="Partecipa al Grande Concorso Acton Point Rimini: in palio un soggiorno per 2 al Borgo Brufa Resort, una cena stellata e 4 ingressi Mirabilandia. Dal 19 settembre al 19 ottobre 2026.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/img/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{-webkit-font-smoothing:antialiased;}
+    a{color:#3F7A0A;}
+    a:hover{color:#B9E75B;}
+    .apr3-script{font-family:'Caveat',cursive;}
+
+    @keyframes apr3In{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    .apr3-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);}
+    .apr3-reveal.is-visible{opacity:1;transform:translateY(0);}
+
+    .apr3-neon-text{
+      font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;
+      font-size:clamp(19px,2.3vw,26px);line-height:1.35;letter-spacing:0.01em;
+    }
+    .apr3-neon-text span{
+      color:#B9E75B;
+      text-shadow:0 0 6px rgba(185,231,91,0.95), 0 0 16px rgba(185,231,91,0.75), 0 0 34px rgba(185,231,91,0.55), 0 0 64px rgba(185,231,91,0.3);
+      animation:apr3NeonFlickerText 4.2s ease-in-out infinite;
+      display:inline-block;
+    }
+    @keyframes apr3NeonFlickerText{
+      0%,18%,20%,22%,55%,57%,100%{opacity:1;}
+      19%,21%,56%{opacity:0.4;}
+    }
+
+    .apr3-btn-lift{position:relative;overflow:hidden;transition:transform .22s ease, box-shadow .22s ease;}
+    .apr3-btn-lift:hover{transform:translate(-2px,-2px);}
+    .apr3-btn-lift::after{content:'';position:absolute;top:0;left:-60%;width:35%;height:100%;background:linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.65) 50%, rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:apr3Shine2 3.4s ease-in-out infinite;pointer-events:none;}
+    @keyframes apr3Shine2{0%{left:-60%;}45%{left:130%;}100%{left:130%;}}
+    .apr3-arrow{transition:transform .22s ease;display:inline-flex;}
+    .apr3-btn-lift:hover .apr3-arrow{transform:translateX(4px);}
+
+    .apr3-card-lift{transition:transform .25s ease, box-shadow .25s ease;}
+    .apr3-card-lift:hover{transform:translateY(-5px);}
+
+    @keyframes apr3Pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.35);}}
+    .apr3-pulse-dot{animation:apr3Pulse 1.8s ease-in-out infinite;}
+
+    @media (max-width:700px){
+      .apr3-nav-links{display:none !important;}
+      .apr3-logo{height:32px !important;}
+      .apr3-prizes-row{grid-template-columns:1fr !important;}
+      .apr3-how-grid{grid-template-columns:1fr !important;}
+    }
+</style>
+</head>
+<body>
+<div style="
+    background:
+      radial-gradient(ellipse 900px 600px at 8% 0%, rgba(185,231,91,0.16) 0%, rgba(185,231,91,0) 60%),
+      radial-gradient(ellipse 800px 700px at 95% 18%, rgba(255,0,200,0.08) 0%, rgba(255,0,200,0) 60%),
+      linear-gradient(180deg, #FFFFFF 0%, #FBF6EF 35%, #F3ECDD 70%, #EFE6D2 100%);
+    color:#16140F;font-family:'Montserrat',sans-serif;overflow-x:hidden;">
+
+  <nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:3px solid #16140F;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 32px;max-width:1240px;margin:0 auto;">
+      <a href="index.html">
+        <img src="assets/img/acton-logo-v2.png" alt="Acton Point" class="apr3-logo" style="height:46px;width:auto;display:block;">
+      </a>
+      <div style="display:flex;gap:26px;align-items:center;" class="apr3-nav-links">
+        <a href="index.html" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Home</a>
+        <a href="index.html#servizi" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Servizi</a>
+        <a href="index.html#buoni" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Buoni</a>
+        <a href="index.html#contatti" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Contatti</a>
+      </div>
+      <a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" class="apr3-btn-lift" style="font-weight:800;font-size:13px;border-radius:999px;padding:12px 24px;border:3px solid #16140F;background:#B9E75B;color:#16140F;text-decoration:none;box-shadow:4px 4px 0 #16140F;">Vieni a trovarci</a>
+    </div>
+  </nav>
+
+  <header style="padding:64px 0 20px;">
+    <div style="max-width:900px;margin:0 auto;padding:0 32px;text-align:center;">
+      <div style="display:inline-flex;align-items:center;gap:9px;background:#16140F;border-radius:999px;padding:7px 16px;">
+        <span class="apr3-pulse-dot" style="width:7px;height:7px;border-radius:50%;background:#B9E75B;display:inline-block;"></span>
+        <span style="color:#fff;font-weight:700;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;">Acton Point Rimini</span>
+      </div>
+
+      <div style="font-weight:800;font-size:clamp(30px,4.2vw,44px);line-height:0.95;margin-top:20px;color:#16140F;">IL <span style="color:#B9E75B;">GRANDE</span></div>
+      <div class="apr3-script" style="font-weight:700;font-size:clamp(50px,7vw,80px);color:#16140F;line-height:0.95;">Concorso</div>
+
+      <div style="font-size:12.5px;letter-spacing:0.08em;color:#3F7A0A;font-weight:700;margin-top:16px;text-transform:uppercase;">Dal 19 settembre al 19 ottobre 2026 · Viale Tripoli 215, Rimini</div>
+
+      <p style="font-size:15px;color:#4A453D;margin-top:20px;line-height:1.65;max-width:560px;margin-left:auto;margin-right:auto;">Vieni a trovarci al nuovo Acton Point di Rimini e partecipa all'estrazione: tre fantastici premi ti aspettano, in aggiunta ai buoni regalo già garantiti su ogni contratto.</p>
+    </div>
+  </header>
+
+  <section style="padding:36px 0 64px;">
+    <div style="max-width:1080px;margin:0 auto;padding:0 32px;">
+      <div style="font-weight:700;letter-spacing:0.12em;text-transform:uppercase;font-size:12px;color:#3F7A0A;margin-bottom:18px;text-align:center;">Puoi vincere</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="apr3-prizes-row">
+
+        <div class="apr3-reveal apr3-card-lift" style="border-radius:20px;overflow:hidden;background:#fff;border:3px solid #16140F;box-shadow:8px 8px 0 #B9E75B;">
+          <div style="height:180px;position:relative;background-image:url('assets/img/premio-borgobrufa.jpg');background-size:cover;background-position:center;"></div>
+          <div style="padding:20px 22px 24px;">
+            <div style="font-size:11px;letter-spacing:0.08em;color:#B9E75B;text-transform:uppercase;font-weight:800;">1° premio</div>
+            <h3 style="font-weight:800;font-size:19px;margin-top:6px;color:#16140F;">Soggiorno per 2</h3>
+            <p style="font-size:13.5px;color:#6C6459;margin-top:6px;line-height:1.5;">Un weekend di relax al Borgo Brufa Resort 5*, tra le colline umbre.</p>
+          </div>
+        </div>
+
+        <div class="apr3-reveal apr3-card-lift" style="border-radius:20px;overflow:hidden;background:#fff;border:3px solid #16140F;box-shadow:8px 8px 0 #B9E75B;">
+          <div style="height:180px;position:relative;background-image:url('assets/img/premio-ristorante.jpg');background-size:cover;background-position:center;"></div>
+          <div style="padding:20px 22px 24px;">
+            <div style="font-size:11px;letter-spacing:0.08em;color:#B9E75B;text-transform:uppercase;font-weight:800;">2° premio</div>
+            <h3 style="font-weight:800;font-size:19px;margin-top:6px;color:#16140F;">Cena stellata per 2</h3>
+            <p style="font-size:13.5px;color:#6C6459;margin-top:6px;line-height:1.5;">Una serata gourmet al Ristorante Pippo, 1 Stella Michelin.</p>
+          </div>
+        </div>
+
+        <div class="apr3-reveal apr3-card-lift" style="border-radius:20px;overflow:hidden;background:#fff;border:3px solid #16140F;box-shadow:8px 8px 0 #B9E75B;">
+          <div style="height:180px;position:relative;background-image:url('assets/img/premio-mirabilandia.jpg');background-size:cover;background-position:center;"></div>
+          <div style="padding:20px 22px 24px;">
+            <div style="font-size:11px;letter-spacing:0.08em;color:#B9E75B;text-transform:uppercase;font-weight:800;">3° premio</div>
+            <h3 style="font-weight:800;font-size:19px;margin-top:6px;color:#16140F;">4 ingressi Mirabilandia</h3>
+            <p style="font-size:13.5px;color:#6C6459;margin-top:6px;line-height:1.5;">Divertimento assicurato in famiglia per tutta la giornata.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 0 80px;">
+    <div style="max-width:1080px;margin:0 auto;padding:0 32px;">
+      <div class="apr3-reveal" style="border:3px solid #16140F;border-radius:26px;padding:40px 44px;background:#16140F;box-shadow:10px 10px 0 #FF00C8;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;" class="apr3-how-grid">
+          <div>
+            <div class="apr3-neon-text" style="font-size:clamp(22px,2.6vw,28px);"><span>Come partecipare</span></div>
+            <p style="font-size:14px;color:#B9B2A5;margin-top:14px;line-height:1.65;">Basta sottoscrivere un contratto luce e/o gas presso il nuovo Acton Point di Rimini: riceverai subito 5 tagliandini "porta un amico". Ogni amico che si presenta con il tuo tagliandino ti regala una possibilità in più di vincere.</p>
+            <p style="font-size:14px;color:#B9B2A5;margin-top:12px;line-height:1.65;">L'estrazione dei tre premi avverrà al termine del periodo promozionale, il 19 ottobre 2026. I vincitori saranno contattati direttamente e il regolamento completo sarà disponibile presso il punto vendita.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" class="apr3-btn-lift" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;font-size:15px;border-radius:999px;padding:16px 30px;background:#B9E75B;color:#16140F;text-decoration:none;box-shadow:5px 5px 0 #fff;">
+              Vieni a trovarci
+              <span class="apr3-arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </a>
+            <a href="index.html#buoni" class="apr3-btn-lift" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;font-size:15px;border-radius:999px;padding:16px 30px;background:transparent;color:#fff;text-decoration:none;border:2px solid #B9E75B;">
+              Scopri anche i buoni regalo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:0 0 44px;">
+    <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
+      <div style="border-top:1px solid #E4DDCF;padding-top:24px;display:flex;align-items:center;flex-wrap:wrap;gap:14px;">
+        <a href="index.html">
+          <img src="assets/img/acton-logo-v2.png" alt="Acton Point" style="height:28px;width:auto;">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  (function(){
+    var revealEls = document.querySelectorAll('.apr3-reveal');
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+      revealEls.forEach(function(el){ observer.observe(el); });
+    } else {
+      revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+    }
+  })();
+</script>
+</body>
+</html>
