@@ -28,7 +28,7 @@
       .apr3-footer-row{grid-template-columns:1fr !important;gap:26px !important;text-align:left !important;}
       .apr3-nav-links{display:none !important;}
       .apr3-form-row{grid-template-columns:1fr !important;}
-      .apr3-logo{height:46px !important;}
+      .apr3-logo{height:32px !important;}
     }
     @keyframes apr3In{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
     .apr3-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);}
@@ -133,11 +133,11 @@
 
   <nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:3px solid #16140F;">
     <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 32px;max-width:1240px;margin:0 auto;">
-      <img src="assets/img/acton-logo-v2.png" alt="Acton Point" class="apr3-logo" style="height:76px;width:auto;display:block;">
+      <img src="assets/img/acton-logo-v2.png" alt="Acton Point" class="apr3-logo" style="height:46px;width:auto;display:block;">
       <div style="display:flex;gap:26px;align-items:center;" class="apr3-nav-links">
         <a href="#servizi" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Servizi</a>
-        <a href="#buoni" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Buoni</a>
         <a href="#concorso" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Concorso</a>
+        <a href="#buoni" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Buoni</a>
         <a href="#contatti" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Contatti</a>
       </div>
       <a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" class="apr3-btn-lift" style="font-weight:800;font-size:13px;border-radius:999px;padding:12px 24px;border:3px solid #16140F;background:#B9E75B;color:#16140F;text-decoration:none;box-shadow:4px 4px 0 #16140F;">Vieni a trovarci</a>
@@ -194,7 +194,8 @@
       <div style="position:relative;">
         <div class="apr3-neon-panel">
           <div class="apr3-tag-red">Novità</div>
-          <img src="assets/img/acton-logo-white.png" alt="Acton Point" class="apr3-logo-wow" style="height:46px;width:auto;margin-bottom:18px;">
+          <div class="apr3-tag-red" style="top:auto;right:auto;bottom:20px;left:-30px;transform:rotate(-6deg);">19 Settembre · Rimini</div>
+          <img src="assets/img/acton-logo-white.png" alt="Acton Point" class="apr3-logo-wow" style="height:76px;width:auto;margin-bottom:18px;">
           <div class="apr3-neon-text" style="font-size:clamp(32px,4vw,46px);text-transform:none;letter-spacing:0;">Sèm <span>pront!</span></div>
           <div class="apr3-neon-icons">
             <img src="assets/img/icon-luce.png" alt="Luce" class="apr3-neon-icon icon-luce">
@@ -268,51 +269,13 @@
     </div>
   </section>
 
-  <section style="padding:0 0 92px;" id="buoni">
-    <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div class="apr3-reveal" style="position:relative;border:3px solid #16140F;border-radius:26px;padding:44px;overflow:hidden;background:linear-gradient(100deg, #16140F 0%, #1c1a14 32%, #9EDB20 70%, #6EA617 100%);box-shadow:10px 10px 0 #B9E75B;">
-        <div class="apr3-tag-red" style="top:26px;right:-34px;">Ad ogni contratto</div>
-        <div style="position:absolute;left:52%;bottom:20%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 65%);pointer-events:none;"></div>
-        <div style="position:absolute;left:58%;bottom:26%;width:14px;height:14px;background:radial-gradient(circle, #fff 0%, rgba(255,255,255,0) 70%);animation:apr3Sparkle 3s ease-in-out infinite;pointer-events:none;"></div>
-        <div style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;align-items:center;position:relative;" class="apr3-contest-grid">
-          <div>
-            <div class="apr3-neon-text" style="font-size:clamp(34px,4.2vw,48px);text-transform:none;letter-spacing:0;text-align:left;"><span>Buoni regalo</span></div>
-            <p style="font-size:13.5px;color:#D9D4C8;margin-top:14px;line-height:1.6;max-width:400px;">Ad ogni contratto sottoscritto presso il nuovo Acton Point di Rimini, regaliamo subito dei buoni acquisto. Un vantaggio garantito, separato da qualsiasi estrazione.</p>
-            <div style="display:flex;gap:26px;margin-top:22px;">
-              <div><b style="display:block;font-weight:800;font-size:30px;color:#fff;">100€</b><span style="font-size:12px;color:#B9B2A5;">contratto luce + gas</span></div>
-              <div><b style="display:block;font-weight:800;font-size:30px;color:#fff;">50€</b><span style="font-size:12px;color:#B9B2A5;">contratto luce o gas</span></div>
-            </div>
-            <a href="#contatti" class="apr3-btn-lift" style="display:inline-flex;align-items:center;gap:9px;margin-top:26px;font-weight:800;font-size:14px;border-radius:999px;padding:13px 26px;background:#B9E75B;color:#16140F;text-decoration:none;box-shadow:5px 5px 0 #fff;">
-              Scopri come richiederlo
-              <span class="apr3-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-            </a>
-            <p style="font-size:10px;color:#9C9184;margin-top:18px;line-height:1.5;">*Offerta valida dal 19 Settembre al 19 Ottobre 2026, solo presso l'Acton Point di Rimini, valida solo su contratti luce e/o gas. Dettagli su actonenergia.forini.com.</p>
-          </div>
-
-          <div style="display:flex;align-items:center;justify-content:center;position:relative;min-height:260px;">
-            <img src="assets/img/atto-saluta.png" alt="Atto la mascotte Acton" style="position:absolute;height:230px;width:auto;left:6%;bottom:-10px;z-index:1;animation:apr3MascotBob 2.8s ease-in-out infinite;animation-delay:0.3s;filter:drop-shadow(0 10px 14px rgba(0,0,0,0.4));">
-            <div style="width:210px;height:210px;position:relative;z-index:2;margin-left:auto;" class="apr3-badge-spin">
-              <svg viewBox="0 0 100 100" width="210" height="210">
-                <defs><path id="apr3circle2" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"></path></defs>
-                <circle cx="50" cy="50" r="48" fill="#B9E75B" stroke="#fff" stroke-width="3"></circle>
-                <text font-family="Montserrat,sans-serif" font-weight="800" font-size="8.6" fill="#16140F" letter-spacing="1.5">
-                  <textpath href="#apr3circle2" startOffset="0%">100€ DI BUONI · AD OGNI CONTRATTO ·</textpath>
-                </text>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section style="padding:0 0 92px;" id="concorso">
     <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
       <div class="apr3-reveal" style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#16140F;box-shadow:10px 10px 0 #B9E75B;">
         <div style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;" class="apr3-contest-grid">
           <div>
             <div style="font-weight:800;font-size:clamp(28px,3.2vw,38px);line-height:0.95;color:#fff;">IL <span style="color:#B9E75B;">GRANDE</span></div>
-            <div class="apr3-script" style="font-weight:700;font-size:clamp(40px,4.6vw,56px);color:#fff;line-height:0.95;">Concorso</div>
+            <div class="apr3-neon-text" style="font-size:clamp(40px,4.6vw,56px);text-transform:none;letter-spacing:0;text-align:left;line-height:0.95;"><span>Concorso</span></div>
             <div style="font-size:11.5px;letter-spacing:0.08em;color:#B9E75B;font-weight:700;margin-top:14px;text-transform:uppercase;">Dal 19 settembre al 19 ottobre 2026</div>
             <p style="font-size:13.5px;color:#B9B2A5;margin-top:12px;line-height:1.6;">Vieni a trovarci al nuovo Acton Point di Rimini e partecipa all'estrazione: in palio tre fantastici premi, in aggiunta ai buoni regalo già garantiti su ogni contratto.</p>
 
@@ -320,8 +283,6 @@
               Scopri anche i buoni regalo
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B9E75B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
-
-            <img src="assets/img/atto-indica.png" alt="Atto la mascotte Acton" style="height:120px;width:auto;margin-top:26px;animation:apr3MascotBob 3s ease-in-out infinite;animation-delay:0.6s;filter:drop-shadow(0 8px 10px rgba(0,0,0,0.4));">
           </div>
 
           <div>
@@ -366,6 +327,45 @@
         </div>
       </div>
     </div>
+
+
+  <section style="padding:0 0 92px;" id="buoni">
+    <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
+      <div class="apr3-reveal" style="position:relative;border:3px solid #16140F;border-radius:26px;padding:44px;overflow:hidden;background:linear-gradient(100deg, #16140F 0%, #1c1a14 32%, #9EDB20 70%, #6EA617 100%);box-shadow:10px 10px 0 #B9E75B;">
+        <div class="apr3-tag-red" style="top:26px;right:-34px;">Ad ogni contratto</div>
+        <div style="position:absolute;left:52%;bottom:20%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 65%);pointer-events:none;"></div>
+        <div style="position:absolute;left:58%;bottom:26%;width:14px;height:14px;background:radial-gradient(circle, #fff 0%, rgba(255,255,255,0) 70%);animation:apr3Sparkle 3s ease-in-out infinite;pointer-events:none;"></div>
+        <div style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;align-items:center;position:relative;" class="apr3-contest-grid">
+          <div>
+            <div class="apr3-neon-text" style="font-size:clamp(34px,4.2vw,48px);text-transform:none;letter-spacing:0;text-align:left;"><span>Buoni regalo</span></div>
+            <p style="font-size:13.5px;color:#D9D4C8;margin-top:14px;line-height:1.6;max-width:400px;">Ad ogni contratto sottoscritto presso il nuovo Acton Point di Rimini, regaliamo subito dei buoni acquisto. Un vantaggio garantito, separato da qualsiasi estrazione.</p>
+            <div style="display:flex;gap:26px;margin-top:22px;">
+              <div><b style="display:block;font-weight:800;font-size:30px;color:#fff;">100€</b><span style="font-size:12px;color:#B9B2A5;">contratto luce + gas</span></div>
+              <div><b style="display:block;font-weight:800;font-size:30px;color:#fff;">50€</b><span style="font-size:12px;color:#B9B2A5;">contratto luce o gas</span></div>
+            </div>
+            <a href="#contatti" class="apr3-btn-lift" style="display:inline-flex;align-items:center;gap:9px;margin-top:26px;font-weight:800;font-size:14px;border-radius:999px;padding:13px 26px;background:#B9E75B;color:#16140F;text-decoration:none;box-shadow:5px 5px 0 #fff;">
+              Scopri come richiederlo
+              <span class="apr3-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </a>
+            <p style="font-size:10px;color:#9C9184;margin-top:18px;line-height:1.5;">*Offerta valida dal 19 Settembre al 19 Ottobre 2026, solo presso l'Acton Point di Rimini, valida solo su contratti luce e/o gas. Dettagli su actonenergia.forini.com.</p>
+          </div>
+
+          <div style="display:flex;align-items:center;justify-content:center;position:relative;min-height:260px;">
+            <div style="width:230px;height:230px;position:relative;z-index:2;" class="apr3-badge-spin">
+              <svg viewBox="0 0 100 100" width="230" height="230">
+                <defs><path id="apr3circle2" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"></path></defs>
+                <circle cx="50" cy="50" r="48" fill="#B9E75B" stroke="#fff" stroke-width="3"></circle>
+                <text font-family="Montserrat,sans-serif" font-weight="800" font-size="8.6" fill="#16140F" letter-spacing="1.5">
+                  <textpath href="#apr3circle2" startOffset="0%">100€ DI BUONI · AD OGNI CONTRATTO ·</textpath>
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   </section>
 
   <section id="contatti" style="padding:0 0 92px;">
