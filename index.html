@@ -43,9 +43,31 @@
     .apr3-btn-lift:hover .apr3-arrow{transform:translateX(4px);}
     .apr3-card-lift{transition:transform .25s ease, box-shadow .25s ease;}
     .apr3-card-lift:hover{transform:translateY(-5px);}
+    @keyframes apr3MascotBob{0%,100%{transform:translateY(0) rotate(-2deg);}50%{transform:translateY(-10px) rotate(2deg);}}
+    .apr3-metal-text{background:linear-gradient(180deg, #fff 0%, #cfcfcf 40%, #7a7a7a 58%, #e8e8e8 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
     .apr3-input{transition:border-color .2s ease, box-shadow .2s ease;}
     .apr3-input:focus{outline:none;border-color:#B9E75B !important;box-shadow:0 0 0 4px rgba(185,231,91,0.22);}
-    .apr3-neon-panel{background:#16140F;border-radius:4px 28px 4px 28px;overflow:hidden;border:3px solid #16140F;box-shadow:10px 10px 0 #DD283F;height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px;position:relative;}
+    .apr3-neon-panel{
+      background:linear-gradient(128deg, #6EA617 0%, #9EDB20 32%, #1c1a14 52%, #16140F 100%);
+      border-radius:4px 28px 4px 28px;overflow:hidden;border:3px solid #16140F;box-shadow:10px 10px 0 #DD283F;
+      height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px;position:relative;
+    }
+    .apr3-neon-panel::before{
+      content:'';position:absolute;left:14%;bottom:22%;width:220px;height:220px;border-radius:50%;
+      background:radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 65%);
+      pointer-events:none;
+    }
+    .apr3-neon-panel::after{
+      content:'';position:absolute;left:20%;bottom:28%;width:16px;height:16px;
+      background:radial-gradient(circle, #fff 0%, rgba(255,255,255,0) 70%);
+      animation:apr3Sparkle 3s ease-in-out infinite;pointer-events:none;
+    }
+    @keyframes apr3Sparkle{0%,100%{opacity:0.3;transform:scale(0.8);}50%{opacity:1;transform:scale(1.3);}}
+    .apr3-tag-red{
+      position:absolute;top:20px;right:-30px;background:#DD283F;color:#fff;font-weight:800;font-size:11.5px;
+      letter-spacing:0.05em;text-transform:uppercase;padding:8px 40px;transform:rotate(6deg);
+      box-shadow:0 4px 10px rgba(0,0,0,0.25);z-index:2;
+    }
     .apr3-neon-text{
       font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;
       font-size:clamp(19px,2.3vw,26px);line-height:1.35;letter-spacing:0.01em;text-transform:uppercase;
@@ -143,7 +165,7 @@
             </div>
             <div>
               <div style="font-weight:800;font-size:15px;color:#16140F;">19 SETTEMBRE</div>
-              <div style="font-size:11.5px;color:#6C6459;font-weight:600;">Viale Tripoli 215, Rimini</div>
+              <div style="font-size:11.5px;color:#6C6459;font-weight:600;"><a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Viale Tripoli 215, Rimini</a></div>
             </div>
           </div>
           <div style="display:flex;align-items:center;gap:12px;background:#16140F;border:2px solid #16140F;border-radius:14px;padding:12px 16px;">
@@ -170,12 +192,14 @@
 
       <div style="position:relative;">
         <div class="apr3-neon-panel">
+          <div class="apr3-tag-red">Novità</div>
           <div class="apr3-neon-text">L'energia che ti<br><span>semplifica la vita.</span></div>
           <div class="apr3-neon-icons">
             <img src="assets/img/icon-luce.png" alt="Luce" class="apr3-neon-icon icon-luce">
             <img src="assets/img/icon-gas.png" alt="Gas" class="apr3-neon-icon icon-gas">
             <img src="assets/img/icon-eco.png" alt="Green energy" class="apr3-neon-icon icon-eco">
           </div>
+          <img id="apr3-mascot" src="assets/img/atto-cammina.png" alt="Atto, la mascotte Acton" style="position:absolute;left:-22px;bottom:-14px;height:150px;width:auto;z-index:3;animation:apr3MascotBob 2.4s ease-in-out infinite;filter:drop-shadow(0 10px 14px rgba(0,0,0,0.35));">
         </div>
       </div>
     </div>
@@ -244,28 +268,31 @@
 
   <section style="padding:0 0 92px;" id="buoni">
     <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div class="apr3-reveal" style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#FBF6EF;box-shadow:10px 10px 0 #B9E75B;">
-        <div style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;align-items:center;" class="apr3-contest-grid">
+      <div class="apr3-reveal" style="position:relative;border:3px solid #16140F;border-radius:26px;padding:44px;overflow:hidden;background:linear-gradient(122deg, #6EA617 0%, #9EDB20 30%, #1c1a14 48%, #16140F 100%);box-shadow:10px 10px 0 #DD283F;">
+        <div class="apr3-tag-red" style="top:26px;right:-34px;">Ad ogni contratto</div>
+        <div style="position:absolute;left:8%;top:18%;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 65%);pointer-events:none;"></div>
+        <div style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;align-items:center;position:relative;" class="apr3-contest-grid">
           <div>
-            <div style="font-weight:800;font-size:clamp(28px,3.2vw,38px);line-height:0.95;color:#16140F;">BUONI</div>
-            <div class="apr3-script" style="font-weight:700;font-size:clamp(40px,4.6vw,56px);color:#16140F;line-height:0.95;">regalo!</div>
-            <p style="font-size:13.5px;color:#4A453D;margin-top:14px;line-height:1.6;max-width:400px;">Ad ogni contratto sottoscritto presso il nuovo Acton Point di Rimini, regaliamo subito dei buoni acquisto. Un vantaggio garantito, separato da qualsiasi estrazione.</p>
+            <div style="font-weight:800;font-size:clamp(30px,3.6vw,42px);line-height:0.95;" class="apr3-metal-text">Sèm</div>
+            <div style="font-weight:800;font-size:clamp(30px,3.6vw,42px);line-height:0.95;color:#B9E75B;margin-bottom:6px;">pront!</div>
+            <div style="font-weight:800;font-size:clamp(22px,2.6vw,28px);line-height:1;color:#fff;margin-top:10px;">Buoni regalo</div>
+            <p style="font-size:13.5px;color:#D9D4C8;margin-top:14px;line-height:1.6;max-width:400px;">Ad ogni contratto sottoscritto presso il nuovo Acton Point di Rimini, regaliamo subito dei buoni acquisto. Un vantaggio garantito, separato da qualsiasi estrazione.</p>
             <div style="display:flex;gap:26px;margin-top:22px;">
-              <div><b style="display:block;font-weight:800;font-size:30px;color:#16140F;">100€</b><span style="font-size:12px;color:#6C6459;">contratto luce + gas</span></div>
-              <div><b style="display:block;font-weight:800;font-size:30px;color:#16140F;">50€</b><span style="font-size:12px;color:#6C6459;">contratto luce o gas</span></div>
+              <div><b style="display:block;font-weight:800;font-size:30px;color:#fff;">100€</b><span style="font-size:12px;color:#B9B2A5;">contratto luce + gas</span></div>
+              <div><b style="display:block;font-weight:800;font-size:30px;color:#fff;">50€</b><span style="font-size:12px;color:#B9B2A5;">contratto luce o gas</span></div>
             </div>
-            <a href="#contatti" class="apr3-btn-lift" style="display:inline-flex;align-items:center;gap:9px;margin-top:26px;font-weight:800;font-size:14px;border-radius:999px;padding:13px 26px;background:#16140F;color:#fff;text-decoration:none;box-shadow:5px 5px 0 #B9E75B;">
+            <a href="#contatti" class="apr3-btn-lift" style="display:inline-flex;align-items:center;gap:9px;margin-top:26px;font-weight:800;font-size:14px;border-radius:999px;padding:13px 26px;background:#fff;color:#16140F;text-decoration:none;box-shadow:5px 5px 0 #DD283F;">
               Scopri come richiederlo
-              <span class="apr3-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+              <span class="apr3-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
             </a>
             <p style="font-size:10px;color:#9C9184;margin-top:18px;line-height:1.5;">*Offerta valida dal 19 Settembre al 19 Ottobre 2026, solo presso l'Acton Point di Rimini, valida solo su contratti luce e/o gas. Dettagli su actonenergia.forini.com.</p>
           </div>
 
-          <div style="display:flex;align-items:center;justify-content:center;">
+          <div style="display:flex;align-items:center;justify-content:center;position:relative;">
             <div style="width:230px;height:230px;" class="apr3-badge-spin">
               <svg viewBox="0 0 100 100" width="230" height="230">
                 <defs><path id="apr3circle2" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"></path></defs>
-                <circle cx="50" cy="50" r="48" fill="#B9E75B" stroke="#16140F" stroke-width="3"></circle>
+                <circle cx="50" cy="50" r="48" fill="#B9E75B" stroke="#fff" stroke-width="3"></circle>
                 <text font-family="Montserrat,sans-serif" font-weight="800" font-size="8.6" fill="#16140F" letter-spacing="1.5">
                   <textpath href="#apr3circle2" startOffset="0%">100€ DI BUONI · AD OGNI CONTRATTO ·</textpath>
                 </text>
@@ -351,6 +378,13 @@
             </div>
             <div style="font-size:13.5px;color:#16140F;font-weight:700;">Ti confermiamo noi data e ora via email o telefono</div>
           </div>
+
+          <div style="display:flex;align-items:center;gap:12px;margin-top:14px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:#B9E75B;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div style="font-size:13.5px;color:#16140F;font-weight:700;"><a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Viale Tripoli 215, Rimini</a></div>
+          </div>
         </div>
 
         <div>
@@ -415,15 +449,14 @@
     <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
       <div class="apr3-reveal apr3-contest-grid" style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#FBF6EF;box-shadow:10px 10px 0 #16140F;display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;">
         <div>
-          <div style="font-weight:800;font-size:clamp(26px,3vw,34px);line-height:1;color:#16140F;">Scrivici</div>
-          <div class="apr3-script" style="font-weight:700;font-size:clamp(32px,3.6vw,42px);color:#DD283F;line-height:1.1;">una parola!</div>
+          <div style="font-weight:800;font-size:clamp(26px,3vw,34px);line-height:1;color:#16140F;">Contattaci</div>
           <p style="font-size:14px;color:#4A453D;line-height:1.65;margin-top:16px;max-width:360px;">Hai domande su luce, gas, fotovoltaico, fibra o carta carburante? Scrivici e ti risponderemo il prima possibile, oppure passa direttamente dal nostro punto vendita.</p>
 
           <div style="display:flex;align-items:center;gap:12px;margin-top:26px;">
             <div style="width:40px;height:40px;border-radius:50%;background:#B9E75B;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </div>
-            <div style="font-size:13.5px;color:#16140F;font-weight:700;">Viale Tripoli 215, Rimini</div>
+            <div style="font-size:13.5px;color:#16140F;font-weight:700;"><a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Viale Tripoli 215, Rimini</a></div>
           </div>
         </div>
 
@@ -478,7 +511,7 @@
           </div>
           <div>
             <div style="font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-size:11px;color:#B9E75B;">Acton Point Rimini</div>
-            <p style="font-size:13.5px;color:#6C6459;line-height:1.75;margin-top:6px;">Viale Tripoli, 215<br>Rimini</p>
+            <p style="font-size:13.5px;color:#6C6459;line-height:1.75;margin-top:6px;"><a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Viale Tripoli, 215<br>Rimini</a></p>
           </div>
         </div>
         <div style="display:flex;align-items:flex-start;gap:12px;">
@@ -599,6 +632,19 @@
 
       render();
       var timer = setInterval(render, 1000);
+    })();
+  </script>
+
+  <script>
+    (function(){
+      var mascot = document.getElementById('apr3-mascot');
+      if (!mascot) return;
+      var frames = ['assets/img/atto-cammina.png', 'assets/img/atto-indica.png', 'assets/img/atto-saluta.png'];
+      var i = 0;
+      setInterval(function(){
+        i = (i + 1) % frames.length;
+        mascot.src = frames[i];
+      }, 1800);
     })();
   </script>
 
