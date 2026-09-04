@@ -104,6 +104,20 @@
       #apr3-sticky-cta .apr3-sticky-msg{font-size:12px;text-align:center;}
       #apr3-sticky-close{position:absolute;top:8px;right:10px;}
     }
+    @media (max-width:480px){
+      .apr3-services-row{grid-template-columns:1fr !important;}
+      .apr3-cd-box{width:22vw !important;max-width:64px;padding:8px 2px !important;}
+      .apr3-cd-num{font-size:19px !important;}
+      #apr3-countdown{gap:7px !important;}
+      .apr3-neon-panel{height:auto !important;min-height:360px;padding:30px 22px !important;}
+      .apr3-tag-red{font-size:10px !important;padding:7px 26px !important;}
+      .apr3-container{padding-left:18px !important;padding-right:18px !important;}
+      .apr3-card-pad{padding:26px 20px !important;}
+      .apr3-buoni-mascot{height:150px !important;left:2% !important;}
+      .apr3-buoni-badge{width:140px !important;height:140px !important;margin:0 auto !important;}
+      .apr3-buoni-imgwrap{min-height:190px !important;}
+      .apr3-nav-cta{font-size:11px !important;padding:9px 14px !important;}
+    }
     @keyframes apr3Float{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-5px) rotate(-3deg);}}
     .apr3-svc-icon{display:inline-flex;animation:apr3Float 3s ease-in-out infinite;transition:transform .25s ease;}
     .apr3-svc-card{transition:transform .25s ease;}
@@ -132,7 +146,7 @@
     color:#16140F;font-family:&#39;Montserrat&#39;,sans-serif;overflow-x:hidden;">
 
   <nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:3px solid #16140F;">
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 32px;max-width:1240px;margin:0 auto;">
+    <div class="apr3-container" style="display:flex;align-items:center;justify-content:space-between;padding:8px 32px;max-width:1240px;margin:0 auto;">
       <img src="assets/img/acton-logo-v2.png" alt="Acton Point" class="apr3-logo" style="height:46px;width:auto;display:block;">
       <div style="display:flex;gap:26px;align-items:center;" class="apr3-nav-links">
         <a href="#servizi" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Servizi</a>
@@ -140,12 +154,12 @@
         <a href="#buoni" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Buoni</a>
         <a href="#contatti" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Contatti</a>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" class="apr3-btn-lift" style="font-weight:800;font-size:13px;border-radius:999px;padding:12px 24px;border:3px solid #16140F;background:#B9E75B;color:#16140F;text-decoration:none;box-shadow:4px 4px 0 #16140F;">Vieni a trovarci</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" class="apr3-btn-lift apr3-nav-cta" style="font-weight:800;font-size:13px;border-radius:999px;padding:12px 24px;border:3px solid #16140F;background:#B9E75B;color:#16140F;text-decoration:none;box-shadow:4px 4px 0 #16140F;">Vieni a trovarci</a>
     </div>
   </nav>
 
   <section style="padding:58px 0 0;">
-    <div style="max-width:1240px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;" class="apr3-hero-grid">
+    <div style="max-width:1240px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;" class="apr3-hero-grid apr3-container">
       <div>
         <div style="display:inline-flex;align-items:center;gap:8px;background:#16140F;color:#fff;font-weight:700;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:7px 14px;border-radius:999px;">
           <span class="apr3-pulse-dot" style="width:7px;height:7px;border-radius:50%;background:#B9E75B;display:inline-block;"></span>
@@ -208,7 +222,7 @@
   </section>
 
   <section style="padding:92px 0 84px;" id="servizi">
-    <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
+    <div class="apr3-container" style="max-width:1240px;margin:0 auto;padding:0 32px;">
       <div style="text-align:center;margin-bottom:34px;">
         <div class="apr3-reveal" style="font-weight:800;font-size:clamp(21px,2.4vw,26px);color:#16140F;">Tutta l'energia di cui hai bisogno, <span class="apr3-btn-lift" style="background:#B9E75B;padding:0 6px;border-radius:4px;">in un solo punto.</span></div>
       </div>
@@ -269,8 +283,8 @@
   </section>
 
   <section style="padding:0 0 92px;" id="concorso">
-    <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div class="apr3-reveal" style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#16140F;box-shadow:10px 10px 0 #FF48D3;">
+    <div class="apr3-container" style="max-width:1240px;margin:0 auto;padding:0 32px;">
+      <div class="apr3-reveal apr3-card-pad" style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#16140F;box-shadow:10px 10px 0 #FF48D3;">
         <div style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;" class="apr3-contest-grid">
           <div>
             <div style="font-weight:800;font-size:clamp(28px,3.2vw,38px);line-height:0.95;color:#fff;">IL <span style="color:#B9E75B;">GRANDE</span></div>
@@ -334,8 +348,8 @@
 
 
   <section style="padding:48px 0 92px;" id="buoni">
-    <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div class="apr3-reveal" style="position:relative;border:3px solid #16140F;border-radius:26px;padding:44px;overflow:hidden;background:linear-gradient(100deg, #16140F 0%, #1c1a14 32%, #9EDB20 70%, #6EA617 100%);box-shadow:10px 10px 0 #FF48D3;">
+    <div class="apr3-container" style="max-width:1240px;margin:0 auto;padding:0 32px;">
+      <div class="apr3-reveal apr3-card-pad" style="position:relative;border:3px solid #16140F;border-radius:26px;padding:44px;overflow:hidden;background:linear-gradient(100deg, #16140F 0%, #1c1a14 32%, #9EDB20 70%, #6EA617 100%);box-shadow:10px 10px 0 #FF48D3;">
         <div class="apr3-tag-red" style="top:26px;right:-34px;">Fino a 100€</div>
         <div style="position:absolute;left:52%;bottom:20%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 65%);pointer-events:none;"></div>
         <div style="position:absolute;left:58%;bottom:26%;width:14px;height:14px;background:radial-gradient(circle, #fff 0%, rgba(255,255,255,0) 70%);animation:apr3Sparkle 3s ease-in-out infinite;pointer-events:none;"></div>
@@ -354,10 +368,10 @@
             <p style="font-size:10px;color:#9C9184;margin-top:18px;line-height:1.5;">*Offerta valida dal 19 Settembre al 19 Ottobre 2026, solo presso l'Acton Point di Rimini, valida solo su contratti luce e/o gas. Dettagli su actonenergia.forini.com.</p>
           </div>
 
-          <div style="display:flex;align-items:center;justify-content:center;position:relative;min-height:260px;">
-            <img src="assets/img/atto-saluta.png" alt="Atto la mascotte Acton" style="position:absolute;height:230px;width:auto;left:6%;bottom:-10px;z-index:1;animation:apr3MascotBob 2.8s ease-in-out infinite;animation-delay:0.3s;filter:drop-shadow(0 10px 14px rgba(0,0,0,0.4));">
-            <div style="width:210px;height:210px;position:relative;z-index:2;margin-left:auto;" class="apr3-badge-spin">
-              <svg viewBox="0 0 100 100" width="210" height="210">
+          <div class="apr3-buoni-imgwrap" style="display:flex;align-items:center;justify-content:center;position:relative;min-height:260px;">
+            <img src="assets/img/atto-saluta.png" alt="Atto la mascotte Acton" class="apr3-buoni-mascot" style="position:absolute;height:230px;width:auto;left:6%;bottom:-10px;z-index:1;animation:apr3MascotBob 2.8s ease-in-out infinite;animation-delay:0.3s;filter:drop-shadow(0 10px 14px rgba(0,0,0,0.4));">
+            <div style="width:210px;height:210px;position:relative;z-index:2;margin-left:auto;" class="apr3-badge-spin apr3-buoni-badge">
+              <svg viewBox="0 0 100 100" width="210" height="210" style="width:100%;height:auto;display:block;">
                 <defs><path id="apr3circle2" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"></path></defs>
                 <circle cx="50" cy="50" r="48" fill="#B9E75B" stroke="#fff" stroke-width="3"></circle>
                 <text font-family="Montserrat,sans-serif" font-weight="800" font-size="8" fill="#16140F" letter-spacing="1.1">
@@ -374,8 +388,8 @@
   </section>
 
   <section id="contatti" style="padding:0 0 92px;">
-    <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div class="apr3-reveal apr3-contest-grid" style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#FBF6EF;box-shadow:10px 10px 0 #FF48D3;display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;">
+    <div class="apr3-container" style="max-width:1240px;margin:0 auto;padding:0 32px;">
+      <div class="apr3-reveal apr3-contest-grid apr3-card-pad" style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#FBF6EF;box-shadow:10px 10px 0 #FF48D3;display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;">
         <div>
           <div style="font-weight:800;font-size:clamp(26px,3vw,34px);line-height:1;color:#16140F;">Contattaci</div>
           <div style="font-weight:800;font-size:clamp(20px,2.4vw,26px);line-height:1.1;color:#FF48D3;margin-top:4px;">o prendi un appuntamento!</div>
@@ -448,7 +462,7 @@
   </section>
 
   <footer style="padding:0 0 44px;">
-    <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
+    <div class="apr3-container" style="max-width:1240px;margin:0 auto;padding:0 32px;">
       <div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px;padding:34px 0;border-top:3px solid #16140F;" class="apr3-footer-row">
         <div style="display:flex;align-items:flex-start;gap:12px;">
           <div style="width:34px;height:34px;border-radius:50%;background:#B9E75B;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;flex-shrink:0;">

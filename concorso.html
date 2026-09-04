@@ -58,6 +58,11 @@
       .apr3-prizes-row{grid-template-columns:1fr !important;}
       .apr3-how-grid{grid-template-columns:1fr !important;}
     }
+    @media (max-width:480px){
+      .apr3-container{padding-left:18px !important;padding-right:18px !important;}
+      .apr3-card-pad{padding:26px 20px !important;}
+      .apr3-nav-cta{font-size:11px !important;padding:9px 14px !important;}
+    }
 </style>
 </head>
 <body>
@@ -69,7 +74,7 @@
     color:#16140F;font-family:'Montserrat',sans-serif;overflow-x:hidden;">
 
   <nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:3px solid #16140F;">
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 32px;max-width:1240px;margin:0 auto;">
+    <div class="apr3-container" style="display:flex;align-items:center;justify-content:space-between;padding:8px 32px;max-width:1240px;margin:0 auto;">
       <a href="index.html">
         <img src="assets/img/acton-logo-v2.png" alt="Acton Point" class="apr3-logo" style="height:46px;width:auto;display:block;">
       </a>
@@ -79,12 +84,12 @@
         <a href="index.html#buoni" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Buoni</a>
         <a href="index.html#contatti" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Contatti</a>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" class="apr3-btn-lift" style="font-weight:800;font-size:13px;border-radius:999px;padding:12px 24px;border:3px solid #16140F;background:#B9E75B;color:#16140F;text-decoration:none;box-shadow:4px 4px 0 #16140F;">Vieni a trovarci</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" class="apr3-btn-lift apr3-nav-cta" style="font-weight:800;font-size:13px;border-radius:999px;padding:12px 24px;border:3px solid #16140F;background:#B9E75B;color:#16140F;text-decoration:none;box-shadow:4px 4px 0 #16140F;">Vieni a trovarci</a>
     </div>
   </nav>
 
   <header style="padding:64px 0 20px;">
-    <div style="max-width:900px;margin:0 auto;padding:0 32px;text-align:center;">
+    <div class="apr3-container" style="max-width:900px;margin:0 auto;padding:0 32px;text-align:center;">
       <div style="display:inline-flex;align-items:center;gap:9px;background:#16140F;border-radius:999px;padding:7px 16px;">
         <span class="apr3-pulse-dot" style="width:7px;height:7px;border-radius:50%;background:#B9E75B;display:inline-block;"></span>
         <span style="color:#fff;font-weight:700;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;">Acton Point Rimini</span>
@@ -100,7 +105,7 @@
   </header>
 
   <section style="padding:36px 0 64px;">
-    <div style="max-width:1080px;margin:0 auto;padding:0 32px;">
+    <div class="apr3-container" style="max-width:1080px;margin:0 auto;padding:0 32px;">
       <div style="font-weight:700;letter-spacing:0.12em;text-transform:uppercase;font-size:12px;color:#3F7A0A;margin-bottom:18px;text-align:center;">Puoi vincere</div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="apr3-prizes-row">
 
@@ -136,8 +141,8 @@
   </section>
 
   <section style="padding:0 0 80px;">
-    <div style="max-width:1080px;margin:0 auto;padding:0 32px;">
-      <div class="apr3-reveal" style="border:3px solid #16140F;border-radius:26px;padding:40px 44px;background:#16140F;box-shadow:10px 10px 0 #FF48D3;">
+    <div class="apr3-container" style="max-width:1080px;margin:0 auto;padding:0 32px;">
+      <div class="apr3-reveal apr3-card-pad" style="border:3px solid #16140F;border-radius:26px;padding:40px 44px;background:#16140F;box-shadow:10px 10px 0 #FF48D3;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;" class="apr3-how-grid">
           <div>
             <div class="apr3-neon-text" style="font-size:clamp(22px,2.6vw,28px);"><span>Come partecipare</span></div>
@@ -159,7 +164,7 @@
   </section>
 
   <footer style="padding:0 0 44px;">
-    <div style="max-width:1240px;margin:0 auto;padding:0 32px;">
+    <div class="apr3-container" style="max-width:1240px;margin:0 auto;padding:0 32px;">
       <div style="border-top:1px solid #E4DDCF;padding-top:24px;display:flex;align-items:center;flex-wrap:wrap;gap:14px;">
         <a href="index.html">
           <img src="assets/img/acton-logo-v2.png" alt="Acton Point" style="height:28px;width:auto;">
