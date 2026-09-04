@@ -30,6 +30,8 @@
       .apr3-form-row{grid-template-columns:1fr !important;}
       .apr3-logo{height:32px !important;}
     }
+    .apr3-form-row > div{min-width:0;}
+    .apr3-input{max-width:100%;box-sizing:border-box;}
     @keyframes apr3In{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
     .apr3-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);}
     .apr3-reveal.is-visible{opacity:1;transform:translateY(0);}
@@ -95,7 +97,7 @@
     .apr3-btn-lift{position:relative;overflow:hidden;}
     .apr3-btn-lift::after{content:'';position:absolute;top:0;left:0;width:35%;height:100%;background:linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.65) 50%, rgba(255,255,255,0) 100%);transform:skewX(-20deg) translateX(-300%);animation:apr3Shine2 3.4s ease-in-out infinite;pointer-events:none;will-change:transform;}
     @keyframes apr3Shine2{0%{transform:skewX(-20deg) translateX(-300%);}45%{transform:skewX(-20deg) translateX(600%);}100%{transform:skewX(-20deg) translateX(600%);}}
-    #apr3-sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#16140F;color:#fff;padding:13px 22px;display:flex;align-items:center;justify-content:center;gap:18px;transform:translateY(120%);transition:transform .45s cubic-bezier(.22,.61,.36,1);box-shadow:0 -8px 24px rgba(0,0,0,0.28);}
+    #apr3-sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#16140F;color:#fff;padding:13px 22px;display:flex;align-items:center;justify-content:center;gap:18px;transform:translateY(120%);transition:transform .45s cubic-bezier(.22,.61,.36,1);box-shadow:0 -8px 24px rgba(0,0,0,0.28);font-family:'Montserrat',sans-serif;}
     #apr3-sticky-cta.is-shown{transform:translateY(0);}
     #apr3-sticky-cta .apr3-sticky-msg{font-weight:700;font-size:13.5px;}
     #apr3-sticky-close{background:none;border:none;color:#B9B2A5;font-size:20px;cursor:pointer;line-height:1;padding:2px 6px;}
@@ -457,16 +459,16 @@
     </div>
   </section>
 
-  <footer style="padding:0 0 44px;">
+  <footer style="background:#16140F;border-top:5px solid #B9E75B;padding:0 0 36px;">
     <div class="apr3-container" style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px;padding:34px 0;border-top:3px solid #16140F;" class="apr3-footer-row">
+      <div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px;padding:34px 0;" class="apr3-footer-row">
         <div style="display:flex;align-items:flex-start;gap:12px;">
           <div style="width:34px;height:34px;border-radius:50%;background:#B9E75B;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           </div>
           <div>
             <div style="font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-size:11px;color:#B9E75B;">Acton Point Rimini</div>
-            <p style="font-size:13.5px;color:#6C6459;line-height:1.75;margin-top:6px;"><a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Viale Tripoli, 215<br>Rimini</a></p>
+            <p style="font-size:13.5px;color:#B9B2A5;line-height:1.75;margin-top:6px;"><a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Viale Tripoli, 215<br>Rimini</a></p>
           </div>
         </div>
         <div style="display:flex;align-items:flex-start;gap:12px;">
@@ -474,24 +476,24 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 16 14"></polyline></svg>
           </div>
           <div>
-            <div style="font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-size:11px;color:#16140F;">Orari di apertura</div>
-            <p style="font-size:13.5px;color:#6C6459;line-height:1.75;margin-top:6px;">Lun – Ven 9:00–13:00 / 15:00–19:00<br>Sabato 9:00–13:00</p>
+            <div style="font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-size:11px;color:#fff;">Orari di apertura</div>
+            <p style="font-size:13.5px;color:#B9B2A5;line-height:1.75;margin-top:6px;">Lun – Ven 9:00–13:00 / 15:00–19:00<br>Sabato 9:00–13:00</p>
           </div>
         </div>
         <div>
           <div class="apr3-script" style="font-size:28px;color:#FF48D3;font-weight:700;">Ti aspettiamo!</div>
           <div style="display:flex;gap:9px;margin-top:12px;">
-            <a href="#" aria-label="Facebook" style="width:34px;height:34px;border-radius:50%;background:#16140F;display:flex;align-items:center;justify-content:center;text-decoration:none;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="#B9E75B" stroke="none"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.9.25-1.5 1.55-1.5H16.5V4.35C16.2 4.3 15.2 4.2 14 4.2c-2.4 0-4 1.46-4 4.15V10.5H7.5v3H10V21h3.5z"></path></svg>
+            <a href="#" aria-label="Facebook" style="width:34px;height:34px;border-radius:50%;background:#B9E75B;display:flex;align-items:center;justify-content:center;text-decoration:none;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#16140F" stroke="none"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.9.25-1.5 1.55-1.5H16.5V4.35C16.2 4.3 15.2 4.2 14 4.2c-2.4 0-4 1.46-4 4.15V10.5H7.5v3H10V21h3.5z"></path></svg>
             </a>
-            <a href="#" aria-label="Instagram" style="width:34px;height:34px;border-radius:50%;background:#16140F;display:flex;align-items:center;justify-content:center;text-decoration:none;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B9E75B" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="#B9E75B" stroke="none"></circle></svg>
+            <a href="#" aria-label="Instagram" style="width:34px;height:34px;border-radius:50%;background:#B9E75B;display:flex;align-items:center;justify-content:center;text-decoration:none;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="#16140F" stroke="none"></circle></svg>
             </a>
-            <a href="#" aria-label="LinkedIn" style="width:34px;height:34px;border-radius:50%;background:#16140F;display:flex;align-items:center;justify-content:center;text-decoration:none;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="#B9E75B" stroke="none"><path d="M6.94 8.5H4.06V20h2.88V8.5zM5.5 4a1.68 1.68 0 1 0 0 3.36A1.68 1.68 0 0 0 5.5 4zM20 13.4c0-3-1.6-4.4-3.74-4.4a3.23 3.23 0 0 0-2.93 1.6V8.5H10.5c.04.86 0 11.5 0 11.5h2.83v-6.4c0-.34.02-.68.12-.93.28-.68.9-1.4 1.96-1.4 1.38 0 1.93 1.05 1.93 2.6V20H20v-6.6z"></path></svg>
+            <a href="#" aria-label="LinkedIn" style="width:34px;height:34px;border-radius:50%;background:#B9E75B;display:flex;align-items:center;justify-content:center;text-decoration:none;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#16140F" stroke="none"><path d="M6.94 8.5H4.06V20h2.88V8.5zM5.5 4a1.68 1.68 0 1 0 0 3.36A1.68 1.68 0 0 0 5.5 4zM20 13.4c0-3-1.6-4.4-3.74-4.4a3.23 3.23 0 0 0-2.93 1.6V8.5H10.5c.04.86 0 11.5 0 11.5h2.83v-6.4c0-.34.02-.68.12-.93.28-.68.9-1.4 1.96-1.4 1.38 0 1.93 1.05 1.93 2.6V20H20v-6.6z"></path></svg>
             </a>
           </div>
-          <a href="https://actonenergia.forini.com/" class="brand-link" style="display:inline-block;margin-top:14px;font-weight:700;font-size:14px;color:#16140F;text-decoration:none;">actonenergia.forini.com</a>
+          <a href="https://actonenergia.forini.com/" class="brand-link" style="display:inline-block;margin-top:14px;font-weight:700;font-size:14px;color:#fff;text-decoration:none;">actonenergia.forini.com</a>
         </div>
       </div>
     </div>
