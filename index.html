@@ -14,9 +14,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <style>
     *{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;}
+    html{scroll-behavior:smooth;background:#16140F;}
     #servizi, #buoni, #concorso, #contatti{scroll-margin-top:120px;}
-    body{-webkit-font-smoothing:antialiased;}
+    body{-webkit-font-smoothing:antialiased;background:#16140F;}
     a{color:#B9E75B;}
     a:hover{color:#B9E75B;}
     .apr3-script{font-family:'Caveat',cursive;}
@@ -32,6 +32,9 @@
     }
     .apr3-form-row > div{min-width:0;}
     .apr3-input{max-width:100%;box-sizing:border-box;font-size:16px !important;}
+    input.apr3-input,select.apr3-input{height:48px;-webkit-appearance:none;appearance:none;line-height:1.2;}
+    select.apr3-input{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316140F' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");background-repeat:no-repeat;background-position:right 14px center;background-size:16px;padding-right:38px !important;}
+    textarea.apr3-input{-webkit-appearance:none;appearance:none;}
     @keyframes apr3In{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
     .apr3-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);}
     .apr3-reveal.is-visible{opacity:1;transform:translateY(0);}
@@ -102,7 +105,7 @@
     #apr3-sticky-cta .apr3-sticky-msg{font-weight:700;font-size:13.5px;}
     #apr3-sticky-close{background:none;border:none;color:#B9B2A5;font-size:20px;cursor:pointer;line-height:1;padding:2px 6px;}
     @media (max-width:700px){
-      #apr3-sticky-cta{flex-direction:column;padding:14px 44px 14px 16px;position:relative;}
+      #apr3-sticky-cta{flex-direction:column;padding:14px 44px 14px 16px;}
       #apr3-sticky-cta .apr3-sticky-msg{font-size:12px;text-align:center;}
       #apr3-sticky-close{position:absolute;top:8px;right:10px;}
     }
