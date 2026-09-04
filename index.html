@@ -23,7 +23,7 @@
     @media (max-width:980px){
       .apr3-hero-grid{grid-template-columns:1fr !important;}
       .apr3-services-row{grid-template-columns:repeat(2,1fr) !important;}
-      .apr3-contest-grid{grid-template-columns:1fr !important;}
+      .apr3-contest-grid{grid-template-columns:1fr !important;gap:28px !important;}
       .apr3-prizes-row{grid-template-columns:1fr !important;}
       .apr3-footer-row{grid-template-columns:1fr !important;gap:26px !important;text-align:left !important;}
       .apr3-nav-links{display:none !important;}
@@ -45,8 +45,8 @@
     .apr3-card-lift:hover{transform:translateY(-5px);}
     @keyframes apr3MascotBob{0%,100%{transform:translateY(0) rotate(-2deg);}50%{transform:translateY(-10px) rotate(2deg);}}
     .apr3-metal-text{background:linear-gradient(180deg, #fff 0%, #cfcfcf 40%, #7a7a7a 58%, #e8e8e8 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
-    .apr3-logo-wow{filter:drop-shadow(0 0 10px rgba(185,231,91,0.85)) drop-shadow(0 0 26px rgba(185,231,91,0.5));animation:apr3LogoPulse 2.6s ease-in-out infinite;}
-    @keyframes apr3LogoPulse{0%,100%{filter:drop-shadow(0 0 10px rgba(185,231,91,0.85)) drop-shadow(0 0 26px rgba(185,231,91,0.5));transform:scale(1);}50%{filter:drop-shadow(0 0 16px rgba(185,231,91,1)) drop-shadow(0 0 40px rgba(185,231,91,0.75));transform:scale(1.03);}}
+    .apr3-logo-wow{filter:drop-shadow(0 0 14px rgba(185,231,91,0.7));animation:apr3LogoPulse 3.2s ease-in-out infinite;}
+    @keyframes apr3LogoPulse{0%,100%{opacity:0.92;}50%{opacity:1;}}
     .apr3-input{transition:border-color .2s ease, box-shadow .2s ease;}
     .apr3-input:focus{outline:none;border-color:#B9E75B !important;box-shadow:0 0 0 4px rgba(185,231,91,0.22);}
     .apr3-neon-panel{
@@ -93,8 +93,8 @@
     .apr3-cd-num{font-weight:800;font-size:22px;line-height:1;color:#B9E75B;}
     .apr3-cd-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#B9B2A5;margin-top:3px;}
     .apr3-btn-lift{position:relative;overflow:hidden;}
-    .apr3-btn-lift::after{content:'';position:absolute;top:0;left:-60%;width:35%;height:100%;background:linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.65) 50%, rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:apr3Shine2 3.4s ease-in-out infinite;pointer-events:none;}
-    @keyframes apr3Shine2{0%{left:-60%;}45%{left:130%;}100%{left:130%;}}
+    .apr3-btn-lift::after{content:'';position:absolute;top:0;left:0;width:35%;height:100%;background:linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.65) 50%, rgba(255,255,255,0) 100%);transform:skewX(-20deg) translateX(-300%);animation:apr3Shine2 3.4s ease-in-out infinite;pointer-events:none;will-change:transform;}
+    @keyframes apr3Shine2{0%{transform:skewX(-20deg) translateX(-300%);}45%{transform:skewX(-20deg) translateX(600%);}100%{transform:skewX(-20deg) translateX(600%);}}
     #apr3-sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#16140F;color:#fff;padding:13px 22px;display:flex;align-items:center;justify-content:center;gap:18px;transform:translateY(120%);transition:transform .45s cubic-bezier(.22,.61,.36,1);box-shadow:0 -8px 24px rgba(0,0,0,0.28);}
     #apr3-sticky-cta.is-shown{transform:translateY(0);}
     #apr3-sticky-cta .apr3-sticky-msg{font-weight:700;font-size:13.5px;}
@@ -113,9 +113,9 @@
       .apr3-tag-red{font-size:10px !important;padding:7px 26px !important;}
       .apr3-container{padding-left:18px !important;padding-right:18px !important;}
       .apr3-card-pad{padding:26px 20px !important;}
-      .apr3-buoni-mascot{height:150px !important;left:2% !important;}
-      .apr3-buoni-badge{width:140px !important;height:140px !important;margin:0 auto !important;}
-      .apr3-buoni-imgwrap{min-height:190px !important;}
+      .apr3-buoni-imgwrap{flex-direction:column !important;gap:18px !important;min-height:auto !important;padding:8px 0 4px;}
+      .apr3-buoni-mascot{position:static !important;height:130px !important;margin:0 auto !important;left:auto !important;bottom:auto !important;}
+      .apr3-buoni-badge{width:150px !important;height:150px !important;margin:0 auto !important;}
       .apr3-nav-cta{font-size:11px !important;padding:9px 14px !important;}
     }
     @keyframes apr3Float{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-5px) rotate(-3deg);}}
@@ -138,14 +138,12 @@
 <body>
 <div style="background:
     radial-gradient(ellipse 900px 600px at 8% 0%, rgba(185,231,91,0.16) 0%, rgba(185,231,91,0) 60%),
-    radial-gradient(ellipse 800px 700px at 95% 18%, rgba(139,90,46,0.13) 0%, rgba(139,90,46,0) 60%),
-    radial-gradient(ellipse 1000px 800px at 15% 55%, rgba(185,231,91,0.10) 0%, rgba(185,231,91,0) 55%),
-    radial-gradient(ellipse 900px 700px at 100% 75%, rgba(139,90,46,0.11) 0%, rgba(139,90,46,0) 55%),
+    radial-gradient(ellipse 1000px 800px at 100% 55%, rgba(139,90,46,0.11) 0%, rgba(139,90,46,0) 55%),
     radial-gradient(ellipse 1000px 700px at 0% 100%, rgba(185,231,91,0.14) 0%, rgba(185,231,91,0) 55%),
     linear-gradient(180deg, #FFFFFF 0%, #FBF6EF 35%, #F3ECDD 70%, #EFE6D2 100%);
     color:#16140F;font-family:&#39;Montserrat&#39;,sans-serif;overflow-x:hidden;">
 
-  <nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.94);backdrop-filter:blur(8px);border-bottom:3px solid #16140F;">
+  <nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.98);border-bottom:3px solid #16140F;">
     <div class="apr3-container" style="display:flex;align-items:center;justify-content:space-between;padding:8px 32px;max-width:1240px;margin:0 auto;">
       <img src="assets/img/acton-logo-v2.png" alt="Acton Point" class="apr3-logo" style="height:46px;width:auto;display:block;">
       <div style="display:flex;gap:26px;align-items:center;" class="apr3-nav-links">
@@ -345,7 +343,7 @@
         </div>
       </div>
     </div>
-
+  </section>
 
   <section style="padding:48px 0 92px;" id="buoni">
     <div class="apr3-container" style="max-width:1240px;margin:0 auto;padding:0 32px;">
@@ -383,8 +381,6 @@
         </div>
       </div>
     </div>
-  </section>
-
   </section>
 
   <section id="contatti" style="padding:0 0 92px;">
@@ -501,6 +497,8 @@
     </div>
   </footer>
 
+  </div>
+
   <script>
     (function(){
       var revealEls = document.querySelectorAll('.apr3-reveal');
@@ -585,15 +583,21 @@
 
       if (sessionStorage.getItem('apr3StickyDismissed') === '1') return;
 
+      var ticking = false;
       function onScroll(){
-        var scrolled = window.scrollY || document.documentElement.scrollTop;
-        var pastHero = scrolled > 480;
-        var nearBottom = (window.innerHeight + scrolled) > (document.body.scrollHeight - 200);
-        if (pastHero && !nearBottom) {
-          bar.classList.add('is-shown');
-        } else {
-          bar.classList.remove('is-shown');
-        }
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function(){
+          var scrolled = window.scrollY || document.documentElement.scrollTop;
+          var pastHero = scrolled > 480;
+          var nearBottom = (window.innerHeight + scrolled) > (document.body.scrollHeight - 200);
+          if (pastHero && !nearBottom) {
+            bar.classList.add('is-shown');
+          } else {
+            bar.classList.remove('is-shown');
+          }
+          ticking = false;
+        });
       }
       window.addEventListener('scroll', onScroll, {passive:true});
       onScroll();
