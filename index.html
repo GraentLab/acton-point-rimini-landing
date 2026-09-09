@@ -4,616 +4,218 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Acton Point Rimini</title>
-<meta name="description" content="Nuova apertura Acton Point a Rimini - 19 Settembre 2025. Luce, Gas, Fotovoltaico, Fibra e Carta Carburante in un unico punto.">
+<meta name="description" content="Nuova apertura Acton Point a Rimini - 19 Settembre 2026. Luce, Gas, Fotovoltaico, Fibra e Carta Carburante in un unico punto.">
 <link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" href="assets/img/favicon-32x32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="assets/img/favicon-16x16.png" type="image/png" sizes="16x16">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;background:#16140F;}
-    #servizi, #buoni, #concorso, #contatti{scroll-margin-top:120px;}
-    body{-webkit-font-smoothing:antialiased;background:#16140F;}
-    a{color:#B9E75B;}
-    a:hover{color:#B9E75B;}
-    .apr3-script{font-family:'Caveat',cursive;}
-    @media (max-width:980px){
-      .apr3-hero-grid{grid-template-columns:1fr !important;}
-      .apr3-services-row{grid-template-columns:repeat(2,1fr) !important;}
-      .apr3-contest-grid{grid-template-columns:1fr !important;gap:28px !important;}
-      .apr3-prizes-row{grid-template-columns:1fr !important;}
-      .apr3-footer-row{grid-template-columns:1fr !important;gap:26px !important;text-align:left !important;}
-      .apr3-nav-links{display:none !important;}
-      .apr3-form-row{grid-template-columns:1fr !important;}
-      .apr3-logo{height:32px !important;}
-    }
-    .apr3-form-row > div{min-width:0;}
-    .apr3-input{max-width:100%;box-sizing:border-box;font-size:16px !important;}
-    input.apr3-input,select.apr3-input{height:48px;-webkit-appearance:none;appearance:none;line-height:1.2;}
-    select.apr3-input{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316140F' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");background-repeat:no-repeat;background-position:right 14px center;background-size:16px;padding-right:38px !important;}
-    textarea.apr3-input{-webkit-appearance:none;appearance:none;}
-    @keyframes apr3In{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
-    .apr3-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);}
-    .apr3-reveal.is-visible{opacity:1;transform:translateY(0);}
-    @keyframes apr3Pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.35);}}
-    .apr3-pulse-dot{animation:apr3Pulse 1.8s ease-in-out infinite;}
-    @keyframes apr3PriceGlow{0%,100%{box-shadow:0 0 0 0 rgba(185,231,91,0.55);}50%{box-shadow:0 0 0 10px rgba(185,231,91,0);}}
-    .apr3-price-glow{animation:apr3PriceGlow 2.4s ease-in-out infinite;}
-    .apr3-btn-lift{transition:transform .22s ease, box-shadow .22s ease;}
-    .apr3-btn-lift:hover{transform:translate(-2px,-2px);}
-    .apr3-arrow{transition:transform .22s ease;display:inline-flex;}
-    .apr3-btn-lift:hover .apr3-arrow{transform:translateX(4px);}
-    .apr3-card-lift{transition:transform .25s ease, box-shadow .25s ease;}
-    .apr3-card-lift:hover{transform:translateY(-5px);}
-    @keyframes apr3MascotBob{0%,100%{transform:translateY(0) rotate(-2deg);}50%{transform:translateY(-10px) rotate(2deg);}}
-    .apr3-metal-text{background:linear-gradient(180deg, #fff 0%, #cfcfcf 40%, #7a7a7a 58%, #e8e8e8 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
-    .apr3-logo-wow{filter:drop-shadow(0 0 14px rgba(185,231,91,0.7));animation:apr3LogoPulse 3.2s ease-in-out infinite;}
-    @keyframes apr3LogoPulse{0%,100%{opacity:0.92;}50%{opacity:1;}}
-    .apr3-input{transition:border-color .2s ease, box-shadow .2s ease;}
-    .apr3-input:focus{outline:none;border-color:#B9E75B !important;box-shadow:0 0 0 4px rgba(185,231,91,0.22);}
-    .apr3-neon-panel{
-      background:linear-gradient(128deg, #6EA617 0%, #9EDB20 32%, #1c1a14 52%, #16140F 100%);
-      border-radius:4px 28px 4px 28px;overflow:hidden;border:3px solid #16140F;box-shadow:10px 10px 0 #FF48D3;
-      height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px;position:relative;
-    }
-    .apr3-neon-panel::before{
-      content:'';position:absolute;left:14%;bottom:22%;width:220px;height:220px;border-radius:50%;
-      background:radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 65%);
-      pointer-events:none;
-    }
-    .apr3-neon-panel::after{
-      content:'';position:absolute;left:20%;bottom:28%;width:16px;height:16px;
-      background:radial-gradient(circle, #fff 0%, rgba(255,255,255,0) 70%);
-      animation:apr3Sparkle 3s ease-in-out infinite;pointer-events:none;
-    }
-    @keyframes apr3Sparkle{0%,100%{opacity:0.3;transform:scale(0.8);}50%{opacity:1;transform:scale(1.3);}}
-    .apr3-tag-red{
-      position:absolute;top:20px;right:-30px;background:#FF48D3;color:#fff;font-weight:800;font-size:11.5px;
-      letter-spacing:0.05em;text-transform:uppercase;padding:8px 40px;transform:rotate(6deg);
-      box-shadow:0 4px 10px rgba(0,0,0,0.25);z-index:2;
-    }
-    .apr3-neon-text{
-      font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;
-      font-size:clamp(19px,2.3vw,26px);line-height:1.35;letter-spacing:0.01em;text-transform:uppercase;
-    }
-    .apr3-neon-text span{
-      color:#B9E75B;
-      text-shadow:0 0 6px rgba(185,231,91,0.95), 0 0 16px rgba(185,231,91,0.75), 0 0 34px rgba(185,231,91,0.55), 0 0 64px rgba(185,231,91,0.3);
-      animation:apr3NeonFlickerText 4.2s ease-in-out infinite;
-      display:inline-block;
-    }
-    @keyframes apr3NeonFlickerText{
-      0%,18%,20%,22%,55%,57%,100%{opacity:1;}
-      19%,21%,56%{opacity:0.4;}
-    }
-    .apr3-neon-icons{display:flex;gap:30px;margin-top:38px;align-items:flex-end;}
-    .apr3-neon-icon{height:56px;width:auto;animation:apr3Float 3.4s ease-in-out infinite;}
-    .apr3-neon-icon.icon-luce{filter:drop-shadow(0 0 10px rgba(255,193,50,0.75));animation-delay:0s;}
-    .apr3-neon-icon.icon-gas{filter:drop-shadow(0 0 10px rgba(79,166,224,0.75));animation-delay:0.4s;height:60px;}
-    .apr3-neon-icon.icon-eco{filter:drop-shadow(0 0 10px rgba(185,231,91,0.75));animation-delay:0.8s;}
-    .apr3-cd-box{background:#16140F;color:#fff;border-radius:12px;padding:10px 4px;width:60px;text-align:center;flex-shrink:0;}
-    .apr3-cd-num{font-weight:800;font-size:22px;line-height:1;color:#B9E75B;}
-    .apr3-cd-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#B9B2A5;margin-top:3px;}
-    .apr3-btn-lift{position:relative;overflow:hidden;}
-    .apr3-btn-lift::after{content:'';position:absolute;top:0;left:0;width:35%;height:100%;background:linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.65) 50%, rgba(255,255,255,0) 100%);transform:skewX(-20deg) translateX(-300%);animation:apr3Shine2 3.4s ease-in-out infinite;pointer-events:none;will-change:transform;}
-    @keyframes apr3Shine2{0%{transform:skewX(-20deg) translateX(-300%);}45%{transform:skewX(-20deg) translateX(600%);}100%{transform:skewX(-20deg) translateX(600%);}}
-    #apr3-sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#16140F;color:#fff;padding:13px 22px;display:flex;align-items:center;justify-content:center;gap:18px;transform:translateY(120%);transition:transform .45s cubic-bezier(.22,.61,.36,1);box-shadow:0 -8px 24px rgba(0,0,0,0.28);font-family:'Montserrat',sans-serif;}
-    #apr3-sticky-cta.is-shown{transform:translateY(0);}
-    #apr3-sticky-cta .apr3-sticky-msg{font-weight:700;font-size:13.5px;}
-    #apr3-sticky-close{background:none;border:none;color:#B9B2A5;font-size:20px;cursor:pointer;line-height:1;padding:2px 6px;}
-    @media (max-width:700px){
-      #apr3-sticky-cta{flex-direction:column;padding:14px 44px 14px 16px;}
-      #apr3-sticky-cta .apr3-sticky-msg{font-size:12px;text-align:center;}
-      #apr3-sticky-close{position:absolute;top:8px;right:10px;}
-    }
-    @media (max-width:480px){
-      .apr3-services-row{grid-template-columns:1fr !important;}
-      .apr3-cd-box{width:22vw !important;max-width:64px;padding:8px 2px !important;}
-      .apr3-cd-num{font-size:19px !important;}
-      #apr3-countdown{gap:7px !important;}
-      .apr3-neon-panel{height:auto !important;min-height:360px;padding:30px 22px !important;}
-      .apr3-tag-red{font-size:9.5px !important;padding:6px 16px !important;}
-      .apr3-tag-topright{right:-6px !important;}
-      .apr3-tag-bottomleft{left:-6px !important;}
-      .apr3-container{padding-left:18px !important;padding-right:18px !important;}
-      .apr3-card-pad{padding:26px 20px !important;}
-      .apr3-buoni-imgwrap{flex-direction:column !important;gap:18px !important;min-height:auto !important;padding:8px 0 4px;}
-      .apr3-buoni-mascot{position:static !important;height:130px !important;margin:0 auto !important;left:auto !important;bottom:auto !important;}
-      .apr3-buoni-badge{width:150px !important;height:150px !important;margin:0 auto !important;}
-      .apr3-nav-cta{font-size:11px !important;padding:9px 14px !important;}
-    }
-    @keyframes apr3Float{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-5px) rotate(-3deg);}}
-    .apr3-svc-icon{display:inline-flex;animation:apr3Float 3s ease-in-out infinite;transition:transform .25s ease;}
-    .apr3-svc-card{transition:transform .25s ease;}
-    .apr3-svc-card:hover{transform:translateY(-4px);}
-    .apr3-svc-card:hover .apr3-svc-icon{transform:scale(1.15) rotate(6deg);animation-play-state:paused;}
-    .apr3-badge-spin{animation:apr3Spin 18s linear infinite;}
-    @keyframes apr3Spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
-    @keyframes apr3Shine{from{background-position:-200% 0;}to{background-position:200% 0;}}
-    .apr3-shine{
-      background:linear-gradient(90deg, #B9E75B 0%, #B9E75B 25%, rgba(185,231,91,0.55) 45%, #B9E75B 65%, #B9E75B 100%);
-      background-size:250% 100%;
-      -webkit-background-clip:text;background-clip:text;color:transparent;
-      animation:apr3Shine 5s ease-in-out infinite;
-      display:inline-block;
-    }
+:root{
+  --ink:#0e100c;
+  --black:#11140f;
+  --cream:#fffdf7;
+  --lime:#a9e719;
+  --lime2:#c7f531;
+  --pink:#ff20b8;
+  --muted:#55584e;
+  --line:#d7dbc8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--cream)}
+body{font-family:'Montserrat',sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:min(1500px,calc(100% - 64px));margin:auto}
+.script{font-family:'Caveat',cursive}
+
+.page-bg{position:relative;isolation:isolate;padding:28px 0 72px;background:
+ radial-gradient(ellipse 900px 420px at 72% 5%,rgba(169,231,25,.12),transparent 68%),
+ radial-gradient(ellipse 700px 500px at 98% 40%,rgba(169,231,25,.10),transparent 72%),
+ linear-gradient(180deg,#fff 0%,#fffdf7 60%,#fffaf2 100%)}
+.page-bg:before,.page-bg:after{content:"";position:absolute;z-index:-1;border-radius:50%;border:2px solid rgba(169,231,25,.45);pointer-events:none}
+.page-bg:before{width:760px;height:760px;right:-360px;top:180px}
+.page-bg:after{width:980px;height:980px;left:40%;top:540px;border-color:rgba(169,231,25,.18)}
+
+/* shared */
+.pill{display:inline-flex;align-items:center;gap:10px;background:#070807;color:#fff;border-radius:999px;padding:10px 18px;font-size:14px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+.pill i{width:10px;height:10px;border-radius:50%;background:var(--lime);display:block;box-shadow:0 0 10px var(--lime)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;text-decoration:none;font-weight:900;border-radius:999px;padding:17px 30px;border:0;cursor:pointer;transition:.2s ease;font-size:16px}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:#080a08;color:#fff;box-shadow:0 7px 0 var(--pink),0 14px 28px rgba(0,0,0,.12)}
+.btn-lime{background:linear-gradient(90deg,var(--lime2),#b9ee31);color:#080a08;box-shadow:0 6px 0 var(--pink)}
+.arrow{font-size:24px;line-height:1}
+.section{margin-top:28px}
+.dark-card{background:linear-gradient(135deg,#11150f,#0b0d0b 65%,#172011);border:2px solid #0b0d0b;border-radius:26px;box-shadow:10px 10px 0 var(--pink);color:#fff;overflow:hidden;position:relative}
+
+/* hero */
+.hero{display:grid;grid-template-columns:.95fr 1.25fr;gap:70px;align-items:center;min-height:720px;padding:8px 0 20px}
+.hero-title{font-size:clamp(68px,8.2vw,126px);line-height:.82;letter-spacing:-.055em;font-weight:900;text-transform:uppercase;margin-top:28px}
+.hero-title .green{display:block;color:#93d42a;margin-top:10px}
+.hero-script{font-size:clamp(42px,4.4vw,68px);line-height:1;color:var(--pink);margin:22px 0 14px;display:inline-block;transform:rotate(-3deg);position:relative}
+.hero-script:after{content:"";position:absolute;height:5px;border-radius:50%;left:7%;right:-2%;bottom:-8px;background:var(--pink);transform:rotate(-2deg)}
+.hero-copy{font-size:20px;line-height:1.55;font-weight:600;max-width:650px;color:#333830;margin-top:30px}
+.hero-copy b{font-weight:900}
+.info-row{display:flex;gap:18px;flex-wrap:wrap;margin-top:28px}.info-card{display:flex;align-items:center;gap:15px;border:1.5px solid #d5dfb9;background:#fff;border-radius:17px;padding:14px 20px;min-width:286px;box-shadow:0 10px 25px rgba(109,154,32,.12)}
+.info-card.pink{border-color:#f8d9ef;box-shadow:0 10px 25px rgba(255,32,184,.12)}
+.info-ico{width:50px;height:50px;border-radius:50%;background:var(--lime);display:grid;place-items:center;flex:none}.info-card.pink .info-ico{background:var(--pink);color:#fff}.info-card strong{font-size:19px;display:block}.info-card small{font-size:13px;font-weight:600;text-decoration:none}
+.count-label{margin-top:32px;font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.22em}.countdown{display:flex;gap:12px;margin-top:12px}.cd{width:86px;padding:13px 4px 11px;background:#080a08;color:#fff;text-align:center;border-radius:14px;box-shadow:inset 0 0 0 1px #2a2d29}.cd b{font-size:30px;line-height:1;color:var(--lime)}.cd span{display:block;margin-top:6px;font-size:11px;text-transform:uppercase;font-weight:800;letter-spacing:.05em}
+.hero-cta{margin-top:32px;display:flex;align-items:center;gap:28px}.share-note{font-family:'Caveat',cursive;font-size:28px;line-height:.9;transform:rotate(-5deg);position:relative}.share-note:after{content:"";position:absolute;width:76px;height:34px;border-bottom:3px solid var(--lime);border-radius:50%;right:90%;top:24px;transform:rotate(-12deg)}
+
+.hero-board{padding:58px 55px 48px;min-height:610px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:
+ radial-gradient(circle at 75% 100%,rgba(119,188,26,.32),transparent 34%),linear-gradient(145deg,#173018 0%,#0b0e0c 48%,#111911 100%)}
+.hero-board:before{content:"";position:absolute;inset:auto -8% -35% 25%;height:80%;background:radial-gradient(ellipse,rgba(147,212,42,.26),transparent 68%);transform:rotate(-12deg)}
+.ribbon{position:absolute;right:-8px;top:20px;background:var(--pink);font-size:24px;font-weight:900;padding:12px 36px;transform:rotate(6deg);box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.ribbon.bottom{top:auto;right:auto;left:-12px;bottom:24px;transform:rotate(-6deg);font-size:18px;padding:12px 22px}
+.brand-lockup{display:flex;align-items:flex-start;justify-content:center;gap:12px;margin-bottom:18px}.mark-a{width:54px;height:58px;position:relative;transform:skew(-14deg);margin-top:4px}.mark-a:before,.mark-a:after{content:"";position:absolute;bottom:0;width:14px;height:54px;background:linear-gradient(180deg,#c9fa34,#72ab1b);border-radius:3px}.mark-a:before{left:9px;transform:rotate(18deg)}.mark-a:after{right:10px;transform:rotate(-18deg)}
+.brand-acton{font-size:56px;line-height:.9;font-weight:900;letter-spacing:-.05em}.brand-acton .outline{font-weight:500;color:transparent;-webkit-text-stroke:1px #fff}.brand-point{font-size:30px;font-weight:900;letter-spacing:.03em;margin-top:4px}.board-copy{font-size:25px;font-weight:900;line-height:1.15;text-transform:uppercase;margin-top:8px}.board-copy span{color:var(--lime)}
+.services-icons{display:grid;grid-template-columns:repeat(5,1fr);gap:28px;width:100%;margin-top:48px;position:relative;z-index:2}.svc{text-align:center}.svc .circle{width:72px;height:72px;border-radius:50%;margin:0 auto 13px;border:2px solid currentColor;display:grid;place-items:center;box-shadow:0 0 20px currentColor}.svc svg{width:38px;height:38px}.svc strong{display:block;font-size:14px;text-transform:uppercase;margin-bottom:8px}.svc small{display:block;font-size:12px;line-height:1.3;color:#f5f5ed}.svc.luce{color:#ffad00}.svc.gas{color:#16a9f5}.svc.fv{color:#9ce327}.svc.fibra{color:#c64cff}.svc.card{color:#ff9f00}
+.board-script{position:absolute;right:55px;bottom:22px;font-size:29px;line-height:.88;text-align:right;transform:rotate(-5deg)}.board-script:after{content:"";display:block;width:130px;border-bottom:4px solid var(--lime);margin:9px 0 0 auto;transform:rotate(-5deg)}
+
+/* contest */
+.contest{padding:42px 44px;display:grid;grid-template-columns:.9fr 1.55fr;gap:42px;align-items:center}
+.contest h2{font-size:36px;text-transform:uppercase;line-height:1}.contest h2 .big{font-size:68px;display:block;color:var(--lime);text-transform:none;text-shadow:0 0 20px rgba(169,231,25,.45)}
+.date-ribbon{display:inline-block;margin:17px 0 20px;background:var(--pink);padding:9px 20px;transform:skew(-9deg);font-size:16px;font-weight:900;text-transform:uppercase}.contest p{font-size:17px;line-height:1.5;color:#f1f0e8;max-width:580px}.contest .sub-link{display:inline-flex;align-items:center;gap:10px;color:var(--lime);font-weight:800;text-decoration:none;margin-top:22px}.contest-left .btn{margin-top:28px}.contest-script{font-size:32px;line-height:.9;text-align:center;margin:22px 0 0 55%;transform:rotate(-7deg);display:inline-block}.contest-script:after{content:"";display:block;border-bottom:4px solid var(--pink);width:120px;margin:5px auto 0}
+.prize-title{font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:13px}.prizes{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.prize{border:1px solid #595d55;border-radius:17px;padding:18px 16px;background:linear-gradient(145deg,#252923,#121512);min-height:220px}.prize .rank{color:var(--lime);font-size:14px;font-weight:900}.prize-ico{height:75px;display:grid;place-items:center;color:var(--lime)}.prize-ico svg{width:62px;height:62px}.prize h3{font-size:18px;line-height:1.1}.prize p{font-size:13px;color:#fff;margin-top:7px}.friend{margin-top:15px;background:linear-gradient(90deg,#ff34c0,#ff48c8);border:1.5px solid #fff;border-radius:16px;padding:18px 20px;display:flex;gap:17px;align-items:center}.friend .ficon{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;flex:none}.friend p{font-size:13px;line-height:1.45}
+
+/* buoni */
+.gifts{display:grid;grid-template-columns:.92fr 1.2fr;gap:28px;align-items:center;padding:34px 44px;background:linear-gradient(105deg,#11150f 0%,#18220f 42%,#90cd25 72%,#bdf22e 100%)}
+.gifts h2{font-size:62px;line-height:.9;margin-bottom:18px}.gifts h2 span{color:var(--lime);text-shadow:0 0 16px rgba(169,231,25,.35)}.gifts p{font-size:16px;line-height:1.5;color:#fff}.gift-values{display:flex;gap:16px;margin-top:20px}.value-box{border:2px solid var(--lime);border-radius:17px;padding:12px 24px;min-width:220px;background:rgba(0,0,0,.12)}.value-box b{font-size:35px;color:var(--lime)}.value-box span{font-size:14px;display:block}.gifts .btn{margin-top:24px}.gift-note{font-size:10px!important;color:#e0e4d4!important;margin-top:14px!important;max-width:620px}
+.gift-visual{position:relative;min-height:300px}.mascot{position:absolute;height:300px;left:2%;bottom:-18px;filter:drop-shadow(0 15px 15px rgba(0,0,0,.35));animation:bob 3s ease-in-out infinite;z-index:2}@keyframes bob{50%{transform:translateY(-8px) rotate(1deg)}}
+.giftcard{position:absolute;right:3%;top:25px;width:360px;height:190px;background:linear-gradient(135deg,#151915,#060706);border-radius:20px;transform:rotate(9deg);box-shadow:0 20px 26px rgba(0,0,0,.35);padding:30px;color:#fff;z-index:3}.giftcard:before{content:"";position:absolute;inset:0;border-radius:20px;background:radial-gradient(circle at 95% 15%,rgba(169,231,25,.16),transparent 30%);pointer-events:none}.gift-brand{font-size:38px;font-weight:900;letter-spacing:-.04em}.gift-brand span{color:var(--lime)}.gift-title{font-size:21px;font-weight:900;margin-top:30px;text-align:right}.gift-icon{position:absolute;right:24px;top:24px;width:46px;height:46px;color:var(--lime)}.gift-ribbon{position:absolute;right:-12px;top:-12px;background:var(--pink);color:#fff;padding:10px 26px;font-weight:900;transform:rotate(6deg);z-index:5}.energy-note{position:absolute;right:2%;bottom:5px;font-size:30px;line-height:.86;transform:rotate(-7deg);z-index:4;color:#111}.energy-note:after{content:"";display:block;width:120px;border-bottom:5px solid var(--pink);margin:8px auto 0}
+
+/* contact */
+.contact{display:grid;grid-template-columns:.85fr 1.2fr;gap:60px;align-items:center;border:2px solid #1f241e;border-radius:25px;padding:42px 48px;background:rgba(255,255,255,.82);box-shadow:8px 8px 0 var(--pink);position:relative;overflow:hidden}.contact:before,.contact:after{content:"";position:absolute;border-radius:50%;border:22px solid rgba(169,231,25,.18);width:260px;height:260px}.contact:before{left:-150px;bottom:-150px}.contact:after{right:-170px;top:-140px}.contact h2{font-size:46px;line-height:.95}.contact h2 span{display:block;color:var(--pink);font-size:34px;margin-top:8px}.contact p{font-size:16px;line-height:1.55;margin-top:25px;max-width:540px}.location{display:flex;align-items:center;gap:14px;margin-top:28px;font-weight:800}.loc-icon{width:44px;height:44px;border:2px solid #111;border-radius:50%;background:var(--lime);display:grid;place-items:center}.contact-script{font-size:33px;line-height:.9;margin:20px 0 0 55%;transform:rotate(-7deg);display:inline-block}.contact-script:after{content:"";display:block;border-bottom:4px solid var(--lime);width:110px;margin-top:4px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;position:relative;z-index:2}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:800;display:block;margin-bottom:5px}.input{width:100%;height:43px;border:1.5px solid #6f746b;border-radius:7px;padding:9px 13px;font:600 14px Montserrat;background:#fff}.field textarea.input{height:80px;resize:vertical}.form-actions{grid-column:1/-1;display:flex;align-items:center;gap:20px}.form-actions .btn{padding:13px 26px;font-size:14px;box-shadow:5px 5px 0 var(--pink)}.privacy{font-size:11px;color:#555;font-weight:600}.privacy:before{content:"✓";color:var(--lime);font-weight:900;font-size:17px;margin-right:8px}
+.feedback{grid-column:1/-1;display:none;padding:12px 15px;border-radius:9px;font-weight:700;font-size:13px}
+
+/* top/bottom navigation */
+.mini-nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.07)}.mini-nav .inner{height:66px;display:flex;align-items:center;justify-content:space-between}.mini-brand{font-weight:900;display:flex;align-items:center;gap:10px}.mini-brand b{font-size:21px}.mini-links{display:flex;gap:24px;font-size:13px;font-weight:800}.mini-links a{text-decoration:none}.mini-cta{padding:10px 17px;background:#111;color:#fff;border-radius:999px;text-decoration:none;font-size:12px;font-weight:900}
+footer{margin-top:42px;padding:26px 0 22px;background:#0e110d;color:#fff;border-top:5px solid var(--lime)}.footer-inner{display:flex;justify-content:space-between;gap:25px;align-items:center;flex-wrap:wrap}.footer-inner b{color:var(--lime)}.footer-inner small{color:#c9cdbf}
+
+@media(max-width:1100px){.hero{grid-template-columns:1fr;min-height:auto}.hero-board{min-height:560px}.contest,.gifts,.contact{grid-template-columns:1fr}.gift-visual{min-height:330px}.services-icons{gap:14px}.svc .circle{width:58px;height:58px}.svc strong{font-size:12px}.svc small{font-size:10px}}
+@media(max-width:700px){.wrap{width:min(100% - 30px,1500px)}.mini-links{display:none}.page-bg{padding-top:14px}.hero{gap:28px}.hero-title{font-size:58px}.hero-script{font-size:39px}.hero-copy{font-size:16px}.info-card{min-width:100%}.cd{width:23%}.hero-board{padding:54px 18px 70px;min-height:650px}.brand-acton{font-size:42px}.brand-point{font-size:24px}.services-icons{grid-template-columns:repeat(2,1fr)}.svc.card{grid-column:1/-1}.board-script{right:22px}.contest{padding:30px 20px}.contest h2 .big{font-size:54px}.prizes{grid-template-columns:1fr}.gifts{padding:32px 20px}.gifts h2{font-size:48px}.gift-values{flex-direction:column}.value-box{min-width:0}.gift-visual{min-height:420px}.mascot{height:210px;left:0}.giftcard{width:280px;height:150px;right:-5%;top:28px}.gift-brand{font-size:28px}.gift-title{font-size:16px;margin-top:24px}.energy-note{font-size:25px}.contact{padding:32px 20px;gap:26px}.contact h2{font-size:38px}.contact h2 span{font-size:27px}.form{grid-template-columns:1fr}.field.full,.form-actions{grid-column:auto}.form-actions{flex-direction:column;align-items:flex-start}.hero-cta{align-items:flex-start;flex-direction:column}.share-note{margin-left:50px}}
 </style>
 </head>
 <body>
-<div style="background:
-    radial-gradient(ellipse 900px 600px at 8% 0%, rgba(185,231,91,0.16) 0%, rgba(185,231,91,0) 60%),
-    radial-gradient(ellipse 1000px 800px at 100% 55%, rgba(139,90,46,0.11) 0%, rgba(139,90,46,0) 55%),
-    radial-gradient(ellipse 1000px 700px at 0% 100%, rgba(185,231,91,0.14) 0%, rgba(185,231,91,0) 55%),
-    linear-gradient(180deg, #FFFFFF 0%, #FBF6EF 35%, #F3ECDD 70%, #EFE6D2 100%);
-    color:#16140F;font-family:&#39;Montserrat&#39;,sans-serif;overflow-x:hidden;">
-
-  <nav style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.98);border-bottom:3px solid #16140F;">
-    <div class="apr3-container" style="display:flex;align-items:center;justify-content:space-between;padding:8px 32px;max-width:1240px;margin:0 auto;">
-      <img src="assets/img/acton-logo-v2.png" alt="Acton Point" class="apr3-logo" style="height:46px;width:auto;display:block;">
-      <div style="display:flex;gap:26px;align-items:center;" class="apr3-nav-links">
-        <a href="#servizi" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Servizi</a>
-        <a href="#concorso" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Concorso</a>
-        <a href="#buoni" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Buoni</a>
-        <a href="#contatti" style="color:#16140F;text-decoration:none;font-size:13px;font-weight:700;">Contatti</a>
-      </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" class="apr3-btn-lift apr3-nav-cta" style="font-weight:800;font-size:13px;border-radius:999px;padding:12px 24px;border:3px solid #16140F;background:#B9E75B;color:#16140F;text-decoration:none;box-shadow:4px 4px 0 #16140F;">Vieni a trovarci</a>
-    </div>
-  </nav>
-
-  <section style="padding:58px 0 90px;">
-    <div style="max-width:1240px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;" class="apr3-hero-grid apr3-container">
+<nav class="mini-nav">
+  <div class="wrap inner">
+    <div class="mini-brand"><b>ACTON POINT</b><span style="color:var(--lime)">RIMINI</span></div>
+    <div class="mini-links"><a href="#servizi">Servizi</a><a href="#concorso">Concorso</a><a href="#buoni">Buoni regalo</a><a href="#contatti">Contatti</a></div>
+    <a class="mini-cta" href="#contatti">Prendi appuntamento</a>
+  </div>
+</nav>
+<div class="page-bg">
+  <main class="wrap">
+    <section class="hero" id="servizi">
       <div>
-        <div style="display:inline-flex;align-items:center;gap:8px;background:#16140F;color:#fff;font-weight:700;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:7px 14px;border-radius:999px;">
-          <span class="apr3-pulse-dot" style="width:7px;height:7px;border-radius:50%;background:#B9E75B;display:inline-block;"></span>
-          Multiutility al tuo servizio
+        <div class="pill"><i></i> Multiutility al tuo servizio</div>
+        <h1 class="hero-title">NUOVA<span class="green">APERTURA</span></h1>
+        <div class="hero-script script">più vicina a te!</div>
+        <p class="hero-copy">Ti aspettiamo nel nuovo Acton Point per scoprire tutti i servizi Luce, Gas, Fotovoltaico, Fibra e Carta Carburante, <b>in un unico punto.</b></p>
+        <div class="info-row">
+          <div class="info-card"><div class="info-ico">
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M7 2v4M17 2v4M3 9h18"/></svg>
+          </div><div><strong>19 SETTEMBRE</strong><small><a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank">Viale Tripoli 215, Rimini</a></small></div></div>
+          <div class="info-card pink"><div class="info-ico"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg></div><div><strong>ORE 12:00</strong><small>Inaugurazione</small></div></div>
         </div>
-        <h1 style="line-height:0.87;margin-top:16px;">
-          <span style="font-weight:800;font-size:clamp(52px,7.2vw,92px);color:#16140F;display:block;letter-spacing:-0.01em;">NUOVA</span>
-          <span class="apr3-shine" style="font-weight:800;font-size:clamp(52px,7.2vw,92px);letter-spacing:-0.01em;">APERTURA</span>
-        </h1>
-        <div class="apr3-script" style="font-weight:700;font-size:clamp(30px,3.6vw,42px);color:#FF48D3;margin-top:4px;transform:rotate(-2deg);transform-origin:left center;display:inline-block;">più vicina a te!</div>
-
-        <p style="margin:20px 0 0;font-size:16px;line-height:1.65;color:#4A453D;max-width:460px;">Ti aspettiamo nel nuovo Acton Point per scoprire tutti i servizi Luce, Gas, Fotovoltaico, Fibra e Carta Carburante, in un unico punto.</p>
-
-        <div style="display:flex;gap:14px;margin-top:28px;flex-wrap:wrap;">
-          <div style="display:flex;align-items:center;gap:12px;background:#FBF6EF;border:2px solid #16140F;border-radius:14px;padding:12px 16px;">
-            <div style="width:46px;height:46px;border-radius:50%;background:#B9E75B;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-            </div>
-            <div>
-              <div style="font-weight:800;font-size:15px;color:#16140F;">19 SETTEMBRE</div>
-              <div style="font-size:11.5px;color:#6C6459;font-weight:600;"><a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Viale Tripoli 215, Rimini</a></div>
-            </div>
-          </div>
-          <div style="display:flex;align-items:center;gap:12px;background:#16140F;border:2px solid #16140F;border-radius:14px;padding:12px 16px;">
-            <div style="width:46px;height:46px;border-radius:50%;background:#FF48D3;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 16 14"></polyline></svg>
-            </div>
-            <div>
-              <div style="font-weight:800;font-size:15px;color:#fff;">ORE 12:00</div>
-              <div style="font-size:11.5px;color:#B9B2A5;font-weight:600;">Inaugurazione</div>
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-top:26px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#FF48D3;margin-bottom:9px;">Mancano solo</div>
-          <div id="apr3-countdown" style="display:flex;gap:10px;flex-wrap:wrap;"></div>
-        </div>
-
-        <a href="#concorso" class="apr3-btn-lift" style="display:inline-flex;align-items:center;gap:9px;margin-top:30px;font-weight:800;font-size:15px;border-radius:999px;padding:15px 30px;background:#16140F;color:#fff;text-decoration:none;box-shadow:5px 5px 0 #FF48D3;">
-          Scopri il concorso
-          <span class="apr3-arrow"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-        </a>
+        <div class="count-label">Mancano solo</div>
+        <div class="countdown" id="countdown"></div>
+        <div class="hero-cta"><a class="btn btn-dark" href="#concorso">Scopri il concorso <span class="arrow">→</span></a><div class="share-note">Condividere<br>può premiarti!</div></div>
       </div>
 
-      <div style="position:relative;">
-        <div class="apr3-neon-panel">
-          <div class="apr3-tag-red apr3-tag-topright">Novità</div>
-          <div class="apr3-tag-red apr3-tag-bottomleft" style="top:auto;right:auto;bottom:20px;left:-30px;transform:rotate(-6deg);">19 Settembre · Rimini</div>
-          <img src="assets/img/acton-logo-white.png" alt="Acton Point" class="apr3-logo-wow" style="height:76px;width:auto;margin-bottom:18px;">
-          <div class="apr3-neon-text" style="font-size:clamp(32px,4vw,46px);text-transform:none;letter-spacing:0;">Sèm <span>pront!</span></div>
-          <div class="apr3-neon-icons">
-            <img src="assets/img/icon-luce.png" alt="Luce" class="apr3-neon-icon icon-luce">
-            <img src="assets/img/icon-gas.png" alt="Gas" class="apr3-neon-icon icon-gas">
-            <img src="assets/img/icon-eco.png" alt="Green energy" class="apr3-neon-icon icon-eco">
-          </div>
+      <div class="dark-card hero-board">
+        <div class="ribbon">NOVITÀ</div>
+        <div class="ribbon bottom">19 SETTEMBRE · RIMINI</div>
+        <div class="brand-lockup"><div class="mark-a"></div><div><div class="brand-acton">ACT<span class="outline">ON</span></div><div class="brand-point">POINT</div></div></div>
+        <div class="board-copy">TUTTI I TUOI SERVIZI,<br><span>IN UN UNICO PUNTO</span></div>
+        <div class="services-icons">
+          <div class="svc luce"><div class="circle"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M28 4 11 27h12l-3 17 17-24H25z"/></svg></div><strong>Luce</strong><small>Energia<br>per ogni giorno</small></div>
+          <div class="svc gas"><div class="circle"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M25 5c2 10-11 13-11 26a11 11 0 0 0 22 0c0-8-5-14-11-26Z"/><path d="M26 20c1 5-5 7-5 13a5 5 0 0 0 10 0c0-4-2-8-5-13Z"/></svg></div><strong>Gas</strong><small>Soluzioni<br>per la tua casa</small></div>
+          <div class="svc fv"><div class="circle"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="22" r="8"/><path d="M24 4v6M24 34v6M6 22h6M36 22h6M11 9l4 4M33 31l4 4M37 9l-4 4M15 31l-4 4M19 42h10"/></svg></div><strong>Fotovoltaico</strong><small>Un futuro<br>più sostenibile</small></div>
+          <div class="svc fibra"><div class="circle"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M7 20c10-9 24-9 34 0M13 27c7-6 15-6 22 0M19 34c4-3 6-3 10 0"/><circle cx="24" cy="40" r="2" fill="currentColor"/></svg></div><strong>Fibra</strong><small>Connessioni<br>senza limiti</small></div>
+          <div class="svc card"><div class="circle"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><rect x="9" y="7" width="21" height="34" rx="2"/><rect x="13" y="11" width="13" height="10"/><path d="M30 17h6l4 4v15a3 3 0 0 1-6 0V24"/></svg></div><strong>Carta<br>carburante</strong><small>Più vantaggi<br>per i tuoi spostamenti</small></div>
         </div>
+        <div class="board-script script">Soluzioni di oggi<br>per un domani più sostenibile.</div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section style="padding:0 0 90px;" id="servizi">
-    <div class="apr3-container" style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div style="text-align:center;margin-bottom:34px;">
-        <div class="apr3-reveal" style="font-weight:800;font-size:clamp(21px,2.4vw,26px);color:#16140F;">Tutta l'energia di cui hai bisogno, <span class="apr3-btn-lift" style="background:#B9E75B;padding:0 6px;border-radius:4px;">in un solo punto.</span></div>
+    <section class="section dark-card contest" id="concorso">
+      <div class="contest-left">
+        <h2>IL GRANDE <span class="big">Concorso</span></h2>
+        <div class="date-ribbon">Dal 19 settembre al 19 ottobre 2026</div>
+        <p>Vieni a trovarci al nuovo Acton Point di Rimini e partecipa all'estrazione: in palio tre fantastici premi, in aggiunta ai buoni regalo già garantiti su ogni contratto.</p>
+        <a class="sub-link" href="#buoni">Scopri anche i buoni regalo →</a><br>
+        <a class="btn btn-lime" href="concorso.html">Scopri tutti i dettagli del concorso <span class="arrow">→</span></a>
+        <div class="contest-script script">Condividere<br>può premiarti!</div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;" class="apr3-services-row">
-        <div class="apr3-svc-card apr3-reveal apr3-card-lift" style="border:2.5px solid #16140F;border-radius:18px;padding:24px 20px;background:#FBF6EF;box-shadow:6px 6px 0 #16140F;">
-          <div class="apr3-svc-icon" style="animation-delay:0s;margin-bottom:12px;display:flex;gap:6px;align-items:flex-end;">
-            <img src="assets/img/icon-luce.png" alt="Luce" style="height:42px;width:auto;filter:drop-shadow(0 0 6px rgba(255,193,50,0.5));">
-            <img src="assets/img/icon-gas.png" alt="Gas" style="height:46px;width:auto;filter:drop-shadow(0 0 6px rgba(79,166,224,0.5));">
-          </div>
-          <h3 style="font-weight:800;font-size:15.5px;color:#16140F;">Luce e gas</h3>
-          <p style="margin-top:6px;font-size:13px;color:#6C6459;line-height:1.5;">Offerte chiare, energia trasparente.</p>
+      <div>
+        <div class="prize-title">Puoi vincere</div>
+        <div class="prizes">
+          <article class="prize"><div class="rank">1° PREMIO</div><div class="prize-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><circle cx="32" cy="20" r="9"/><path d="M32 3v7M13 8l5 5M51 8l-5 5M7 25h8M49 25h8M7 43c7 5 15 5 25 0 10 5 18 5 25 0M7 52c7 5 15 5 25 0 10 5 18 5 25 0"/></svg></div><h3>Soggiorno per 2</h3><p>Borgo Brufa Resort 5*.</p></article>
+          <article class="prize"><div class="rank">2° PREMIO</div><div class="prize-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M8 45h48M15 45c0-14 8-25 17-25s17 11 17 25M32 20v-7M27 13h10M11 52h42"/></svg></div><h3>Cena stellata per 2</h3><p>Ristorante Pippo,<br>1 Stella Michelin.</p></article>
+          <article class="prize"><div class="rank">3° PREMIO</div><div class="prize-ico"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M15 43V15h13v28M28 21h13v22M41 28h8v15M6 43c7 5 15 5 25 0 10 5 18 5 27 0M6 52c7 5 15 5 25 0 10 5 18 5 27 0"/></svg></div><h3>4 ingressi<br>Mirabilandia</h3><p>Divertimento assicurato<br>in famiglia.</p></article>
         </div>
-        <div class="apr3-svc-card apr3-reveal apr3-card-lift" style="border:2.5px solid #16140F;border-radius:18px;padding:24px 20px;background:#FBF6EF;box-shadow:6px 6px 0 #16140F;">
-          <div class="apr3-svc-icon" style="animation-delay:0.3s;margin-bottom:12px;">
-            <svg width="46" height="46" viewBox="0 0 48 48" fill="none">
-              <path d="M18 6l1.6 3.2M12 10l2.8 2.2M25 4.5l-.6 3.5" stroke="#4FA6E0" stroke-width="2.2" stroke-linecap="round"></path>
-              <g transform="rotate(-18 24 27)">
-                <rect x="8" y="15" width="32" height="22" rx="2" fill="#DCEFFB" stroke="#1F7ABF" stroke-width="2.4"></rect>
-                <line x1="8" y1="22" x2="40" y2="22" stroke="#1F7ABF" stroke-width="1.8"></line>
-                <line x1="8" y1="29" x2="40" y2="29" stroke="#1F7ABF" stroke-width="1.8"></line>
-                <line x1="18" y1="15" x2="18" y2="37" stroke="#1F7ABF" stroke-width="1.8"></line>
-                <line x1="29" y1="15" x2="29" y2="37" stroke="#1F7ABF" stroke-width="1.8"></line>
-              </g>
-            </svg>
-          </div>
-          <h3 style="font-weight:800;font-size:15.5px;color:#16140F;">Fotovoltaico</h3>
-          <p style="margin-top:6px;font-size:13px;color:#6C6459;line-height:1.5;">Soluzioni su misura per casa e azienda.</p>
-        </div>
-        <div class="apr3-svc-card apr3-reveal apr3-card-lift" style="border:2.5px solid #16140F;border-radius:18px;padding:24px 20px;background:#FBF6EF;box-shadow:6px 6px 0 #16140F;">
-          <div class="apr3-svc-icon" style="animation-delay:0.6s;margin-bottom:12px;">
-            <svg width="46" height="46" viewBox="0 0 48 48" fill="none">
-              <path d="M8 20a24 24 0 0 1 32 0" stroke="#DCEFFB" stroke-width="5" stroke-linecap="round"></path>
-              <path d="M8 20a24 24 0 0 1 32 0" stroke="#2C8FD6" stroke-width="2.6" stroke-linecap="round"></path>
-              <path d="M14 27a15 15 0 0 1 20 0" stroke="#DCEFFB" stroke-width="5" stroke-linecap="round"></path>
-              <path d="M14 27a15 15 0 0 1 20 0" stroke="#2C8FD6" stroke-width="2.6" stroke-linecap="round"></path>
-              <path d="M20 34a7 7 0 0 1 8 0" stroke="#2C8FD6" stroke-width="2.6" stroke-linecap="round"></path>
-              <circle cx="24" cy="40" r="2.6" fill="#2C8FD6"></circle>
-            </svg>
-          </div>
-          <h3 style="font-weight:800;font-size:15.5px;color:#16140F;">Fibra</h3>
-          <p style="margin-top:6px;font-size:13px;color:#6C6459;line-height:1.5;">Connessione veloce e stabile, sempre.</p>
-        </div>
-        <div class="apr3-svc-card apr3-reveal apr3-card-lift" style="border:2.5px solid #16140F;border-radius:18px;padding:24px 20px;background:#FBF6EF;box-shadow:6px 6px 0 #16140F;">
-          <div class="apr3-svc-icon" style="animation-delay:0.9s;margin-bottom:12px;">
-            <svg width="46" height="46" viewBox="0 0 48 48" fill="none">
-              <rect x="7" y="9" width="19" height="32" rx="2.5" fill="#FBE0DA" stroke="#D8492A" stroke-width="2.4"></rect>
-              <rect x="11" y="13" width="11" height="9" rx="1.2" fill="#fff" stroke="#D8492A" stroke-width="1.8"></rect>
-              <line x1="11" y1="30" x2="22" y2="30" stroke="#D8492A" stroke-width="1.8" stroke-linecap="round"></line>
-              <line x1="11" y1="35" x2="18" y2="35" stroke="#D8492A" stroke-width="1.8" stroke-linecap="round"></line>
-              <path d="M26 18h5.5a2.5 2.5 0 0 1 2.5 2.5v13a2.2 2.2 0 0 0 2.2 2.2v0a2.2 2.2 0 0 0 2.2-2.2v-13.7a1.4 1.4 0 0 0-.4-1L34.5 15.5" stroke="#D8492A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </div>
-          <h3 style="font-weight:800;font-size:15.5px;color:#16140F;">Carta carburante</h3>
-          <p style="margin-top:6px;font-size:13px;color:#6C6459;line-height:1.5;">La libertà di viaggiare, costi sotto controllo.</p>
-        </div>
+        <div class="friend"><div class="ficon"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="9" cy="8" r="4"/><path d="M2 21v-2a6 6 0 0 1 12 0v2M16 3a4 4 0 0 1 0 8M18 15a6 6 0 0 1 4 6"/></svg></div><p><b>Tagliandini “porta un amico”.</b> Per ogni contratto ricevi 5 tagliandini: ogni amico che arriva con il tuo tagliandino ti dà una possibilità in più di vincere.</p></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section style="padding:0 0 90px;" id="concorso">
-    <div class="apr3-container" style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div class="apr3-reveal apr3-card-pad" style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#16140F;box-shadow:10px 10px 0 #FF48D3;">
-        <div style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;" class="apr3-contest-grid">
-          <div>
-            <div style="font-weight:800;font-size:clamp(28px,3.2vw,38px);line-height:0.95;color:#fff;">IL <span style="color:#B9E75B;">GRANDE</span></div>
-            <div class="apr3-neon-text" style="font-size:clamp(40px,4.6vw,56px);text-transform:none;letter-spacing:0;text-align:left;line-height:0.95;"><span>Concorso</span></div>
-            <div style="font-size:11.5px;letter-spacing:0.08em;color:#B9E75B;font-weight:700;margin-top:14px;text-transform:uppercase;">Dal 19 settembre al 19 ottobre 2026</div>
-            <p style="font-size:13.5px;color:#B9B2A5;margin-top:12px;line-height:1.6;">Vieni a trovarci al nuovo Acton Point di Rimini e partecipa all'estrazione: in palio tre fantastici premi, in aggiunta ai buoni regalo già garantiti su ogni contratto.</p>
-
-            <a href="#buoni" style="display:inline-flex;align-items:center;gap:7px;margin-top:20px;font-size:12.5px;font-weight:700;color:#B9E75B;text-decoration:none;">
-              Scopri anche i buoni regalo
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B9E75B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-
-            <a href="concorso.html" class="apr3-btn-lift" style="display:inline-flex;align-items:center;gap:9px;margin-top:22px;font-weight:800;font-size:14px;border-radius:999px;padding:13px 26px;background:#B9E75B;color:#16140F;text-decoration:none;box-shadow:5px 5px 0 #FF48D3;">
-              Scopri tutti i dettagli del concorso
-              <span class="apr3-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-            </a>
-          </div>
-
-          <div>
-            <div style="font-weight:700;letter-spacing:0.12em;text-transform:uppercase;font-size:11.5px;color:#B9E75B;margin-bottom:14px;">Puoi vincere</div>
-            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;" class="apr3-prizes-row">
-              <div class="apr3-reveal apr3-card-lift" style="border-radius:16px;overflow:hidden;background:#fff;border:2px solid #16140F;">
-                <div style="height:110px;position:relative;background-image:url('assets/img/premio-borgobrufa.jpg');background-size:cover;background-position:center;">
-                </div>
-                <div style="padding:12px 14px 16px;">
-                  <div style="font-size:9.5px;letter-spacing:0.08em;color:#B9E75B;text-transform:uppercase;font-weight:700;">1° premio</div>
-                  <h3 style="font-weight:800;font-size:13.5px;margin-top:5px;color:#16140F;">Soggiorno per 2</h3>
-                  <p style="font-size:11px;color:#6C6459;margin-top:3px;">Borgo Brufa Resort 5*.</p>
-                </div>
-              </div>
-              <div class="apr3-reveal apr3-card-lift" style="border-radius:16px;overflow:hidden;background:#fff;border:2px solid #16140F;">
-                <div style="height:110px;position:relative;background-image:url('assets/img/premio-ristorante.jpg');background-size:cover;background-position:center;">
-                </div>
-                <div style="padding:12px 14px 16px;">
-                  <div style="font-size:9.5px;letter-spacing:0.08em;color:#B9E75B;text-transform:uppercase;font-weight:700;">2° premio</div>
-                  <h3 style="font-weight:800;font-size:13.5px;margin-top:5px;color:#16140F;">Cena stellata per 2</h3>
-                  <p style="font-size:11px;color:#6C6459;margin-top:3px;">Ristorante Pippo, 1 Stella Michelin.</p>
-                </div>
-              </div>
-              <div class="apr3-reveal apr3-card-lift" style="border-radius:16px;overflow:hidden;background:#fff;border:2px solid #16140F;">
-                <div style="height:110px;position:relative;background-image:url('assets/img/premio-mirabilandia.jpg');background-size:cover;background-position:center;">
-                </div>
-                <div style="padding:12px 14px 16px;">
-                  <div style="font-size:9.5px;letter-spacing:0.08em;color:#B9E75B;text-transform:uppercase;font-weight:700;">3° premio</div>
-                  <h3 style="font-weight:800;font-size:13.5px;margin-top:5px;color:#16140F;">4 ingressi Mirabilandia</h3>
-                  <p style="font-size:11px;color:#6C6459;margin-top:3px;">Divertimento assicurato in famiglia.</p>
-                </div>
-              </div>
-            </div>
-
-            <div style="margin-top:16px;background:#FF48D3;border:2px solid #fff;border-radius:16px;padding:18px 22px;display:flex;align-items:center;gap:16px;">
-              <div style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-              </div>
-              <p style="font-size:12.5px;line-height:1.55;color:#fff;"><b>Tagliandini "porta un amico".</b> Per ogni contratto ricevi 5 tagliandini: ogni amico che arriva con il tuo tagliandino ti dà una possibilità in più di vincere.</p>
-            </div>
-          </div>
-        </div>
+    <section class="section dark-card gifts" id="buoni">
+      <div>
+        <div class="pill" style="padding:7px 13px;font-size:11px;margin-bottom:15px"><i></i> Il tuo vantaggio</div>
+        <h2>Buoni <span>regalo</span></h2>
+        <p>Ad ogni contratto sottoscritto presso il nuovo Acton Point di Rimini, regaliamo subito dei buoni acquisto. Un vantaggio garantito, separato da qualsiasi estrazione.</p>
+        <div class="gift-values"><div class="value-box"><b>100€</b><span>contratto luce + gas</span></div><div class="value-box"><b>50€</b><span>contratto luce o gas</span></div></div>
+        <a class="btn btn-lime" href="#contatti">Scopri come richiederlo <span class="arrow">→</span></a>
+        <p class="gift-note">*Offerta valida dal 19 Settembre al 19 Ottobre 2026, solo presso l'Acton Point di Rimini, valida solo su contratti luce e/o gas. Dettagli su actonenergia.forini.com.</p>
       </div>
-    </div>
-  </section>
-
-  <section style="padding:0 0 90px;" id="buoni">
-    <div class="apr3-container" style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div class="apr3-reveal apr3-card-pad" style="position:relative;border:3px solid #16140F;border-radius:26px;padding:44px;overflow:hidden;background:linear-gradient(100deg, #16140F 0%, #1c1a14 32%, #9EDB20 70%, #6EA617 100%);box-shadow:10px 10px 0 #FF48D3;">
-        <div class="apr3-tag-red apr3-tag-topright" style="top:26px;right:-34px;">Fino a 100€</div>
-        <div style="position:absolute;left:52%;bottom:20%;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 65%);pointer-events:none;"></div>
-        <div style="position:absolute;left:58%;bottom:26%;width:14px;height:14px;background:radial-gradient(circle, #fff 0%, rgba(255,255,255,0) 70%);animation:apr3Sparkle 3s ease-in-out infinite;pointer-events:none;"></div>
-        <div style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;align-items:center;position:relative;" class="apr3-contest-grid">
-          <div>
-            <div class="apr3-neon-text" style="font-size:clamp(34px,4.2vw,48px);text-transform:none;letter-spacing:0;text-align:left;"><span>Buoni regalo</span></div>
-            <p style="font-size:13.5px;color:#D9D4C8;margin-top:14px;line-height:1.6;max-width:400px;">Ad ogni contratto sottoscritto presso il nuovo Acton Point di Rimini, regaliamo subito dei buoni acquisto. Un vantaggio garantito, separato da qualsiasi estrazione.</p>
-            <div style="display:flex;gap:26px;margin-top:22px;">
-              <div><b style="display:block;font-weight:800;font-size:30px;color:#fff;">100€</b><span style="font-size:12px;color:#B9B2A5;">contratto luce + gas</span></div>
-              <div><b style="display:block;font-weight:800;font-size:30px;color:#fff;">50€</b><span style="font-size:12px;color:#B9B2A5;">contratto luce o gas</span></div>
-            </div>
-            <a href="#contatti" class="apr3-btn-lift" style="display:inline-flex;align-items:center;gap:9px;margin-top:26px;font-weight:800;font-size:14px;border-radius:999px;padding:13px 26px;background:#B9E75B;color:#16140F;text-decoration:none;box-shadow:5px 5px 0 #fff;">
-              Scopri come richiederlo
-              <span class="apr3-arrow"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-            </a>
-            <p style="font-size:10px;color:#9C9184;margin-top:18px;line-height:1.5;">*Offerta valida dal 19 Settembre al 19 Ottobre 2026, solo presso l'Acton Point di Rimini, valida solo su contratti luce e/o gas. Dettagli su actonenergia.forini.com.</p>
-          </div>
-
-          <div class="apr3-buoni-imgwrap" style="display:flex;align-items:center;justify-content:center;position:relative;min-height:260px;">
-            <img src="assets/img/atto-saluta.png" alt="Atto la mascotte Acton" class="apr3-buoni-mascot" style="position:absolute;height:230px;width:auto;left:6%;bottom:-10px;z-index:1;animation:apr3MascotBob 2.8s ease-in-out infinite;animation-delay:0.3s;filter:drop-shadow(0 10px 14px rgba(0,0,0,0.4));">
-            <div style="width:210px;height:210px;position:relative;z-index:2;margin-left:auto;" class="apr3-badge-spin apr3-buoni-badge">
-              <svg viewBox="0 0 100 100" width="210" height="210" style="width:100%;height:auto;display:block;">
-                <defs><path id="apr3circle2" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"></path></defs>
-                <circle cx="50" cy="50" r="48" fill="#B9E75B" stroke="#fff" stroke-width="3"></circle>
-                <text font-family="Montserrat,sans-serif" font-weight="800" font-size="8" fill="#16140F" letter-spacing="1.1">
-                  <textpath href="#apr3circle2" startOffset="0%">FINO A 100€ DI BUONI  ·  ·  ·</textpath>
-                </text>
-              </svg>
-            </div>
-          </div>
-        </div>
+      <div class="gift-visual">
+        <img class="mascot" src="assets/img/atto-saluta.png" alt="Atto, mascotte Acton">
+        <div class="giftcard"><div class="gift-ribbon">FINO A 100 €</div><svg class="gift-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M7 18h34v24H7zM24 18v24M5 12h38v8H5z"/><path d="M24 12c-8 0-12-3-12-7 0-3 2-4 5-4 5 0 7 7 7 11Zm0 0c8 0 12-3 12-7 0-3-2-4-5-4-5 0-7 7-7 11Z"/></svg><div class="gift-brand"><span>Λ</span>CTON</div><div class="gift-title">BUONO REGALO</div></div>
+        <div class="energy-note script">Più energia<br>alle tue scelte!</div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contatti" style="padding:0 0 90px;">
-    <div class="apr3-container" style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div class="apr3-reveal apr3-contest-grid apr3-card-pad" style="border:3px solid #16140F;border-radius:26px;padding:44px;background:#FBF6EF;box-shadow:10px 10px 0 #FF48D3;display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;">
-        <div>
-          <div style="font-weight:800;font-size:clamp(26px,3vw,34px);line-height:1;color:#16140F;">Contattaci</div>
-          <div style="font-weight:800;font-size:clamp(20px,2.4vw,26px);line-height:1.1;color:#FF48D3;margin-top:4px;">o prendi un appuntamento!</div>
-          <p style="font-size:14px;color:#4A453D;line-height:1.65;margin-top:16px;max-width:360px;">Scrivici per qualsiasi domanda su luce, gas, fotovoltaico, fibra o carta carburante, oppure fissa un appuntamento con un nostro consulente in negozio scegliendo giorno e fascia oraria: eviterai ogni attesa quando arrivi.</p>
-
-          <div style="display:flex;align-items:center;gap:12px;margin-top:26px;">
-            <div style="width:40px;height:40px;border-radius:50%;background:#B9E75B;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            </div>
-            <div style="font-size:13.5px;color:#16140F;font-weight:700;"><a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Viale Tripoli 215, Rimini</a></div>
-          </div>
-        </div>
-
-        <div>
-          <form id="apr3-contact-form" action="contact.php" method="POST" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-            <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true">
-
-            <div style="grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:14px;" class="apr3-form-row">
-              <div>
-                <label style="display:block;font-size:11.5px;font-weight:700;color:#16140F;margin-bottom:6px;">Nome *</label>
-                <input type="text" name="nome" required class="apr3-input" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
-              </div>
-              <div>
-                <label style="display:block;font-size:11.5px;font-weight:700;color:#16140F;margin-bottom:6px;">Cognome *</label>
-                <input type="text" name="cognome" required class="apr3-input" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
-              </div>
-            </div>
-
-            <div style="grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:14px;" class="apr3-form-row">
-              <div>
-                <label style="display:block;font-size:11.5px;font-weight:700;color:#16140F;margin-bottom:6px;">Email *</label>
-                <input type="email" name="email" required class="apr3-input" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
-              </div>
-              <div>
-                <label style="display:block;font-size:11.5px;font-weight:700;color:#16140F;margin-bottom:6px;">Telefono</label>
-                <input type="tel" name="telefono" class="apr3-input" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
-              </div>
-            </div>
-
-            <div style="grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:14px;" class="apr3-form-row">
-              <div>
-                <label style="display:block;font-size:11.5px;font-weight:700;color:#16140F;margin-bottom:6px;">Data preferita (facoltativo)</label>
-                <input type="date" name="data_preferita" class="apr3-input" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
-              </div>
-              <div>
-                <label style="display:block;font-size:11.5px;font-weight:700;color:#16140F;margin-bottom:6px;">Fascia oraria (facoltativo)</label>
-                <select name="fascia_oraria" class="apr3-input" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;">
-                  <option value="">Nessuna preferenza</option>
-                  <option value="Mattina (9:00-13:00)">Mattina (9:00–13:00)</option>
-                  <option value="Pomeriggio (15:00-19:00)">Pomeriggio (15:00–19:00)</option>
-                </select>
-              </div>
-            </div>
-
-            <div style="grid-column:1 / -1;">
-              <label style="display:block;font-size:11.5px;font-weight:700;color:#16140F;margin-bottom:6px;">Messaggio *</label>
-              <textarea name="messaggio" required rows="4" class="apr3-input" style="width:100%;padding:12px 14px;border:2px solid #16140F;border-radius:10px;font-family:inherit;font-size:14px;background:#fff;resize:vertical;" placeholder="Scrivi qui la tua richiesta, oppure indica che vorresti fissare un appuntamento."></textarea>
-            </div>
-
-            <div style="grid-column:1 / -1;">
-              <button type="submit" class="apr3-btn-lift" style="font-weight:800;font-size:15px;border-radius:999px;padding:15px 30px;background:#16140F;color:#fff;border:none;cursor:pointer;box-shadow:5px 5px 0 #FF48D3;">Invia richiesta</button>
-              <div style="display:flex;align-items:center;gap:7px;margin-top:12px;font-size:12px;color:#6C6459;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B9E75B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>I tuoi dati sono trattati con riservatezza.</div>
-            </div>
-
-            <div id="apr3-form-feedback" style="grid-column:1 / -1;display:none;padding:12px 16px;border-radius:10px;font-size:13.5px;font-weight:700;"></div>
-          </form>
-        </div>
+    <section class="section contact" id="contatti">
+      <div>
+        <h2>Contattaci <span>o prendi un appuntamento!</span></h2>
+        <p>Scrivici per qualsiasi domanda su luce, gas, fotovoltaico, fibra o carta carburante, oppure fissa un appuntamento con un nostro consulente in negozio scegliendo giorno e fascia oraria: eviterai ogni attesa quando arrivi.</p>
+        <div class="location"><div class="loc-icon"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.2"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank">Viale Tripoli 215, Rimini</a></div>
+        <div class="contact-script script">Ti aspettiamo!</div>
       </div>
-    </div>
-  </section>
+      <form class="form" id="contact-form" action="contact.php" method="POST">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <div class="field"><label>Nome *</label><input class="input" name="nome" required placeholder="Nome"></div>
+        <div class="field"><label>Cognome *</label><input class="input" name="cognome" required placeholder="Cognome"></div>
+        <div class="field"><label>Email *</label><input class="input" type="email" name="email" required placeholder="La tua email"></div>
+        <div class="field"><label>Telefono</label><input class="input" type="tel" name="telefono" placeholder="Il tuo numero"></div>
+        <div class="field"><label>Data preferita (facoltativo)</label><input class="input" type="date" name="data_preferita"></div>
+        <div class="field"><label>Fascia oraria (facoltativo)</label><select class="input" name="fascia_oraria"><option value="">Nessuna preferenza</option><option>Mattina (9:00-13:00)</option><option>Pomeriggio (15:00-19:00)</option></select></div>
+        <div class="field full"><label>Messaggio *</label><textarea class="input" name="messaggio" required placeholder="Scrivi qui la tua richiesta, oppure indica che vorresti fissare un appuntamento."></textarea></div>
+        <div class="form-actions"><button class="btn btn-dark" type="submit">Invia richiesta <span class="arrow">→</span></button><div class="privacy">I tuoi dati sono trattati con riservatezza.</div></div>
+        <div class="feedback" id="form-feedback"></div>
+      </form>
+    </section>
+  </main>
+</div>
+<footer><div class="wrap footer-inner"><div><b>ACTON POINT RIMINI</b><br><small>Viale Tripoli 215, Rimini</small></div><div><small>Lun–Ven 9:00–13:00 / 15:00–19:00 · Sabato 9:00–13:00</small></div><a href="https://actonenergia.forini.com/" style="color:#fff;text-decoration:none;font-weight:800">actonenergia.forini.com</a></div></footer>
+<script>
+(function(){
+  const target = new Date('2026-09-19T12:00:00+02:00').getTime();
+  const el = document.getElementById('countdown');
+  const unit=(n,l)=>`<div class="cd"><b>${String(n).padStart(2,'0')}</b><span>${l}</span></div>`;
+  function render(){
+    let diff=target-Date.now();
+    if(diff<=0){el.innerHTML='<div style="font-weight:900;color:#111;background:var(--lime);padding:14px 18px;border-radius:12px">SIAMO APERTI! 🎉</div>';return}
+    const d=Math.floor(diff/86400000); diff%=86400000;
+    const h=Math.floor(diff/3600000); diff%=3600000;
+    const m=Math.floor(diff/60000); const s=Math.floor((diff%60000)/1000);
+    el.innerHTML=unit(d,'Giorni')+unit(h,'Ore')+unit(m,'Min')+unit(s,'Sec');
+  }
+  render(); setInterval(render,1000);
 
-  <footer style="background:#16140F;border-top:5px solid #B9E75B;padding:0 0 36px;">
-    <div class="apr3-container" style="max-width:1240px;margin:0 auto;padding:0 32px;">
-      <div style="display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px;padding:34px 0;" class="apr3-footer-row">
-        <div style="display:flex;align-items:flex-start;gap:12px;">
-          <div style="width:34px;height:34px;border-radius:50%;background:#B9E75B;border:2px solid #16140F;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          </div>
-          <div>
-            <div style="font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-size:11px;color:#B9E75B;">Acton Point Rimini</div>
-            <p style="font-size:13.5px;color:#B9B2A5;line-height:1.75;margin-top:6px;"><a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Viale Tripoli, 215<br>Rimini</a></p>
-          </div>
-        </div>
-        <div style="display:flex;align-items:flex-start;gap:12px;">
-          <div style="width:34px;height:34px;border-radius:50%;background:#FF48D3;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 16 14"></polyline></svg>
-          </div>
-          <div>
-            <div style="font-weight:700;letter-spacing:0.1em;text-transform:uppercase;font-size:11px;color:#fff;">Orari di apertura</div>
-            <p style="font-size:13.5px;color:#B9B2A5;line-height:1.75;margin-top:6px;">Lun – Ven 9:00–13:00 / 15:00–19:00<br>Sabato 9:00–13:00</p>
-          </div>
-        </div>
-        <div>
-          <div class="apr3-script" style="font-size:28px;color:#FF48D3;font-weight:700;">Ti aspettiamo!</div>
-          <div style="display:flex;gap:9px;margin-top:12px;">
-            <a href="#" aria-label="Facebook" style="width:34px;height:34px;border-radius:50%;background:#B9E75B;display:flex;align-items:center;justify-content:center;text-decoration:none;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="#16140F" stroke="none"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.9.25-1.5 1.55-1.5H16.5V4.35C16.2 4.3 15.2 4.2 14 4.2c-2.4 0-4 1.46-4 4.15V10.5H7.5v3H10V21h3.5z"></path></svg>
-            </a>
-            <a href="#" aria-label="Instagram" style="width:34px;height:34px;border-radius:50%;background:#B9E75B;display:flex;align-items:center;justify-content:center;text-decoration:none;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16140F" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="#16140F" stroke="none"></circle></svg>
-            </a>
-            <a href="#" aria-label="LinkedIn" style="width:34px;height:34px;border-radius:50%;background:#B9E75B;display:flex;align-items:center;justify-content:center;text-decoration:none;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="#16140F" stroke="none"><path d="M6.94 8.5H4.06V20h2.88V8.5zM5.5 4a1.68 1.68 0 1 0 0 3.36A1.68 1.68 0 0 0 5.5 4zM20 13.4c0-3-1.6-4.4-3.74-4.4a3.23 3.23 0 0 0-2.93 1.6V8.5H10.5c.04.86 0 11.5 0 11.5h2.83v-6.4c0-.34.02-.68.12-.93.28-.68.9-1.4 1.96-1.4 1.38 0 1.93 1.05 1.93 2.6V20H20v-6.6z"></path></svg>
-            </a>
-          </div>
-          <a href="https://actonenergia.forini.com/" class="brand-link" style="display:inline-block;margin-top:14px;font-weight:700;font-size:14px;color:#fff;text-decoration:none;">actonenergia.forini.com</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  </div>
-
-  <script>
-    (function(){
-      var revealEls = document.querySelectorAll('.apr3-reveal');
-      if ('IntersectionObserver' in window) {
-        var observer = new IntersectionObserver(function(entries){
-          entries.forEach(function(entry){
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
-        revealEls.forEach(function(el){ observer.observe(el); });
-      } else {
-        revealEls.forEach(function(el){ el.classList.add('is-visible'); });
-      }
-    })();
-  </script>
-
-  <script>
-    (function(){
-      var params = new URLSearchParams(window.location.search);
-
-      var sent = params.get('sent');
-      var box = document.getElementById('apr3-form-feedback');
-      if (box && sent) {
-        box.style.display = 'block';
-        if (sent === '1') {
-          box.style.background = '#B9E75B';
-          box.style.color = '#16140F';
-          box.textContent = 'Grazie! Il tuo messaggio è stato inviato, ti risponderemo al più presto.';
-        } else {
-          box.style.background = '#F3D9D9';
-          box.style.color = '#8A2222';
-          box.textContent = 'Si è verificato un errore nell\'invio. Riprova o scrivici direttamente.';
-        }
-        document.getElementById('contatti').scrollIntoView({behavior:'smooth'});
-      }
-    })();
-  </script>
-  <div id="apr3-sticky-cta">
-    <span class="apr3-sticky-msg">Fino a 100€ di buono subito per te alla nuova apertura!</span>
-    <a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener" class="apr3-btn-lift" style="font-weight:800;font-size:12.5px;border-radius:999px;padding:9px 18px;border:2px solid #B9E75B;background:#B9E75B;color:#16140F;text-decoration:none;white-space:nowrap;">Vieni a trovarci</a>
-    <button id="apr3-sticky-close" aria-label="Chiudi">&times;</button>
-  </div>
-
-  <script>
-    (function(){
-      var target = new Date('2026-09-19T12:00:00').getTime();
-      var el = document.getElementById('apr3-countdown');
-      if (!el) return;
-
-      function unit(num, label){
-        return '<div class="apr3-cd-box"><div class="apr3-cd-num">' + num + '</div><div class="apr3-cd-label">' + label + '</div></div>';
-      }
-
-      function render(){
-        var now = new Date().getTime();
-        var diff = target - now;
-        if (diff <= 0) {
-          el.innerHTML = '<div style="font-weight:800;font-size:15px;color:#B9E75B;">Siamo aperti! Vieni a trovarci 🎉</div>';
-          clearInterval(timer);
-          return;
-        }
-        var d = Math.floor(diff / (1000*60*60*24));
-        var h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
-        var m = Math.floor((diff % (1000*60*60)) / (1000*60));
-        var s = Math.floor((diff % (1000*60)) / 1000);
-        el.innerHTML = unit(d,'Giorni') + unit(h,'Ore') + unit(m,'Min') + unit(s,'Sec');
-      }
-
-      render();
-      var timer = setInterval(render, 1000);
-    })();
-  </script>
-
-  <script>
-    (function(){
-      var bar = document.getElementById('apr3-sticky-cta');
-      var closeBtn = document.getElementById('apr3-sticky-close');
-      if (!bar) return;
-
-      if (sessionStorage.getItem('apr3StickyDismissed') === '1') return;
-
-      var ticking = false;
-      function onScroll(){
-        if (ticking) return;
-        ticking = true;
-        window.requestAnimationFrame(function(){
-          var scrolled = window.scrollY || document.documentElement.scrollTop;
-          var pastHero = scrolled > 480;
-          var nearBottom = (window.innerHeight + scrolled) > (document.body.scrollHeight - 200);
-          if (pastHero && !nearBottom) {
-            bar.classList.add('is-shown');
-          } else {
-            bar.classList.remove('is-shown');
-          }
-          ticking = false;
-        });
-      }
-      window.addEventListener('scroll', onScroll, {passive:true});
-      onScroll();
-
-      closeBtn.addEventListener('click', function(){
-        bar.classList.remove('is-shown');
-        sessionStorage.setItem('apr3StickyDismissed', '1');
-      });
-    })();
-  </script>
+  const params=new URLSearchParams(location.search), sent=params.get('sent'), box=document.getElementById('form-feedback');
+  if(sent && box){box.style.display='block';box.style.background=sent==='1'?'#c7f531':'#f5d7d7';box.style.color=sent==='1'?'#111':'#8a2222';box.textContent=sent==='1'?'Grazie! Il tuo messaggio è stato inviato, ti risponderemo al più presto.':'Si è verificato un errore nell\'invio. Riprova o scrivici direttamente.';document.getElementById('contatti').scrollIntoView({behavior:'smooth'});}
+})();
+</script>
 </body>
 </html>
