@@ -60,9 +60,9 @@ img{max-width:100%;display:block}
 .hero-script:after{content:"";position:absolute;height:4px;border-radius:50%;left:7%;right:-2%;bottom:-7px;background:var(--pink);transform:rotate(-2deg)}
 .hero-copy{font-size:18px;line-height:1.55;font-weight:600;max-width:590px;color:#333830;margin-top:27px}
 .hero-copy b{font-weight:900}
-.info-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:25px}.info-card{display:flex;align-items:center;gap:14px;flex:1;border:1.5px solid #cfe5a2;background:rgba(255,255,255,.96);border-radius:16px;padding:12px 17px;min-width:220px;box-shadow:0 0 22px rgba(169,231,25,.4),0 8px 20px rgba(109,154,32,.1)}
+.info-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.info-card{display:flex;align-items:center;gap:10px;flex:0 1 auto;border:1.5px solid #cfe5a2;background:rgba(255,255,255,.96);border-radius:14px;padding:9px 14px;min-width:0;box-shadow:0 0 18px rgba(169,231,25,.35),0 6px 16px rgba(109,154,32,.1)}
 .info-card.pink{border-color:#f7d3eb;box-shadow:0 0 22px rgba(255,32,184,.4),0 8px 20px rgba(255,32,184,.1)}
-.info-ico{width:47px;height:47px;border-radius:50%;background:var(--lime);display:grid;place-items:center;flex:none}.info-card.pink .info-ico{background:var(--pink);color:#fff}.info-card strong{font-size:17px;display:block}.info-card small{font-size:12.5px;font-weight:600;text-decoration:none}
+.info-ico{width:38px;height:38px;border-radius:50%;background:var(--lime);display:grid;place-items:center;flex:none}.info-card.pink .info-ico{background:var(--pink);color:#fff}.info-card strong{font-size:14.5px;display:block}.info-card small{font-size:11px;font-weight:600;text-decoration:none}
 .count-label{margin-top:27px;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.20em}.countdown{display:flex;gap:10px;margin-top:10px}.cd{width:77px;padding:11px 4px 10px;background:#080a08;color:#fff;text-align:center;border-radius:12px;box-shadow:inset 0 0 0 1px #2a2d29}.cd b{font-size:27px;line-height:1;color:var(--lime)}.cd span{display:block;margin-top:5px;font-size:10px;text-transform:uppercase;font-weight:800;letter-spacing:.05em}
 .hero-cta{margin-top:28px;display:flex;align-items:center;gap:28px}.share-note{font-family:'Caveat',cursive;font-size:27px;line-height:.9;transform:rotate(-5deg);position:relative}.share-note:after{content:"";position:absolute;width:76px;height:34px;border-bottom:3px solid var(--lime);border-radius:50%;right:90%;top:24px;transform:rotate(-12deg)}
 
@@ -80,18 +80,21 @@ img{max-width:100%;display:block}
 .contest{padding:42px 44px;display:grid;grid-template-columns:.9fr 1.55fr;gap:42px;align-items:center}
 .contest h2{font-size:36px;text-transform:uppercase;line-height:1}.contest h2 .big{font-size:68px;display:block;color:var(--lime);text-transform:none;text-shadow:0 0 8px rgba(169,231,25,.9),0 0 20px rgba(169,231,25,.6),0 0 40px rgba(169,231,25,.35);animation:neonFlicker 3.6s ease-in-out infinite}
 .date-ribbon{display:inline-block;margin:17px 0 20px;background:var(--pink);padding:9px 20px;transform:skew(-9deg);font-size:16px;font-weight:900;text-transform:uppercase}.contest p{font-size:17px;line-height:1.5;color:#f1f0e8;max-width:580px}.contest .sub-link{display:inline-flex;align-items:center;gap:10px;color:var(--lime);font-weight:800;text-decoration:none;margin-top:22px}.contest-left{position:relative}.contest-left>*{position:relative;z-index:1}.contest-left .btn{margin-top:28px}.contest-script{position:relative;font-size:32px;line-height:.9;text-align:center;margin:22px 0 0 55%;transform:rotate(-7deg);display:inline-block;z-index:1}.contest-script:after{content:"";display:block;border-bottom:4px solid var(--pink);width:120px;margin:5px auto 0}
-.gift-decor{position:absolute;right:-10px;top:190px;width:150px;height:150px;pointer-events:none;z-index:0;opacity:.85}.gift-decor .gift-box{filter:drop-shadow(0 0 6px rgba(169,231,25,.9)) drop-shadow(0 0 18px rgba(169,231,25,.55)) drop-shadow(0 0 34px rgba(169,231,25,.3));animation:neonFlicker 4.2s ease-in-out infinite}.gift-decor .confetti{position:absolute;inset:-15px;opacity:.7}
-.prize-title{font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:13px}.prizes{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.prize{border:1px solid #595d55;border-radius:17px;padding:18px 16px;background:linear-gradient(145deg,#252923,#121512);min-height:220px}.prize .rank{color:var(--lime);font-size:14px;font-weight:900}.prize-ico{height:75px;display:grid;place-items:center;color:var(--lime)}.prize-ico svg{width:62px;height:62px}.prize h3{font-size:18px;line-height:1.1}.prize p{font-size:13px;color:#fff;margin-top:7px}.friend{margin-top:15px;background:linear-gradient(90deg,#ff34c0,#ff48c8);border:1.5px solid #fff;border-radius:16px;padding:18px 20px;display:flex;gap:17px;align-items:center}.friend .ficon{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;flex:none}.friend p{font-size:13px;line-height:1.45}
+.card-waves{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.contest>*,.gifts>*,.contact>*{position:relative;z-index:1}
+.contest .card-waves,.gifts .card-waves,.contact .card-waves{position:absolute;z-index:0}
+.gift-decor{position:absolute;left:37%;top:50%;transform:translate(-50%,-50%);width:150px;height:150px;pointer-events:none;z-index:1;opacity:.85}.gift-decor .gift-box{filter:drop-shadow(0 0 6px rgba(169,231,25,.9)) drop-shadow(0 0 18px rgba(169,231,25,.55)) drop-shadow(0 0 34px rgba(169,231,25,.3));animation:neonFlicker 4.2s ease-in-out infinite}.gift-decor .confetti{position:absolute;inset:-15px;opacity:.7}
+.prize-title{font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;margin-bottom:13px}.prizes{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.prize{border:1px solid #595d55;border-radius:15px;padding:14px 12px;background:linear-gradient(145deg,#252923,#121512);min-height:185px}.prize .rank{color:var(--lime);font-size:13px;font-weight:900}.prize-ico{height:58px;display:grid;place-items:center;color:var(--lime)}.prize-ico svg{width:48px;height:48px}.prize h3{font-size:16px;line-height:1.15}.prize p{font-size:12px;color:#fff;margin-top:6px}.friend{margin-top:15px;background:linear-gradient(90deg,#ff34c0,#ff48c8);border:1.5px solid #fff;border-radius:16px;padding:18px 20px;display:flex;gap:17px;align-items:center}.friend .ficon{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;flex:none}.friend p{font-size:13px;line-height:1.45}
 
 /* buoni */
 .gifts{display:grid;grid-template-columns:.92fr 1.2fr;gap:28px;align-items:center;padding:34px 44px;background:linear-gradient(105deg,#11150f 0%,#18220f 42%,#90cd25 72%,#bdf22e 100%)}
 .gifts h2{font-size:62px;line-height:.9;margin-bottom:18px}.gifts h2 span{color:var(--lime);text-shadow:0 0 8px rgba(169,231,25,.9),0 0 20px rgba(169,231,25,.6),0 0 40px rgba(169,231,25,.35);animation:neonFlicker 3.6s ease-in-out infinite}.gifts p{font-size:16px;line-height:1.5;color:#fff}.gift-values{display:flex;gap:16px;margin-top:20px}.value-box{border:2px solid var(--lime);border-radius:17px;padding:12px 24px;min-width:220px;background:rgba(0,0,0,.12)}.value-box b{font-size:35px;color:var(--lime)}.value-box span{font-size:14px;display:block}.gifts .btn{margin-top:24px}.gift-note{font-size:10px!important;color:#e0e4d4!important;margin-top:14px!important;max-width:620px}
 .gift-visual{position:relative;min-height:320px;overflow:visible}.mascot{position:absolute;height:300px;left:2%;bottom:0;filter:drop-shadow(0 15px 15px rgba(0,0,0,.35));animation:bob 3s ease-in-out infinite;z-index:3}@keyframes bob{50%{transform:translateY(-8px) rotate(1deg)}}
 @keyframes neonFlicker{0%,18%,20%,22%,55%,57%,100%{opacity:1}19%,21%,56%{opacity:.55}}
-.giftcard{position:absolute;right:12%;top:78px;width:340px;height:180px;background:linear-gradient(135deg,#151915,#060706);border-radius:20px;transform:rotate(6deg);box-shadow:0 20px 26px rgba(0,0,0,.35);padding:30px;color:#fff;z-index:2}.giftcard:before{content:"";position:absolute;inset:0;border-radius:20px;background:radial-gradient(circle at 95% 15%,rgba(169,231,25,.16),transparent 30%);pointer-events:none}.gift-brand{font-size:38px;font-weight:900;letter-spacing:-.04em}.gift-brand span{color:var(--lime)}.gift-title{font-size:21px;font-weight:900;margin-top:30px;text-align:right}.gift-icon{position:absolute;right:24px;top:24px;width:46px;height:46px;color:var(--lime)}.gift-ribbon{position:absolute;right:-12px;top:-12px;background:var(--pink);color:#fff;padding:10px 26px;font-weight:900;transform:rotate(6deg);z-index:5}.energy-note{position:absolute;right:1%;bottom:-10px;font-size:28px;line-height:.86;transform:rotate(-7deg);z-index:4;color:#111}.energy-note:after{content:"";display:block;width:120px;border-bottom:5px solid var(--pink);margin:8px auto 0}
+.giftcard{position:absolute;right:16%;top:48px;width:320px;height:175px;background:linear-gradient(135deg,#151915,#060706);border-radius:20px;transform:rotate(8deg);box-shadow:0 20px 26px rgba(0,0,0,.35);padding:28px;color:#fff;z-index:2}.giftcard:before{content:"";position:absolute;inset:0;border-radius:20px;background:radial-gradient(circle at 95% 15%,rgba(169,231,25,.16),transparent 30%);pointer-events:none}.gift-brand{font-size:38px;font-weight:900;letter-spacing:-.04em}.gift-brand span{color:var(--lime)}.gift-title{font-size:21px;font-weight:900;margin-top:30px;text-align:right}.gift-icon{position:absolute;right:24px;top:24px;width:46px;height:46px;color:var(--lime)}.gift-ribbon{position:absolute;right:-12px;top:-12px;background:var(--pink);color:#fff;padding:10px 26px;font-weight:900;transform:rotate(6deg);z-index:5}.energy-note{position:absolute;right:1%;bottom:-10px;font-size:28px;line-height:.86;transform:rotate(-7deg);z-index:4;color:#111}.energy-note:after{content:"";display:block;width:120px;border-bottom:5px solid var(--pink);margin:8px auto 0}
 
 /* contact */
-.contact{display:grid;grid-template-columns:.85fr 1.2fr;gap:60px;align-items:center;border:2px solid #1f241e;border-radius:25px;padding:42px 48px;background:rgba(255,255,255,.82);box-shadow:8px 8px 0 var(--pink);position:relative;overflow:hidden}.contact:before,.contact:after{content:"";position:absolute;border-radius:50%;border:22px solid rgba(169,231,25,.18);width:260px;height:260px}.contact:before{left:-150px;bottom:-150px}.contact:after{right:-170px;top:-140px}.contact h2{font-size:46px;line-height:.95}.contact h2 span{display:block;color:var(--pink);font-size:34px;margin-top:8px}.contact p{font-size:16px;line-height:1.55;margin-top:25px;max-width:540px}.location{display:flex;align-items:center;gap:14px;margin-top:28px;font-weight:800}.loc-icon{width:44px;height:44px;border:2px solid #111;border-radius:50%;background:var(--lime);display:grid;place-items:center}.contact-script{font-size:33px;line-height:.9;margin:20px 0 0 55%;transform:rotate(-7deg);display:inline-block}.contact-script:after{content:"";display:block;border-bottom:4px solid var(--lime);width:110px;margin-top:4px}
+.contact{display:grid;grid-template-columns:.85fr 1.2fr;gap:60px;align-items:center;border:2px solid #1f241e;border-radius:25px;padding:42px 48px;background:rgba(255,255,255,.82);box-shadow:8px 8px 0 var(--pink);position:relative;overflow:hidden}.contact h2{font-size:46px;line-height:.95}.contact h2 span{display:block;color:var(--pink);font-size:34px;margin-top:8px}.contact p{font-size:16px;line-height:1.55;margin-top:25px;max-width:540px}.location{display:flex;align-items:center;gap:14px;margin-top:28px;font-weight:800}.loc-icon{width:44px;height:44px;border:2px solid #111;border-radius:50%;background:var(--lime);display:grid;place-items:center}.contact-script{font-size:33px;line-height:.9;margin:20px 0 0 55%;transform:rotate(-7deg);display:inline-block}.contact-script:after{content:"";display:block;border-bottom:4px solid var(--lime);width:110px;margin-top:4px}
 .form{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;position:relative;z-index:2}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:800;display:block;margin-bottom:5px}.input{width:100%;height:43px;border:1.5px solid #6f746b;border-radius:7px;padding:9px 13px;font:600 14px Montserrat;background:#fff}.field textarea.input{height:80px;resize:vertical}.form-actions{grid-column:1/-1;display:flex;align-items:center;gap:20px}.form-actions .btn{padding:13px 26px;font-size:14px;box-shadow:5px 5px 0 var(--pink)}.privacy{font-size:11px;color:#555;font-weight:600}.privacy:before{content:"✓";color:var(--lime);font-weight:900;font-size:17px;margin-right:8px}
 .feedback{grid-column:1/-1;display:none;padding:12px 15px;border-radius:9px;font-weight:700;font-size:13px}
 
@@ -113,7 +116,6 @@ footer{margin-top:42px;padding:26px 0 22px;background:#0e110d;color:#fff;border-
 </nav>
 <div class="page-bg">
   <svg class="hero-decor" viewBox="0 0 1600 1450" preserveAspectRatio="none" aria-hidden="true">
-    <ellipse class="blob" cx="1180" cy="120" rx="380" ry="150" transform="rotate(-14 1180 120)"/>
     <path class="wave3" d="M120 40 C420 260 620 -40 920 180 C1140 340 1320 260 1560 380"/>
     <path class="wave2" d="M60 140 C380 380 600 60 900 300 C1130 480 1320 400 1600 540"/>
     <path class="wave1" d="M20 220 C350 470 580 150 880 400 C1120 590 1310 510 1600 660"/>
@@ -131,9 +133,9 @@ footer{margin-top:42px;padding:26px 0 22px;background:#0e110d;color:#fff;border-
         <p class="hero-copy">Ti aspettiamo nel nuovo Acton Point per scoprire tutti i servizi Luce, Gas, Fotovoltaico, Fibra e Carta Carburante, <b>in un unico punto.</b></p>
         <div class="info-row">
           <div class="info-card"><div class="info-ico">
-            <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M7 2v4M17 2v4M3 9h18"/></svg>
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M7 2v4M17 2v4M3 9h18"/></svg>
           </div><div><strong>19 SETTEMBRE</strong><small><a href="https://www.google.com/maps/search/?api=1&query=Viale+Tripoli+215%2C+Rimini" target="_blank">Viale Tripoli 215, Rimini</a></small></div></div>
-          <div class="info-card pink"><div class="info-ico"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg></div><div><strong>ORE 12:00</strong><small>Inaugurazione</small></div></div>
+          <div class="info-card pink"><div class="info-ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg></div><div><strong>ORE 12:00</strong><small>Inaugurazione</small></div></div>
         </div>
         <div class="count-label">Mancano solo</div>
         <div class="countdown" id="countdown"></div>
@@ -157,11 +159,16 @@ footer{margin-top:42px;padding:26px 0 22px;background:#0e110d;color:#fff;border-
     </section>
 
     <section class="section dark-card contest" id="concorso">
+      <svg class="card-waves" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-50 480 C200 380 320 520 560 420 C740 340 860 380 1050 300" stroke="#a9e719" stroke-width="2" fill="none" opacity=".22"/>
+        <path d="M-50 520 C220 440 340 560 600 460 C780 390 900 420 1050 360" stroke="#c7f531" stroke-width="6" fill="none" opacity=".1"/>
+        <path d="M-50 70 C180 30 260 130 480 80 C630 45 720 80 900 30" stroke="#a9e719" stroke-width="2" fill="none" opacity=".15"/>
+      </svg>
+      <div class="gift-decor" aria-hidden="true">
+        <svg class="gift-box" viewBox="0 0 120 120" width="130" height="130"><path d="M18 46h84v54H18zM60 46v54M12 30h96v20H12z" fill="none" stroke="#a9e719" stroke-width="4" stroke-linejoin="round"/><path d="M60 30c-18 0-28-7-28-16 0-7 5-9 12-9 12 0 16 16 16 25zm0 0c18 0 28-7 28-16 0-7-5-9-12-9-12 0-16 16-16 25z" fill="none" stroke="#a9e719" stroke-width="4" stroke-linejoin="round"/></svg>
+        <svg class="confetti" viewBox="0 0 160 160" width="160" height="160"><path d="M14 18C44 8 34 58 74 38" stroke="#c7f531" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M140 12C118 40 152 46 132 82" stroke="#a9e719" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M120 118c-10 14 16 12 8 30" stroke="#c7f531" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+      </div>
       <div class="contest-left">
-        <div class="gift-decor" aria-hidden="true">
-          <svg class="gift-box" viewBox="0 0 120 120" width="130" height="130"><path d="M18 46h84v54H18zM60 46v54M12 30h96v20H12z" fill="none" stroke="#a9e719" stroke-width="4" stroke-linejoin="round"/><path d="M60 30c-18 0-28-7-28-16 0-7 5-9 12-9 12 0 16 16 16 25zm0 0c18 0 28-7 28-16 0-7-5-9-12-9-12 0-16 16-16 25z" fill="none" stroke="#a9e719" stroke-width="4" stroke-linejoin="round"/></svg>
-          <svg class="confetti" viewBox="0 0 160 160" width="160" height="160"><path d="M14 18C44 8 34 58 74 38" stroke="#c7f531" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M140 12C118 40 152 46 132 82" stroke="#a9e719" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M120 118c-10 14 16 12 8 30" stroke="#c7f531" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
-        </div>
         <h2>IL GRANDE <span class="big">Concorso</span></h2>
         <div class="date-ribbon">Dal 19 settembre al 19 ottobre 2026</div>
         <p>Vieni a trovarci al nuovo Acton Point di Rimini e partecipa all'estrazione: in palio tre fantastici premi, in aggiunta ai buoni regalo già garantiti su ogni contratto.</p>
@@ -181,6 +188,10 @@ footer{margin-top:42px;padding:26px 0 22px;background:#0e110d;color:#fff;border-
     </section>
 
     <section class="section dark-card gifts" id="buoni">
+      <svg class="card-waves" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-50 500 C200 420 320 540 560 460 C740 400 860 430 1050 370" stroke="#fff" stroke-width="2" fill="none" opacity=".16"/>
+        <path d="M-50 60 C200 20 300 100 520 60 C680 30 780 60 950 20" stroke="#0e100c" stroke-width="2" fill="none" opacity=".1"/>
+      </svg>
       <div>
         <div class="pill" style="padding:7px 13px;font-size:11px;margin-bottom:15px"><i></i> Il tuo vantaggio</div>
         <h2>Buoni <span>regalo</span></h2>
@@ -197,6 +208,10 @@ footer{margin-top:42px;padding:26px 0 22px;background:#0e110d;color:#fff;border-
     </section>
 
     <section class="section contact" id="contatti">
+      <svg class="card-waves" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-50 500 C200 420 320 540 560 460 C740 400 860 430 1050 370" stroke="#a9e719" stroke-width="2" fill="none" opacity=".3"/>
+        <path d="M-50 80 C200 40 300 120 520 80 C680 50 780 80 950 40" stroke="#a9e719" stroke-width="2" fill="none" opacity=".2"/>
+      </svg>
       <div>
         <h2>Contattaci <span>o prendi un appuntamento!</span></h2>
         <p>Scrivici per qualsiasi domanda su luce, gas, fotovoltaico, fibra o carta carburante, oppure fissa un appuntamento con un nostro consulente in negozio scegliendo giorno e fascia oraria: eviterai ogni attesa quando arrivi.</p>
