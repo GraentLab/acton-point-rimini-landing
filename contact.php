@@ -7,7 +7,7 @@
  */
 
 $destinatario = "INSERISCI-QUI@actonpoint.it"; // <-- cambia con l'email reale a cui ricevere i contatti
-$redirect_base = "index.html";
+$redirect_base = "/";
 
 function redirect_con_esito($esito) {
     global $redirect_base;

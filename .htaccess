@@ -1,0 +1,12 @@
+# Rimuove l'estensione .html dagli URL (es. /concorso invece di /concorso.html)
+
+RewriteEngine On
+
+# Se il browser richiede esplicitamente .html, reindirizza (301) alla versione pulita
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Serve internamente il file .html quando viene richiesto il percorso senza estensione
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
