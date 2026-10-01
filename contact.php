@@ -1,12 +1,9 @@
 <?php
 /**
  * Gestione invio form contatti - Acton Point Rimini
- *
- * IMPORTANTE: prima di andare online, imposta l'indirizzo email
- * di destinazione qui sotto ($destinatario).
  */
 
-$destinatario = "INSERISCI-QUI@actonpoint.it"; // <-- cambia con l'email reale a cui ricevere i contatti
+$destinatario = "comunicazioni@forini.com";
 $redirect_base = "/";
 
 function redirect_con_esito($esito) {
