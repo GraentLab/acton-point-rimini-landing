@@ -12,6 +12,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Write SMTP config
+        env:
+          SMTP_APP_PASSWORD: ${{ secrets.SMTP_APP_PASSWORD }}
+        run: |
+          cat > smtp-config.php <<PHP
+          <?php
+          return [
+              'host'     => 'smtp.gmail.com',
+              'port'     => 587,
+              'username' => 'comunicazioni@forini.com',
+              'password' => '${SMTP_APP_PASSWORD}',
+          ];
+          PHP
+
       - name: Deploy to SiteGround via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:

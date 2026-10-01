@@ -1,7 +1,19 @@
 <?php
 /**
  * Gestione invio form contatti - Acton Point Rimini
+ *
+ * Invia via SMTP autenticato (Gmail) invece della mail() nativa di PHP:
+ * senza autenticazione/DKIM, Gmail scarta o mette in spam la posta in
+ * arrivo da hosting condiviso. Le credenziali SMTP vivono in
+ * smtp-config.php, che non è versionato (vedi smtp-config.example.php).
  */
+
+require __DIR__ . '/lib/PHPMailer/src/Exception.php';
+require __DIR__ . '/lib/PHPMailer/src/PHPMailer.php';
+require __DIR__ . '/lib/PHPMailer/src/SMTP.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception as PHPMailerException;
 
 $destinatario = "comunicazioni@forini.com";
 $redirect_base = "/";
@@ -39,7 +51,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     redirect_con_esito('0');
 }
 
-// Sanitizzazione minima per l'header email (anti header-injection)
+// Sanitizzazione minima (difesa in profondità, PHPMailer valida comunque gli header)
 $nome    = str_replace(array("\r", "\n"), '', $nome);
 $cognome = str_replace(array("\r", "\n"), '', $cognome);
 $email   = str_replace(array("\r", "\n"), '', $email);
@@ -56,10 +68,35 @@ if ($data_preferita !== '' || $fascia_oraria !== '') {
 }
 $corpo .= "\nMessaggio:\n" . $messaggio . "\n";
 
-$headers  = "From: Sito Acton Point <no-reply@" . $_SERVER['HTTP_HOST'] . ">\r\n";
-$headers .= "Reply-To: " . $email . "\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$config_path = __DIR__ . '/smtp-config.php';
+$inviata = false;
 
-$inviata = mail($destinatario, $oggetto, $corpo, $headers);
+if (file_exists($config_path)) {
+    $smtp = require $config_path;
+
+    $mail = new PHPMailer(true);
+    try {
+        $mail->isSMTP();
+        $mail->Host       = $smtp['host'];
+        $mail->Port       = $smtp['port'];
+        $mail->SMTPAuth   = true;
+        $mail->Username   = $smtp['username'];
+        $mail->Password   = $smtp['password'];
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->CharSet    = 'UTF-8';
+
+        $mail->setFrom($smtp['username'], 'Acton Point Rimini');
+        $mail->addAddress($destinatario);
+        $mail->addReplyTo($email, $nome . ' ' . $cognome);
+
+        $mail->Subject = $oggetto;
+        $mail->Body    = $corpo;
+
+        $mail->send();
+        $inviata = true;
+    } catch (PHPMailerException $e) {
+        $inviata = false;
+    }
+}
 
 redirect_con_esito($inviata ? '1' : '0');
