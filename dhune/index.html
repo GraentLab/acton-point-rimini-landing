@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js');</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18480237940"></script>
 <script>
@@ -12,7 +13,7 @@
   gtag('config', 'AW-18480237940');
 </script>
 <title>Scopri i vantaggi di essere cliente del DHUNE | Acton Point Rimini</title>
-<meta name="description" content="Clienti DHUNE: richiedi informazioni ad Acton Point Rimini su luce, gas, fotovoltaico, fibra e carta carburante. Un consulente ti ricontatta.">
+<meta name="description" content="Clienti DHUNE: compila il form e ricevi subito un voucher da 5 euro. Passando ad Acton fino a 100 euro di buoni. Acton Point Rimini ti ricontatta.">
 <link rel="canonical" href="https://dhune.actonpoint.it/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Scopri i vantaggi di essere cliente del DHUNE">
@@ -20,6 +21,7 @@
 <meta property="og:url" content="https://dhune.actonpoint.it/">
 <meta property="og:image" content="https://dhune.actonpoint.it/assets/img/dune-logo.png">
 <meta property="og:locale" content="it_IT">
+<meta name="theme-color" content="#07122b">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/img/favicon-32x32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="assets/img/favicon-16x16.png" type="image/png" sizes="16x16">
@@ -33,26 +35,36 @@
   --paper:#ece7dc;
   --paper2:#f6f2e9;
   --blue:#33599b;
-  --red:#e3331b;
+  --night:#0c1c3f;
+  --deep:#07122b;
+  --ice:#8fb4ff;
+  --lime:#a9e719;
   --muted:#5b574d;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;background:var(--paper)}
 body{font-family:'Montserrat',sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden;-webkit-font-smoothing:antialiased;position:relative}
-/* carta con grana, come lo sfondo dei post */
 body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.55;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .3  0 0 0 0 .22  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
 a{color:inherit}
 img{max-width:100%;display:block}
 .wrap{width:min(1160px,calc(100% - 64px));margin:auto}
 .type{font-family:'Special Elite','Courier New',monospace}
-.wide{font-family:'Syncopate',sans-serif}
 
-/* motivo croce del logo */
-.cross{position:absolute;width:26px;height:26px;pointer-events:none;opacity:.55}
+/* barra di avanzamento */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--blue),var(--ice),var(--lime));z-index:1000}
+
+/* entrata a scorrimento */
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+html.js .reveal{opacity:0}
+html.js .reveal.in{opacity:1;animation:rise .85s cubic-bezier(.2,.7,.2,1) var(--d,0s) backwards}
+
+/* croci del logo */
+.cross{position:absolute;width:26px;height:26px;pointer-events:none;opacity:.55;animation:spin 28s linear infinite}
 .cross:before,.cross:after{content:"";position:absolute;background:var(--ink)}
 .cross:before{left:50%;top:0;bottom:0;width:1.5px;transform:translateX(-50%)}
 .cross:after{top:50%;left:0;right:0;height:1.5px;transform:translateY(-50%)}
+@keyframes spin{to{transform:rotate(360deg)}}
 
 .topbar{border-bottom:1.5px solid var(--ink)}
 .topbar .inner{height:92px;display:flex;align-items:center;justify-content:center;gap:34px}
@@ -62,64 +74,121 @@ img{max-width:100%;display:block}
 
 .hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:64px;align-items:center;padding:64px 0 72px}
 .eyebrow{display:inline-block;font-size:14px;color:var(--blue);letter-spacing:.04em}
-.eyebrow:before{content:"+ ";}
+.eyebrow:before{content:"+ "}
 .hero h1{font-family:'Syncopate',sans-serif;font-weight:700;font-size:clamp(20px,2.5vw,32px);line-height:1.25;text-transform:uppercase;letter-spacing:.02em;margin-top:20px}
-.hero .big-logo{width:min(100%,520px);margin-top:26px}
+
+/* logo DHUNE: rivelazione + riflesso luminoso */
+.logo-fx{position:relative;width:min(100%,520px);margin-top:26px}
+.logo-fx img{width:100%;animation:wipe 1.6s cubic-bezier(.2,.75,.2,1) .25s both;transition:filter .4s ease}
+.logo-fx:after{content:"";position:absolute;inset:0;pointer-events:none;
+  -webkit-mask:url(assets/img/dune-logo.png) center/100% 100% no-repeat;mask:url(assets/img/dune-logo.png) center/100% 100% no-repeat;
+  background:linear-gradient(105deg,transparent 38%,rgba(111,155,255,.95) 47%,#fff 50%,rgba(111,155,255,.95) 53%,transparent 62%);
+  background-size:320% 100%;background-position:130% 0;
+  animation:glint 6s ease-in-out 2.2s infinite}
+.logo-fx:hover img{filter:drop-shadow(0 0 14px rgba(51,89,155,.55))}
+@keyframes wipe{from{clip-path:inset(0 100% 0 0);opacity:.2}to{clip-path:inset(0 0 0 0);opacity:1}}
+@keyframes glint{0%{background-position:130% 0}38%,100%{background-position:-35% 0}}
+
+/* vantaggi */
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.perk{border:2px solid var(--ink);background:var(--paper2);padding:14px 18px 18px;box-shadow:6px 6px 0 var(--night);transition:transform .25s ease,box-shadow .25s ease}
+.perk:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--night)}
+.perk .upto{display:block;font-size:14px;color:var(--blue);text-decoration:none}
+.perk a.upto:hover{text-decoration:underline}
+.perk .big{display:block;font-family:'Syncopate',sans-serif;font-weight:700;font-size:clamp(30px,3.4vw,44px);line-height:1.05;color:var(--night);margin-top:2px;font-variant-numeric:tabular-nums}
+.perk p{font-size:14px;line-height:1.5;font-weight:700;margin-top:10px}
+
+/* condizioni a tendina */
+.terms{margin-top:18px;border:1.5px solid var(--ink);background:rgba(246,242,233,.78)}
+.terms summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;font-size:14px;color:var(--ink);transition:background .2s}
+.terms summary::-webkit-details-marker{display:none}
+.terms summary:hover{background:rgba(51,89,155,.08)}
+.terms summary:focus-visible{outline:3px solid rgba(51,89,155,.45);outline-offset:2px}
+.terms summary:after{content:"+";font-size:24px;line-height:1;transition:transform .3s ease;flex:none}
+.terms[open] summary:after{transform:rotate(45deg)}
+.terms[open] summary{border-bottom:1.5px solid var(--ink)}
+.terms .terms-body{padding:14px 16px 16px;font-size:13px;line-height:1.7;color:#4a463c;animation:drop .4s ease}
+@keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
 .tagline{font-size:clamp(17px,1.7vw,21px);line-height:1.5;color:var(--blue);margin-top:28px}
 .hero-copy{font-size:16px;line-height:1.7;font-weight:500;color:#3a372f;max-width:520px;margin-top:16px}
 .hero-copy b{font-weight:800;color:var(--ink)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
-.chip{font-size:13px;border:1.5px solid var(--ink);border-radius:2px;padding:6px 12px;background:rgba(246,242,233,.7)}
+.chip{font-size:13px;border:1.5px solid var(--ink);border-radius:2px;padding:6px 12px;background:rgba(246,242,233,.7);transition:background .2s,color .2s,transform .2s}
+.chip:hover{background:var(--night);color:#fff;transform:translateY(-2px)}
 
-.formcard{position:relative;background:var(--paper2);border:2px solid var(--ink);padding:34px 32px 30px;box-shadow:10px 10px 0 var(--red)}
+.formcard{position:relative;background:var(--paper2);border:2px solid var(--ink);padding:34px 32px 30px;box-shadow:10px 10px 0 var(--night);transition:box-shadow .3s ease}
+.formcard:hover,.formcard:focus-within{box-shadow:14px 14px 0 var(--night)}
 .formcard h2{font-family:'Syncopate',sans-serif;font-weight:700;font-size:20px;line-height:1.2;text-transform:uppercase}
 .formcard .sub{font-size:14px;line-height:1.5;color:var(--blue);margin-top:10px}
 .form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
 .field.full{grid-column:1/-1}
 .field label{font-size:12px;display:block;margin-bottom:5px;color:var(--ink)}
-.input{width:100%;height:46px;border:1.5px solid var(--ink);border-radius:0;padding:9px 13px;font:600 16px Montserrat,sans-serif;background:#fffdf8;color:var(--ink)}
-.input:focus{outline:3px solid rgba(51,89,155,.35);outline-offset:0}
+.input{width:100%;height:46px;border:1.5px solid var(--ink);border-radius:0;padding:9px 13px;font:600 16px Montserrat,sans-serif;background:#fffdf8;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.input:focus{outline:none;border-color:var(--night);box-shadow:0 0 0 4px rgba(51,89,155,.25)}
 .consent{grid-column:1/-1;display:flex;gap:11px;align-items:flex-start;font-size:12px;line-height:1.55;font-weight:500;color:#3a372f}
 .consent input{width:20px;height:20px;margin-top:1px;flex:none;accent-color:var(--ink)}
 .consent a{font-weight:700;color:var(--blue)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;font-family:'Syncopate',sans-serif;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:18px 28px;border:2px solid var(--ink);cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
-.btn-red{background:var(--red);color:#fff}
-.btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+.btn-night{position:relative;overflow:hidden;background:var(--night);color:#fff}
+.btn-night:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);animation:shine 4.4s ease-in-out 1.5s infinite}
+@keyframes shine{0%{left:-60%}35%,100%{left:140%}}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--blue)}
 .form .btn{grid-column:1/-1;margin-top:6px;width:100%}
 .feedback{display:none;margin-top:18px;padding:13px 16px;font-weight:700;font-size:14px;line-height:1.45;border:1.5px solid var(--ink)}
 
 /* come funziona */
-.how{padding:0 0 76px}
+.how{padding:0 0 84px}
 .how h2{font-family:'Syncopate',sans-serif;font-weight:700;font-size:clamp(20px,2.4vw,30px);line-height:1.2;text-transform:uppercase;margin-top:14px}
 .steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:30px}
-.steps li{background:var(--paper2);border:1.5px solid var(--ink);padding:22px 20px 24px;display:flex;flex-direction:column;gap:14px}
-.steps .num{width:42px;height:42px;border-radius:50%;background:#a9e719;border:1.5px solid var(--ink);display:grid;place-items:center;font-size:19px;line-height:1}
+.steps li{background:var(--paper2);border:1.5px solid var(--ink);padding:22px 20px 24px;display:flex;flex-direction:column;gap:14px;transition:transform .25s ease,box-shadow .25s ease}
+.steps li:hover{transform:translateY(-5px);box-shadow:6px 6px 0 var(--night)}
+.steps .num{position:relative;width:42px;height:42px;border-radius:50%;background:var(--lime);border:1.5px solid var(--ink);display:grid;place-items:center;font-size:19px;line-height:1;flex:none}
+.steps li.in .num{animation:pop .7s cubic-bezier(.3,1.7,.5,1) calc(var(--d,0s) + .35s) backwards}
+.steps .num:after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1.5px solid var(--lime);opacity:0}
+.steps li.in .num:after{animation:ring 2.8s ease-out calc(var(--d,0s) + 1s) infinite}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes ring{0%{transform:scale(.8);opacity:.9}70%,100%{transform:scale(1.5);opacity:0}}
 .steps p{font-size:15px;line-height:1.6;font-weight:500;color:#2c2a23}
-.steps b{font-weight:800}
+
+/* striscia scorrevole */
+.ticker-wrap{position:relative;z-index:3;padding:6px 0 0;margin-bottom:-34px;overflow:hidden}
+.ticker{background:var(--ink);color:var(--paper2);transform:rotate(-1.3deg);margin:0 -3%;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);overflow:hidden;box-shadow:0 10px 0 var(--night)}
+.ticker-track{display:flex;width:max-content;padding:15px 0}
+html.js .ticker-track{animation:marquee 34s linear infinite}
+.tg{display:flex;align-items:center;flex:none}
+.tg span{font-size:15px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;padding:0 22px}
+.tg span em{font-style:normal;color:var(--ice)}
+.tg b{font-weight:400;font-size:20px;color:var(--lime);line-height:1}
+@keyframes marquee{to{transform:translateX(-50%)}}
 
 /* contatti: lato "notte" del club */
 .night{position:relative;color:#fff;background:
-  radial-gradient(ellipse 620px 360px at 85% 10%,rgba(227,51,27,.55) 0%,transparent 70%),
-  radial-gradient(ellipse 520px 320px at 8% 100%,rgba(227,51,27,.32) 0%,transparent 70%),
-  #0d0a0a;padding:76px 0 80px;overflow:hidden}
-.night:before{content:"";position:absolute;inset:0;pointer-events:none;
-  background:
-   linear-gradient(104deg,transparent 40%,rgba(255,80,50,.35) 40.2%,transparent 40.6%),
-   linear-gradient(112deg,transparent 52%,rgba(255,80,50,.22) 52.2%,transparent 52.5%),
-   linear-gradient(76deg,transparent 66%,rgba(120,170,255,.22) 66.2%,transparent 66.5%)}
-.night .inner{position:relative;display:grid;grid-template-columns:1fr 1.45fr;gap:48px;align-items:center}
-.night .eyebrow{color:#ff8a72}
-.night h2{font-family:'Syncopate',sans-serif;font-weight:700;font-size:clamp(22px,2.6vw,32px);line-height:1.2;text-transform:uppercase;margin-top:16px}
+  radial-gradient(ellipse 620px 360px at 85% 10%,rgba(51,89,155,.6) 0%,transparent 70%),
+  radial-gradient(ellipse 520px 320px at 8% 100%,rgba(51,89,155,.38) 0%,transparent 70%),
+  var(--deep);padding:112px 0 84px;overflow:hidden}
+.beams{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.beams i{position:absolute;top:-8%;left:var(--x);width:46vmax;height:125%;margin-left:-23vmax;transform-origin:50% 0;
+  background:linear-gradient(to bottom,var(--c,rgba(143,180,255,.28)),rgba(143,180,255,0) 70%);
+  clip-path:polygon(48.5% 0,51.5% 0,100% 100%,0 100%);animation:sweep var(--t) ease-in-out var(--dl,0s) infinite alternate}
+@keyframes sweep{from{transform:rotate(calc(var(--a) * -1))}to{transform:rotate(var(--a))}}
+.stars{position:absolute;inset:0;pointer-events:none}
+.stars i{position:absolute;border-radius:50%;background:#fff;opacity:.05;animation:twinkle var(--t) ease-in-out var(--dl) infinite}
+@keyframes twinkle{0%,100%{opacity:.05}50%{opacity:.95}}
+.night .inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.45fr;gap:48px;align-items:center}
+.night .eyebrow{color:var(--ice)}
+.night h2{font-family:'Syncopate',sans-serif;font-weight:700;font-size:clamp(22px,2.6vw,32px);line-height:1.2;text-transform:uppercase;margin-top:16px;text-shadow:0 0 26px rgba(143,180,255,.45)}
 .night .lead{font-size:15px;line-height:1.7;color:#e9e3d8;margin-top:16px;font-weight:500;max-width:420px}
 .clist{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.citem{display:flex;gap:14px;align-items:flex-start;border:1.5px solid rgba(255,255,255,.5);padding:18px 18px;background:rgba(255,255,255,.04)}
+.citem{display:flex;gap:14px;align-items:flex-start;border:1.5px solid rgba(255,255,255,.5);padding:18px;background:rgba(255,255,255,.04);transition:transform .25s ease,border-color .25s ease,background .25s ease,box-shadow .25s ease}
+.citem:hover{transform:translateY(-4px);border-color:var(--ice);background:rgba(143,180,255,.1);box-shadow:0 0 28px rgba(143,180,255,.28)}
 .cico{width:40px;height:40px;border:1.5px solid #fff;display:grid;place-items:center;flex:none}
 .citem.wa .cico{background:#25d366;border-color:#25d366}
-.citem strong{display:block;font-family:'Special Elite',monospace;font-weight:400;font-size:13px;color:#ff8a72;margin-bottom:4px}
+.citem strong{display:block;font-family:'Special Elite',monospace;font-weight:400;font-size:13px;color:var(--ice);margin-bottom:4px}
 .citem span,.citem a{font-size:15px;font-weight:700;line-height:1.45;color:#fff;text-decoration:none}
 .citem a:hover{text-decoration:underline}
 
-footer{background:#0d0a0a;color:#fff;border-top:1px solid rgba(255,255,255,.25);padding:26px 0 24px;font-size:13px}
+footer{position:relative;z-index:2;background:var(--deep);color:#fff;border-top:1px solid rgba(143,180,255,.3);padding:26px 0 24px;font-size:13px}
 .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
 .footer-inner small{color:#c9c4b8}
 .footer-inner a{color:#fff;font-weight:700}
@@ -129,12 +198,49 @@ footer{background:#0d0a0a;color:#fff;border-top:1px solid rgba(255,255,255,.25);
 .whatsapp-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.3);z-index:999;transition:transform .2s ease}
 .whatsapp-float:hover{transform:scale(1.07)}
 
-@media(max-width:1100px){.steps{grid-template-columns:1fr;gap:12px}.steps li{flex-direction:row;align-items:center;gap:18px;padding:16px 20px}.steps .num{flex:none}}
-@media(max-width:960px){.hide-narrow{display:none}.hero{grid-template-columns:1fr;gap:42px;padding:44px 0 56px}.night .inner{grid-template-columns:1fr;gap:34px}}
-@media(max-width:700px){.wrap{width:min(100% - 30px,1160px)}.topbar .inner{height:76px;gap:20px}.logo-acton{height:42px}.logo-dune{height:24px}.formcard{padding:26px 20px 24px;box-shadow:7px 7px 0 var(--red)}.form{grid-template-columns:1fr}.clist{grid-template-columns:1fr}.night{padding:56px 0 64px}.hero h1{font-size:18px}}
+/* tablet e sotto */
+@media(max-width:1100px){
+  .steps{grid-template-columns:1fr;gap:12px}
+  .steps li{flex-direction:row;align-items:center;gap:18px;padding:16px 20px}
+}
+@media(max-width:960px){
+  .hide-narrow{display:none}
+  .hero{grid-template-columns:1fr;gap:44px;padding:44px 0 56px}
+  .formcard{max-width:640px;width:100%;margin:0 auto}
+  .night .inner{grid-template-columns:1fr;gap:34px}
+  .night .lead{max-width:560px}
+}
+/* mobile */
+@media(max-width:700px){
+  .wrap{width:min(100% - 30px,1160px)}
+  .topbar .inner{height:76px;gap:20px}
+  .logo-acton{height:42px}.logo-dune{height:24px}
+  .hero h1{font-size:18px}
+  .perks{grid-template-columns:1fr;gap:14px}
+  .formcard{padding:26px 20px 24px;box-shadow:7px 7px 0 var(--night)}
+  .form{grid-template-columns:1fr}
+  .how{padding-bottom:70px}
+  .steps li{padding:14px 16px;gap:14px}
+  .tg span{font-size:13px;padding:0 16px}
+  .ticker-wrap{margin-bottom:-26px}
+  .night{padding:96px 0 64px}
+  .clist{grid-template-columns:1fr}
+  .beams i{width:70vmax;margin-left:-35vmax;opacity:.7}
+}
+@media(max-width:380px){.perk .big{font-size:28px}.terms summary{font-size:13px}}
+
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+  html.js .reveal{opacity:1}
+  .ticker-track{flex-wrap:wrap;width:auto}
+  .tg:nth-child(2){display:none}
+  html{scroll-behavior:auto}
+}
 </style>
 </head>
 <body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
 <header class="topbar">
   <div class="wrap inner">
     <img class="logo-acton" src="assets/img/acton-logo-green.png" alt="Acton Gas Power Eco">
@@ -149,12 +255,20 @@ footer{background:#0d0a0a;color:#fff;border-top:1px solid rgba(255,255,255,.25);
       <span class="cross" style="right:0;top:14px" aria-hidden="true"></span>
       <span class="cross hide-narrow" style="right:496px;bottom:30px" aria-hidden="true"></span>
       <div>
-        <span class="eyebrow type">riservato ai clienti</span>
-        <h1>Scopri i vantaggi di essere cliente del</h1>
-        <img class="big-logo" src="assets/img/dune-logo.png" alt="DHUNE">
-        <p class="tagline type">Lascia i tuoi dati: ti ricontattiamo noi.</p>
-        <p class="hero-copy">Richiedi informazioni ad <b>Acton Point Rimini</b>: un nostro consulente ti ricontatterà per illustrarti tutte le opportunità a te dedicate.</p>
-        <div class="chips type">
+        <span class="eyebrow type reveal">riservato ai clienti</span>
+        <h1 class="reveal" style="--d:.1s">Scopri i vantaggi di essere cliente del</h1>
+        <div class="logo-fx"><img src="assets/img/dune-logo.png" alt="DHUNE"></div>
+        <div class="perks">
+          <div class="perk reveal" style="--d:.15s"><a class="upto type" href="#condizioni" data-terms>subito*</a><span class="big" data-count="5">5&euro;</span><p>Compila il form e ricevi un voucher buono da 5&euro;.</p></div>
+          <div class="perk reveal" style="--d:.3s"><span class="upto type">fino a</span><span class="big" data-count="100">100&euro;</span><p>Passando ad Acton puoi arrivare fino a 100&euro; di buoni.</p></div>
+        </div>
+        <details class="terms reveal" id="condizioni" style="--d:.4s">
+          <summary class="type">* Condizioni del voucher da 5&euro;</summary>
+          <div class="terms-body type">Il voucher da 5&euro; verr&agrave; consegnato presso Acton Point Rimini, Viale Tripoli 215, dal luned&igrave; al venerd&igrave;, dalle 9:00 alle 13:00 e dalle 15:00 alle 19:00. Per riceverlo &egrave; necessario compilare il form, portare una bolletta della luce o del gas e acconsentire a un'analisi dei costi da parte di un nostro consulente energetico.</div>
+        </details>
+        <p class="tagline type reveal" style="--d:.5s">Lascia i tuoi dati: ti ricontattiamo noi.</p>
+        <p class="hero-copy reveal" style="--d:.6s">Richiedi informazioni ad <b>Acton Point Rimini</b>: un nostro consulente ti ricontatter&agrave; per illustrarti tutte le opportunit&agrave; a te dedicate.</p>
+        <div class="chips type reveal" style="--d:.7s">
           <span class="chip">Luce</span>
           <span class="chip">Gas</span>
           <span class="chip">Fotovoltaico</span>
@@ -163,7 +277,7 @@ footer{background:#0d0a0a;color:#fff;border-top:1px solid rgba(255,255,255,.25);
         </div>
       </div>
 
-      <div class="formcard" id="richiesta">
+      <div class="formcard reveal" id="richiesta" style="--d:.25s">
         <h2>Richiedi informazioni</h2>
         <p class="sub type">Compila il modulo: tutti i campi sono obbligatori.</p>
         <form class="form" id="info-form" action="submit.php" method="POST">
@@ -173,39 +287,63 @@ footer{background:#0d0a0a;color:#fff;border-top:1px solid rgba(255,255,255,.25);
           <div class="field full"><label class="type" for="email">Email *</label><input class="input" id="email" type="email" name="email" required autocomplete="email" placeholder="La tua email"></div>
           <div class="field full"><label class="type" for="telefono">Numero di telefono *</label><input class="input" id="telefono" type="tel" name="telefono" required autocomplete="tel" inputmode="tel" minlength="6" placeholder="Il tuo numero"></div>
           <label class="consent"><input type="checkbox" name="privacy" value="1" required><span>Dichiaro di aver letto l'<a href="https://www.iubenda.com/privacy-policy/53951965" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei miei dati personali per essere ricontattato da Acton Point Rimini. *</span></label>
-          <button class="btn btn-red" type="submit">Invia richiesta <span aria-hidden="true">&rarr;</span></button>
+          <button class="btn btn-night" type="submit">Invia richiesta <span aria-hidden="true">&rarr;</span></button>
         </form>
         <div class="feedback type" id="form-feedback"></div>
       </div>
     </section>
 
     <section class="how" id="come-funziona">
-      <span class="eyebrow type">in 5 semplici passi</span>
-      <h2>Come funziona</h2>
+      <span class="eyebrow type reveal">in 5 semplici passi</span>
+      <h2 class="reveal" style="--d:.1s">Come funziona</h2>
       <ol class="steps">
-        <li><span class="num type">1</span><p>Compili il form.</p></li>
-        <li><span class="num type">2</span><p>Passi presso il nostro Point di Rimini con la tua bolletta luce e gas.</p></li>
-        <li><span class="num type">3</span><p>Ritiri subito il tuo buono carburante ACTON.</p></li>
-        <li><span class="num type">4</span><p>Ricevi la nostra migliore offerta per le tue utenze.</p></li>
-        <li><span class="num type">5</span><p>Passi ad ACTON GAS-POWER-ECO per te in regalo buoni carburante fino a 100&euro;.</p></li>
+        <li class="reveal" style="--d:0s"><span class="num type">1</span><p>Compili il form.</p></li>
+        <li class="reveal" style="--d:.12s"><span class="num type">2</span><p>Passi presso il nostro Point di Rimini con la tua bolletta luce e gas.</p></li>
+        <li class="reveal" style="--d:.24s"><span class="num type">3</span><p>Ritiri subito il tuo buono carburante ACTON.</p></li>
+        <li class="reveal" style="--d:.36s"><span class="num type">4</span><p>Ricevi la nostra migliore offerta per le tue utenze.</p></li>
+        <li class="reveal" style="--d:.48s"><span class="num type">5</span><p>Passi ad ACTON GAS-POWER-ECO per te in regalo buoni carburante fino a 100&euro;.</p></li>
       </ol>
     </section>
   </div>
 
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <div class="ticker-track" id="ticker-track">
+        <div class="tg">
+          <span class="type">Voucher <em>5&euro;</em> subito*</span><b>+</b>
+          <span class="type">Fino a <em>100&euro;</em> di buoni</span><b>+</b>
+          <span class="type">DHUNE <em>&times;</em> ACTON</span><b>+</b>
+          <span class="type">Acton Point Rimini</span><b>+</b>
+          <span class="type">Luce &middot; Gas &middot; Fibra</span><b>+</b>
+          <span class="type">Voucher <em>5&euro;</em> subito*</span><b>+</b>
+          <span class="type">Fino a <em>100&euro;</em> di buoni</span><b>+</b>
+          <span class="type">DHUNE <em>&times;</em> ACTON</span><b>+</b>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section class="night" id="contatti">
-    <span class="cross" style="left:24px;top:28px;opacity:.5;filter:invert(1)" aria-hidden="true"></span>
+    <div class="beams" aria-hidden="true">
+      <i style="--x:14%;--a:16deg;--t:7s;--dl:-2s"></i>
+      <i style="--x:38%;--a:12deg;--t:9s;--dl:-5s;--c:rgba(255,255,255,.2)"></i>
+      <i style="--x:64%;--a:18deg;--t:8s;--dl:-1s"></i>
+      <i style="--x:88%;--a:14deg;--t:10s;--dl:-6s;--c:rgba(255,255,255,.17)"></i>
+    </div>
+    <div class="stars" id="stars" aria-hidden="true"></div>
+    <span class="cross" style="left:24px;top:60px;opacity:.5;filter:invert(1)" aria-hidden="true"></span>
     <span class="cross" style="right:24px;bottom:28px;opacity:.5;filter:invert(1)" aria-hidden="true"></span>
     <div class="wrap inner">
-      <div>
+      <div class="reveal">
         <span class="eyebrow type">i nostri contatti</span>
         <h2>Vieni a trovarci ad Acton Point Rimini</h2>
         <p class="lead">Passa nel nostro Point o scrivici su WhatsApp: ti aspettiamo!</p>
       </div>
       <div class="clist">
-        <div class="citem"><div class="cico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><strong>Dove siamo</strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener">Viale Tripoli 215<br>Rimini</a></div></div>
-        <div class="citem"><div class="cico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg></div><div><strong>Orari</strong><span>Lun&ndash;Ven<br>9:00&ndash;13:00 / 15:00&ndash;19:00</span></div></div>
-        <div class="citem wa"><div class="cico"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12.004 2c-5.523 0-10 4.477-10 10 0 1.767.464 3.496 1.345 5.016L2 22l5.117-1.317c1.47.805 3.137 1.232 4.887 1.232 5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.155c-1.553 0-3.067-.42-4.388-1.213l-.315-.188-3.028.78.807-2.95-.206-.323a8.138 8.138 0 0 1-1.268-4.26c0-4.513 3.675-8.188 8.198-8.188 2.191 0 4.252.855 5.798 2.407a8.15 8.15 0 0 1 2.398 5.78c0 4.513-3.675 8.155-8.196 8.155z"/><path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></div><div><strong>WhatsApp</strong><a href="https://wa.me/393382666418" target="_blank" rel="noopener">+39 338 266 6418</a></div></div>
-        <div class="citem"><div class="cico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></div><div><strong>Chiamaci</strong><a href="tel:+393382666418">+39 338 266 6418</a></div></div>
+        <div class="citem reveal" style="--d:.05s"><div class="cico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><strong>Dove siamo</strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener">Viale Tripoli 215<br>Rimini</a></div></div>
+        <div class="citem reveal" style="--d:.15s"><div class="cico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg></div><div><strong>Orari</strong><span>Lun&ndash;Ven<br>9:00&ndash;13:00 / 15:00&ndash;19:00</span></div></div>
+        <div class="citem wa reveal" style="--d:.25s"><div class="cico"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12.004 2c-5.523 0-10 4.477-10 10 0 1.767.464 3.496 1.345 5.016L2 22l5.117-1.317c1.47.805 3.137 1.232 4.887 1.232 5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.155c-1.553 0-3.067-.42-4.388-1.213l-.315-.188-3.028.78.807-2.95-.206-.323a8.138 8.138 0 0 1-1.268-4.26c0-4.513 3.675-8.188 8.198-8.188 2.191 0 4.252.855 5.798 2.407a8.15 8.15 0 0 1 2.398 5.78c0 4.513-3.675 8.155-8.196 8.155z"/><path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></div><div><strong>WhatsApp</strong><a href="https://wa.me/393382666418" target="_blank" rel="noopener">+39 338 266 6418</a></div></div>
+        <div class="citem reveal" style="--d:.35s"><div class="cico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></div><div><strong>Chiamaci</strong><a href="tel:+393382666418">+39 338 266 6418</a></div></div>
       </div>
     </div>
   </section>
@@ -228,12 +366,86 @@ footer{background:#0d0a0a;color:#fff;border-top:1px solid rgba(255,255,255,.25);
 
 <script>
 (function(){
-  var params=new URLSearchParams(location.search), sent=params.get('sent'), box=document.getElementById('form-feedback');
+  var d=document, reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* entrata a scorrimento */
+  var els=[].slice.call(d.querySelectorAll('.reveal'));
+  if(!('IntersectionObserver' in window)||reduce){
+    els.forEach(function(e){e.classList.add('in')});
+  }else{
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+    },{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  /* numeri che scorrono */
+  var counters=[].slice.call(d.querySelectorAll('[data-count]'));
+  function run(el){
+    var end=parseInt(el.getAttribute('data-count'),10),t0=null,dur=1300;
+    function step(t){
+      if(t0===null)t0=t;
+      var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);
+      el.textContent=Math.round(end*e)+'€';
+      if(p<1)requestAnimationFrame(step);
+    }
+    el.textContent='0€';requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window&&!reduce){
+    var co=new IntersectionObserver(function(es){
+      es.forEach(function(en){if(en.isIntersecting){run(en.target);co.unobserve(en.target)}});
+    },{threshold:.6});
+    counters.forEach(function(c){co.observe(c)});
+  }
+
+  /* barra di avanzamento */
+  var bar=d.getElementById('progress'),tick=false;
+  function upd(){
+    var h=d.documentElement.scrollHeight-innerHeight;
+    bar.style.transform='scaleX('+(h>0?Math.min(scrollY/h,1):0)+')';
+    tick=false;
+  }
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
+  upd();
+
+  /* striscia scorrevole: duplica il gruppo per il ciclo continuo */
+  var track=d.getElementById('ticker-track');
+  if(track&&track.firstElementChild&&!reduce){
+    var clone=track.firstElementChild.cloneNode(true);
+    track.appendChild(clone);
+  }
+
+  /* stelle nella sezione notte */
+  var stars=d.getElementById('stars');
+  if(stars&&!reduce){
+    for(var i=0;i<38;i++){
+      var s=d.createElement('i'),z=1+Math.random()*2;
+      s.style.left=(Math.random()*100)+'%';
+      s.style.top=(Math.random()*100)+'%';
+      s.style.width=s.style.height=z+'px';
+      s.style.setProperty('--t',(3+Math.random()*4)+'s');
+      s.style.setProperty('--dl',(-Math.random()*6)+'s');
+      stars.appendChild(s);
+    }
+  }
+
+  /* l'asterisco apre le condizioni */
+  var terms=d.getElementById('condizioni');
+  [].slice.call(d.querySelectorAll('[data-terms]')).forEach(function(a){
+    a.addEventListener('click',function(ev){
+      ev.preventDefault();
+      terms.open=true;
+      terms.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
+    });
+  });
+
+  /* esito invio form */
+  var params=new URLSearchParams(location.search), sent=params.get('sent'), box=d.getElementById('form-feedback');
   if(sent && box){
     box.style.display='block';
     if(sent==='1'){box.style.background='#d8e6c6';box.style.color='#16140f';box.textContent='Grazie! La tua richiesta è stata inviata, ti ricontatteremo al più presto.';}
     else{box.style.background='#f3d3cc';box.style.color='#7a1d10';box.textContent='Si è verificato un errore nell\'invio. Riprova o scrivici su WhatsApp al +39 338 266 6418.';}
-    document.getElementById('richiesta').scrollIntoView({behavior:'smooth'});
+    d.getElementById('richiesta').scrollIntoView({behavior:'smooth'});
   }
 })();
 </script>
