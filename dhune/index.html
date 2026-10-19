@@ -20,6 +20,7 @@
 <meta property="og:url" content="https://dhune.actonpoint.it/">
 <meta property="og:image" content="https://dhune.actonpoint.it/assets/img/dune-logo.png">
 <meta property="og:locale" content="it_IT">
+<link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="assets/img/favicon-32x32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="assets/img/favicon-16x16.png" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -55,7 +56,7 @@ img{max-width:100%;display:block}
 
 .topbar{border-bottom:1.5px solid var(--ink)}
 .topbar .inner{height:92px;display:flex;align-items:center;justify-content:center;gap:34px}
-.logo-acton{height:48px;width:auto}
+.logo-acton{height:56px;width:auto}
 .logo-plus{font-size:28px;font-weight:400;line-height:1;opacity:.7}
 .logo-dune{height:34px;width:auto}
 
@@ -86,6 +87,15 @@ img{max-width:100%;display:block}
 .btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
 .form .btn{grid-column:1/-1;margin-top:6px;width:100%}
 .feedback{display:none;margin-top:18px;padding:13px 16px;font-weight:700;font-size:14px;line-height:1.45;border:1.5px solid var(--ink)}
+
+/* come funziona */
+.how{padding:0 0 76px}
+.how h2{font-family:'Syncopate',sans-serif;font-weight:700;font-size:clamp(20px,2.4vw,30px);line-height:1.2;text-transform:uppercase;margin-top:14px}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:30px}
+.steps li{background:var(--paper2);border:1.5px solid var(--ink);padding:22px 20px 24px;display:flex;flex-direction:column;gap:14px}
+.steps .num{width:42px;height:42px;border-radius:50%;background:#a9e719;border:1.5px solid var(--ink);display:grid;place-items:center;font-size:19px;line-height:1}
+.steps p{font-size:15px;line-height:1.6;font-weight:500;color:#2c2a23}
+.steps b{font-weight:800}
 
 /* contatti: lato "notte" del club */
 .night{position:relative;color:#fff;background:
@@ -119,14 +129,15 @@ footer{background:#0d0a0a;color:#fff;border-top:1px solid rgba(255,255,255,.25);
 .whatsapp-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.3);z-index:999;transition:transform .2s ease}
 .whatsapp-float:hover{transform:scale(1.07)}
 
+@media(max-width:1100px){.steps{grid-template-columns:1fr;gap:12px}.steps li{flex-direction:row;align-items:center;gap:18px;padding:16px 20px}.steps .num{flex:none}}
 @media(max-width:960px){.hide-narrow{display:none}.hero{grid-template-columns:1fr;gap:42px;padding:44px 0 56px}.night .inner{grid-template-columns:1fr;gap:34px}}
-@media(max-width:700px){.wrap{width:min(100% - 30px,1160px)}.topbar .inner{height:76px;gap:20px}.logo-acton{height:38px}.logo-dune{height:24px}.formcard{padding:26px 20px 24px;box-shadow:7px 7px 0 var(--red)}.form{grid-template-columns:1fr}.clist{grid-template-columns:1fr}.night{padding:56px 0 64px}.hero h1{font-size:18px}}
+@media(max-width:700px){.wrap{width:min(100% - 30px,1160px)}.topbar .inner{height:76px;gap:20px}.logo-acton{height:42px}.logo-dune{height:24px}.formcard{padding:26px 20px 24px;box-shadow:7px 7px 0 var(--red)}.form{grid-template-columns:1fr}.clist{grid-template-columns:1fr}.night{padding:56px 0 64px}.hero h1{font-size:18px}}
 </style>
 </head>
 <body>
 <header class="topbar">
   <div class="wrap inner">
-    <img class="logo-acton" src="assets/img/acton-logo-v2.png" alt="Acton Point">
+    <img class="logo-acton" src="assets/img/acton-logo-green.png" alt="Acton Gas Power Eco">
     <span class="logo-plus" aria-hidden="true">+</span>
     <img class="logo-dune" src="assets/img/dune-logo.png" alt="DHUNE">
   </div>
@@ -166,6 +177,18 @@ footer{background:#0d0a0a;color:#fff;border-top:1px solid rgba(255,255,255,.25);
         </form>
         <div class="feedback type" id="form-feedback"></div>
       </div>
+    </section>
+
+    <section class="how" id="come-funziona">
+      <span class="eyebrow type">in 5 semplici passi</span>
+      <h2>Come funziona</h2>
+      <ol class="steps">
+        <li><span class="num type">1</span><p>Compili il form.</p></li>
+        <li><span class="num type">2</span><p>Passi presso il nostro Point di Rimini con la tua bolletta luce e gas.</p></li>
+        <li><span class="num type">3</span><p>Ritiri subito il tuo buono carburante ACTON.</p></li>
+        <li><span class="num type">4</span><p>Ricevi la nostra migliore offerta per le tue utenze.</p></li>
+        <li><span class="num type">5</span><p>Passi ad ACTON GAS-POWER-ECO per te in regalo buoni carburante fino a 100&euro;.</p></li>
+      </ol>
     </section>
   </div>
 
