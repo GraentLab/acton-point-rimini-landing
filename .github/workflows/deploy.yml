@@ -8,6 +8,8 @@ jobs:
   ftp-deploy:
     name: Deploy via FTP
     runs-on: ubuntu-latest
+    env:
+      FTP_DIR_DHUNE: ${{ secrets.FTP_DIR_DHUNE }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -39,3 +41,23 @@ jobs:
             **/.git*/**
             **/node_modules/**
             **/README.md
+            dhune/**
+
+      - name: Build DHUNE subdomain bundle
+        if: ${{ env.FTP_DIR_DHUNE != '' }}
+        run: |
+          mkdir build-dhune
+          cp -r dhune/. build-dhune/
+          cp -r lib build-dhune/lib
+          cp smtp-config.php build-dhune/smtp-config.php
+
+      - name: Deploy DHUNE subdomain via FTP
+        if: ${{ env.FTP_DIR_DHUNE != '' }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_DIR_DHUNE }}
+          local-dir: ./build-dhune/
+          state-name: "ftp-deploy-state-dhune.json"
