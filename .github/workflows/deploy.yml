@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FTP_DIR_DHUNE: ${{ secrets.FTP_DIR_DHUNE }}
+      FTP_DIR_RIMINICALCIO: ${{ secrets.FTP_DIR_RIMINICALCIO }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -42,6 +43,7 @@ jobs:
             **/node_modules/**
             **/README.md
             dhune/**
+            riminicalcio/**
 
       - name: Build DHUNE subdomain bundle
         if: ${{ env.FTP_DIR_DHUNE != '' }}
@@ -61,3 +63,22 @@ jobs:
           server-dir: ${{ secrets.FTP_DIR_DHUNE }}
           local-dir: ./build-dhune/
           state-name: "ftp-deploy-state-dhune.json"
+
+      - name: Build Rimini Calcio subdomain bundle
+        if: ${{ env.FTP_DIR_RIMINICALCIO != '' }}
+        run: |
+          mkdir build-riminicalcio
+          cp -r riminicalcio/. build-riminicalcio/
+          cp -r lib build-riminicalcio/lib
+          cp smtp-config.php build-riminicalcio/smtp-config.php
+
+      - name: Deploy Rimini Calcio subdomain via FTP
+        if: ${{ env.FTP_DIR_RIMINICALCIO != '' }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_DIR_RIMINICALCIO }}
+          local-dir: ./build-riminicalcio/
+          state-name: "ftp-deploy-state-riminicalcio.json"

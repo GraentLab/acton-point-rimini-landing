@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js');</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18480237940"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18480237940');
+</script>
+<title>Scopri i vantaggi di essere tifoso del Rimini Calcio | Acton Point Rimini</title>
+<meta name="description" content="Tifosi del Rimini Calcio: compila il form e ricevi subito 5 euro di buono carburante! Passando ad Acton fino a 100 euro di buoni. Acton Point Rimini ti ricontatta.">
+<link rel="canonical" href="https://riminicalcio.actonpoint.it/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Scopri i vantaggi di essere tifoso del Rimini Calcio">
+<meta property="og:description" content="Richiedi informazioni ad Acton Point Rimini: un consulente ti ricontatta.">
+<meta property="og:url" content="https://riminicalcio.actonpoint.it/">
+<meta property="og:image" content="https://riminicalcio.actonpoint.it/assets/img/rimini-calcio-logo.png">
+<meta property="og:locale" content="it_IT">
+<meta name="theme-color" content="#2a0710">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/img/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,500;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#e0051d;
+  --wine:#4a0b16;
+  --deep:#2a0710;
+  --pink:#f3c9cf;
+  --paper:#fbf7f5;
+  --cream:#f3ebe8;
+  --ink:#1b0c10;
+  --muted:#6b5a5e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;background:var(--paper)}
+body{font-family:'Montserrat',sans-serif;color:var(--ink);background:
+  radial-gradient(ellipse 760px 420px at 88% 6%,rgba(224,5,29,.07) 0%,transparent 70%),
+  radial-gradient(ellipse 700px 460px at 4% 46%,rgba(243,201,207,.45) 0%,transparent 70%),
+  var(--paper);overflow-x:hidden;-webkit-font-smoothing:antialiased;position:relative}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:min(1160px,calc(100% - 64px));margin:auto}
+.serif{font-family:'Playfair Display',Georgia,serif}
+.label{font-weight:700;text-transform:uppercase;letter-spacing:.18em;font-size:12px}
+
+/* righe della maglia */
+.stripes{height:24px;background:repeating-linear-gradient(to bottom,var(--red) 0 6px,#fff 6px 12px)}
+.stripes.thin{height:12px}
+
+/* barra di avanzamento */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--red);z-index:1000}
+
+/* entrata a scorrimento */
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+html.js .reveal{opacity:0}
+html.js .reveal.in{opacity:1;animation:rise .85s cubic-bezier(.2,.7,.2,1) var(--d,0s) backwards}
+
+.topbar{background:#fff}
+.topbar .inner{height:104px;display:flex;align-items:center;justify-content:center;gap:34px}
+.logo-acton{height:54px;width:auto}
+.logo-plus{font-family:'Playfair Display',serif;font-size:34px;line-height:1;color:var(--red)}
+.logo-club{height:78px;width:auto}
+
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:64px;align-items:center;padding:58px 0 72px}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--red)}
+.eyebrow:before{content:"";width:34px;height:2px;background:var(--red)}
+.hero h1{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:clamp(22px,2.7vw,36px);line-height:1.2;margin-top:18px}
+
+/* stemma + titolo del club */
+.club{display:flex;align-items:center;gap:26px;margin-top:22px}
+.crest{position:relative;flex:none;width:clamp(120px,15vw,170px);animation:float 7s ease-in-out infinite}
+.crest img{width:100%;height:auto;filter:drop-shadow(0 14px 18px rgba(74,11,22,.28));animation:crestIn 1.6s cubic-bezier(.2,.75,.2,1) .2s both}
+.crest:after{content:"";position:absolute;inset:0;pointer-events:none;
+  -webkit-mask:url(assets/img/rimini-calcio-logo.png) center/100% 100% no-repeat;mask:url(assets/img/rimini-calcio-logo.png) center/100% 100% no-repeat;
+  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.95) 50%,transparent 62%);
+  background-size:320% 100%;background-position:130% 0;animation:glint 12s ease-in-out 3.4s infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes crestIn{from{opacity:0;transform:scale(.82) rotate(-5deg)}to{opacity:1;transform:none}}
+@keyframes glint{0%{background-position:130% 0}42%,100%{background-position:-35% 0}}
+.club-name{font-family:'Playfair Display',serif;font-weight:800;text-transform:uppercase;font-size:clamp(34px,4.6vw,62px);line-height:.95;letter-spacing:.01em;color:var(--ink)}
+.since{display:block;font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(54px,8vw,104px);line-height:.9;color:transparent;-webkit-text-stroke:1.6px var(--red);margin-top:8px;letter-spacing:.02em}
+
+/* vantaggi */
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.perk{border:2px solid var(--ink);background:#fff;padding:14px 18px 18px;box-shadow:6px 6px 0 var(--wine);transition:transform .25s ease,box-shadow .25s ease}
+.perk:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--wine)}
+.perk .upto{display:block;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);text-decoration:none}
+.perk a.upto:hover{text-decoration:underline}
+.perk .big{display:block;font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(36px,4vw,54px);line-height:1;color:var(--red);margin-top:6px;font-variant-numeric:lining-nums tabular-nums}
+.perk p{font-size:14px;line-height:1.5;font-weight:700;margin-top:10px}
+
+/* condizioni a tendina */
+.terms{margin-top:18px;border:1.5px solid var(--ink);background:rgba(255,255,255,.82)}
+.terms summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;font-weight:700;font-size:13px;letter-spacing:.04em;transition:background .2s}
+.terms summary::-webkit-details-marker{display:none}
+.terms summary:hover{background:rgba(224,5,29,.06)}
+.terms summary:focus-visible{outline:3px solid rgba(224,5,29,.4);outline-offset:2px}
+.terms summary:after{content:"+";font-family:'Playfair Display',serif;font-size:26px;line-height:1;color:var(--red);transition:transform .3s ease;flex:none}
+.terms[open] summary:after{transform:rotate(45deg)}
+.terms[open] summary{border-bottom:1.5px solid var(--ink)}
+.terms .terms-body{padding:14px 16px 16px;font-size:13px;line-height:1.7;color:#4d3d41;animation:drop .4s ease}
+@keyframes drop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+
+.tagline{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(20px,2vw,26px);line-height:1.4;color:var(--red);margin-top:28px}
+.hero-copy{font-size:16px;line-height:1.7;font-weight:500;color:#4d3d41;max-width:520px;margin-top:14px}
+.hero-copy b{font-weight:800;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--ink);padding:7px 12px;background:#fff;transition:background .2s,color .2s,transform .2s}
+.chip:hover{background:var(--red);border-color:var(--red);color:#fff;transform:translateY(-2px)}
+
+.formcard{position:relative;background:#fff;border:2px solid var(--ink);padding:34px 32px 30px;box-shadow:10px 10px 0 var(--wine);transition:box-shadow .3s ease}
+.formcard:hover,.formcard:focus-within{box-shadow:14px 14px 0 var(--wine)}
+.formcard h2{font-family:'Playfair Display',serif;font-weight:800;font-size:28px;line-height:1.1}
+.formcard .sub{font-size:13.5px;line-height:1.5;color:var(--muted);margin-top:10px;font-weight:600}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.field.full{grid-column:1/-1}
+.field label{font-size:11px;display:block;margin-bottom:5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.input{width:100%;height:46px;border:1.5px solid var(--ink);border-radius:0;padding:9px 13px;font:600 16px Montserrat,sans-serif;background:#fffdfc;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+.input:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 4px rgba(224,5,29,.2)}
+.consent{grid-column:1/-1;display:flex;gap:11px;align-items:flex-start;font-size:12px;line-height:1.55;font-weight:500;color:#4d3d41}
+.consent input{width:20px;height:20px;margin-top:1px;flex:none;accent-color:var(--red)}
+.consent a{font-weight:700;color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;padding:19px 28px;border:2px solid var(--ink);cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+.btn-red{position:relative;overflow:hidden;background:var(--red);color:#fff}
+.btn-red:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);animation:shine 4.4s ease-in-out 1.5s infinite}
+@keyframes shine{0%{left:-60%}35%,100%{left:140%}}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+.form .btn{grid-column:1/-1;margin-top:6px;width:100%}
+.feedback{display:none;margin-top:18px;padding:13px 16px;font-weight:700;font-size:14px;line-height:1.45;border:1.5px solid var(--ink)}
+
+/* come funziona */
+.how{padding:0 0 84px}
+.how h2{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,3.6vw,48px);line-height:1.1;margin-top:14px}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:30px}
+.steps li{background:#fff;border:1.5px solid var(--ink);padding:22px 20px 24px;display:flex;flex-direction:column;gap:14px;transition:transform .25s ease,box-shadow .25s ease}
+.steps li:hover{transform:translateY(-5px);box-shadow:6px 6px 0 var(--wine)}
+.steps .num{position:relative;width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:800;font-size:22px;line-height:1;flex:none}
+.steps li.in .num{animation:pop .7s cubic-bezier(.3,1.7,.5,1) calc(var(--d,0s) + .35s) backwards}
+.steps .num:after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1.5px solid var(--red);opacity:0}
+.steps li.in .num:after{animation:ring 2.8s ease-out calc(var(--d,0s) + 1s) infinite}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes ring{0%{transform:scale(.8);opacity:.9}70%,100%{transform:scale(1.5);opacity:0}}
+.steps p{font-size:15px;line-height:1.6;font-weight:500;color:#2c1d21}
+
+/* striscia scorrevole */
+.ticker-wrap{position:relative;z-index:3;padding:6px 0 0;margin-bottom:-34px;overflow:hidden}
+.ticker{background:var(--red);color:#fff;transform:rotate(-1.3deg);margin:0 -3%;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);overflow:hidden;box-shadow:0 10px 0 var(--wine)}
+.ticker-track{display:flex;width:max-content;padding:15px 0}
+html.js .ticker-track{animation:marquee 34s linear infinite}
+.tg{display:flex;align-items:center;flex:none}
+.tg span{font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;padding:0 22px}
+.tg span em{font-style:normal;font-family:'Playfair Display',serif;font-size:19px;color:var(--pink)}
+.tg b{font-weight:400;font-size:14px;color:var(--pink);line-height:1}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* contatti: serata allo stadio */
+.night{position:relative;color:#fff;background:
+  radial-gradient(ellipse 640px 380px at 86% 8%,rgba(224,5,29,.42) 0%,transparent 70%),
+  radial-gradient(ellipse 520px 320px at 6% 100%,rgba(224,5,29,.24) 0%,transparent 70%),
+  var(--deep);padding:112px 0 84px;overflow:hidden}
+.night .mark{position:absolute;right:-1%;bottom:-4%;font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(140px,26vw,360px);line-height:.8;color:transparent;-webkit-text-stroke:1.5px rgba(243,201,207,.18);pointer-events:none;user-select:none}
+.beams{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.beams i{position:absolute;top:-8%;left:var(--x);width:46vmax;height:125%;margin-left:-23vmax;transform-origin:50% 0;
+  background:linear-gradient(to bottom,var(--c,rgba(255,236,214,.26)),rgba(255,236,214,0) 70%);
+  clip-path:polygon(48.5% 0,51.5% 0,100% 100%,0 100%);animation:sweep var(--t) ease-in-out var(--dl,0s) infinite alternate}
+@keyframes sweep{from{transform:rotate(calc(var(--a) * -1))}to{transform:rotate(var(--a))}}
+.stars{position:absolute;inset:0;pointer-events:none}
+.stars i{position:absolute;border-radius:50%;background:#fff;opacity:.05;animation:twinkle var(--t) ease-in-out var(--dl) infinite}
+@keyframes twinkle{0%,100%{opacity:.05}50%{opacity:.9}}
+.night .inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.45fr;gap:48px;align-items:center}
+.night .eyebrow{color:var(--pink)}
+.night .eyebrow:before{background:var(--pink)}
+.night h2{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(30px,3.6vw,48px);line-height:1.1;margin-top:16px;text-shadow:0 0 30px rgba(224,5,29,.4)}
+.night .lead{font-size:15px;line-height:1.7;color:#f1e3e5;margin-top:16px;font-weight:500;max-width:420px}
+.clist{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.citem{display:flex;gap:14px;align-items:flex-start;border:1.5px solid rgba(255,255,255,.5);padding:18px;background:rgba(255,255,255,.05);transition:transform .25s ease,border-color .25s ease,background .25s ease,box-shadow .25s ease}
+.citem:hover{transform:translateY(-4px);border-color:var(--red);background:rgba(224,5,29,.14);box-shadow:0 0 28px rgba(224,5,29,.35)}
+.cico{width:40px;height:40px;border:1.5px solid #fff;display:grid;place-items:center;flex:none}
+.citem.wa .cico{background:#25d366;border-color:#25d366}
+.citem strong{display:block;font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:5px}
+.citem span,.citem a{font-size:15px;font-weight:700;line-height:1.45;color:#fff;text-decoration:none}
+.citem a:hover{text-decoration:underline}
+
+footer{position:relative;z-index:2;background:var(--deep);color:#fff;padding:0 0 24px;font-size:13px}
+footer .stripes{margin-bottom:24px}
+.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+.footer-inner small{color:#d9c6c9}
+.footer-inner a{color:#fff;font-weight:700}
+.footer-logos{display:flex;align-items:center;gap:20px}
+.footer-logos .fa{height:24px;width:auto}
+.footer-logos .fc{height:46px;width:auto}
+
+.whatsapp-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.3);z-index:999;transition:transform .2s ease}
+.whatsapp-float:hover{transform:scale(1.07)}
+
+/* tablet e sotto */
+@media(max-width:1100px){
+  .steps{grid-template-columns:1fr;gap:12px}
+  .steps li{flex-direction:row;align-items:center;gap:18px;padding:16px 20px}
+}
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;gap:44px;padding:44px 0 56px}
+  .formcard{max-width:640px;width:100%;margin:0 auto}
+  .night .inner{grid-template-columns:1fr;gap:34px}
+  .night .lead{max-width:560px}
+}
+/* mobile */
+@media(max-width:700px){
+  .wrap{width:min(100% - 30px,1160px)}
+  .topbar .inner{height:88px;gap:20px}
+  .logo-acton{height:40px}.logo-club{height:62px}
+  .hero h1{font-size:21px}
+  .club{gap:18px}
+  .perks{grid-template-columns:1fr;gap:14px}
+  .formcard{padding:26px 20px 24px;box-shadow:7px 7px 0 var(--wine)}
+  .formcard h2{font-size:25px}
+  .form{grid-template-columns:1fr}
+  .how{padding-bottom:70px}
+  .steps li{padding:14px 16px;gap:14px}
+  .tg span{font-size:12px;padding:0 16px}
+  .ticker-wrap{margin-bottom:-26px}
+  .night{padding:96px 0 64px}
+  .clist{grid-template-columns:1fr}
+  .beams i{width:70vmax;margin-left:-35vmax;opacity:.7}
+}
+@media(max-width:380px){.club{flex-direction:column;align-items:flex-start}.crest{width:110px}.terms summary{font-size:12px}}
+
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{animation:none!important;transition:none!important}
+  html.js .reveal{opacity:1}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap inner">
+    <img class="logo-acton" src="assets/img/acton-logo-green.png" alt="Acton Gas Power Eco">
+    <span class="logo-plus" aria-hidden="true">+</span>
+    <img class="logo-club" src="assets/img/rimini-calcio-logo.png" alt="Rimini Calcio">
+  </div>
+  <div class="stripes"></div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <span class="eyebrow label reveal">Io, Noi Siamo Rimini</span>
+        <h1 class="reveal" style="--d:.1s">Scopri i vantaggi di essere tifoso del</h1>
+        <div class="club">
+          <div class="crest"><img src="assets/img/rimini-calcio-logo.png" alt="Stemma del Rimini Calcio"></div>
+          <div class="club-name">Rimini<br>Calcio<span class="since" aria-hidden="true">1912</span></div>
+        </div>
+        <div class="perks">
+          <div class="perk reveal" style="--d:.15s"><a class="upto" href="#condizioni" data-terms>ricevi subito*</a><span class="big" data-count="5">5&euro;</span><p>di buono carburante!</p></div>
+          <div class="perk reveal" style="--d:.3s"><span class="upto">fino a</span><span class="big" data-count="100">100&euro;</span><p>Passando ad Acton puoi arrivare fino a 100&euro; di buoni.</p></div>
+        </div>
+        <details class="terms reveal" id="condizioni" style="--d:.4s">
+          <summary>* Condizioni del buono carburante da 5&euro;</summary>
+          <div class="terms-body">Il buono carburante da 5&euro; verr&agrave; consegnato presso Acton Point Rimini, Viale Tripoli 215, dal luned&igrave; al venerd&igrave;, dalle 9:00 alle 13:00 e dalle 15:00 alle 19:00. Per riceverlo &egrave; necessario compilare il form, portare una bolletta della luce o del gas e acconsentire a un'analisi dei costi da parte di un nostro consulente energetico.</div>
+        </details>
+        <p class="tagline reveal" style="--d:.5s">Lascia i tuoi dati: ti ricontattiamo noi.</p>
+        <p class="hero-copy reveal" style="--d:.6s">Richiedi informazioni ad <b>Acton Point Rimini</b>: un nostro consulente ti ricontatter&agrave; per illustrarti tutte le opportunit&agrave; a te dedicate.</p>
+        <div class="chips reveal" style="--d:.7s">
+          <span class="chip">Luce</span>
+          <span class="chip">Gas</span>
+          <span class="chip">Fotovoltaico</span>
+          <span class="chip">Fibra</span>
+          <span class="chip">Carta carburante</span>
+        </div>
+      </div>
+
+      <div class="formcard reveal" id="richiesta" style="--d:.25s">
+        <h2>Richiedi informazioni</h2>
+        <p class="sub">Compila il modulo: tutti i campi sono obbligatori.</p>
+        <form class="form" id="info-form" action="submit.php" method="POST">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+          <div class="field"><label for="nome">Nome *</label><input class="input" id="nome" name="nome" required autocomplete="given-name" placeholder="Nome"></div>
+          <div class="field"><label for="cognome">Cognome *</label><input class="input" id="cognome" name="cognome" required autocomplete="family-name" placeholder="Cognome"></div>
+          <div class="field full"><label for="email">Email *</label><input class="input" id="email" type="email" name="email" required autocomplete="email" placeholder="La tua email"></div>
+          <div class="field full"><label for="telefono">Numero di telefono *</label><input class="input" id="telefono" type="tel" name="telefono" required autocomplete="tel" inputmode="tel" minlength="6" placeholder="Il tuo numero"></div>
+          <label class="consent"><input type="checkbox" name="privacy" value="1" required><span>Dichiaro di aver letto l'<a href="https://www.iubenda.com/privacy-policy/53951965" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei miei dati personali per essere ricontattato da Acton Point Rimini. *</span></label>
+          <button class="btn btn-red" type="submit">Invia richiesta <span aria-hidden="true">&rarr;</span></button>
+        </form>
+        <div class="feedback" id="form-feedback"></div>
+      </div>
+    </section>
+
+    <section class="how" id="come-funziona">
+      <span class="eyebrow label reveal">In 5 semplici passi</span>
+      <h2 class="reveal" style="--d:.1s">Come funziona</h2>
+      <ol class="steps">
+        <li class="reveal" style="--d:0s"><span class="num">1</span><p>Compili il form.</p></li>
+        <li class="reveal" style="--d:.12s"><span class="num">2</span><p>Passi presso il nostro Point di Rimini con la tua bolletta luce e gas.</p></li>
+        <li class="reveal" style="--d:.24s"><span class="num">3</span><p>Ritiri subito il tuo buono carburante ACTON.</p></li>
+        <li class="reveal" style="--d:.36s"><span class="num">4</span><p>Ricevi la nostra migliore offerta per le tue utenze.</p></li>
+        <li class="reveal" style="--d:.48s"><span class="num">5</span><p>Passi ad ACTON GAS-POWER-ECO per te in regalo buoni carburante fino a 100&euro;.</p></li>
+      </ol>
+    </section>
+  </div>
+
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <div class="ticker-track" id="ticker-track">
+        <div class="tg">
+          <span>Ricevi subito <em>5&euro;</em> di buono carburante*</span><b>&#9670;</b>
+          <span>Fino a <em>100&euro;</em> di buoni</span><b>&#9670;</b>
+          <span>Rimini Calcio <em>&times;</em> Acton</span><b>&#9670;</b>
+          <span>Io, Noi Siamo Rimini</span><b>&#9670;</b>
+          <span>Dal <em>1912</em></span><b>&#9670;</b>
+          <span>Acton Point Rimini</span><b>&#9670;</b>
+          <span>Ricevi subito <em>5&euro;</em> di buono carburante*</span><b>&#9670;</b>
+          <span>Fino a <em>100&euro;</em> di buoni</span><b>&#9670;</b>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="night" id="contatti">
+    <div class="beams" aria-hidden="true">
+      <i style="--x:12%;--a:15deg;--t:8s;--dl:-2s"></i>
+      <i style="--x:36%;--a:11deg;--t:10s;--dl:-5s;--c:rgba(255,255,255,.17)"></i>
+      <i style="--x:62%;--a:17deg;--t:9s;--dl:-1s"></i>
+      <i style="--x:88%;--a:13deg;--t:11s;--dl:-6s;--c:rgba(255,255,255,.15)"></i>
+    </div>
+    <div class="stars" id="stars" aria-hidden="true"></div>
+    <div class="mark" aria-hidden="true">1912</div>
+    <div class="wrap inner">
+      <div class="reveal">
+        <span class="eyebrow label">I nostri contatti</span>
+        <h2>Vieni a trovarci ad Acton Point Rimini</h2>
+        <p class="lead">Passa nel nostro Point o scrivici su WhatsApp: ti aspettiamo!</p>
+      </div>
+      <div class="clist">
+        <div class="citem reveal" style="--d:.05s"><div class="cico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><strong>Dove siamo</strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Viale+Tripoli+215%2C+Rimini" target="_blank" rel="noopener">Viale Tripoli 215<br>Rimini</a></div></div>
+        <div class="citem reveal" style="--d:.15s"><div class="cico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg></div><div><strong>Orari</strong><span>Lun&ndash;Ven<br>9:00&ndash;13:00 / 15:00&ndash;19:00</span></div></div>
+        <div class="citem wa reveal" style="--d:.25s"><div class="cico"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12.004 2c-5.523 0-10 4.477-10 10 0 1.767.464 3.496 1.345 5.016L2 22l5.117-1.317c1.47.805 3.137 1.232 4.887 1.232 5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.155c-1.553 0-3.067-.42-4.388-1.213l-.315-.188-3.028.78.807-2.95-.206-.323a8.138 8.138 0 0 1-1.268-4.26c0-4.513 3.675-8.188 8.198-8.188 2.191 0 4.252.855 5.798 2.407a8.15 8.15 0 0 1 2.398 5.78c0 4.513-3.675 8.155-8.196 8.155z"/><path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></div><div><strong>WhatsApp</strong><a href="https://wa.me/393382666418" target="_blank" rel="noopener">+39 338 266 6418</a></div></div>
+        <div class="citem reveal" style="--d:.35s"><div class="cico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></div><div><strong>Chiamaci</strong><a href="tel:+393382666418">+39 338 266 6418</a></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="stripes thin"></div>
+  <div class="wrap footer-inner">
+    <div class="footer-logos">
+      <img class="fa" src="assets/img/acton-logo-v2.png" alt="Acton Point" style="filter:brightness(0) invert(1)">
+      <img class="fc" src="assets/img/rimini-calcio-logo.png" alt="Rimini Calcio">
+    </div>
+    <div><small>Acton Point Rimini &middot; Viale Tripoli 215 &middot; Lun&ndash;Ven 9:00&ndash;13:00 / 15:00&ndash;19:00</small></div>
+    <a href="https://www.iubenda.com/privacy-policy/53951965" target="_blank" rel="noopener">Informativa privacy</a>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/393382666418" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12.004 2c-5.523 0-10 4.477-10 10 0 1.767.464 3.496 1.345 5.016L2 22l5.117-1.317c1.47.805 3.137 1.232 4.887 1.232 5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.155c-1.553 0-3.067-.42-4.388-1.213l-.315-.188-3.028.78.807-2.95-.206-.323a8.138 8.138 0 0 1-1.268-4.26c0-4.513 3.675-8.188 8.198-8.188 2.191 0 4.252.855 5.798 2.407a8.15 8.15 0 0 1 2.398 5.78c0 4.513-3.675 8.155-8.196 8.155z"/><path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+</a>
+
+<script>
+(function(){
+  var d=document, reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var els=[].slice.call(d.querySelectorAll('.reveal'));
+  if(!('IntersectionObserver' in window)||reduce){
+    els.forEach(function(e){e.classList.add('in')});
+  }else{
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+    },{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  var counters=[].slice.call(d.querySelectorAll('[data-count]'));
+  function run(el){
+    var end=parseInt(el.getAttribute('data-count'),10),t0=null,dur=1300;
+    function step(t){
+      if(t0===null)t0=t;
+      var p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);
+      el.textContent=Math.round(end*e)+'€';
+      if(p<1)requestAnimationFrame(step);
+    }
+    el.textContent='0€';requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window&&!reduce){
+    var co=new IntersectionObserver(function(es){
+      es.forEach(function(en){if(en.isIntersecting){run(en.target);co.unobserve(en.target)}});
+    },{threshold:.6});
+    counters.forEach(function(c){co.observe(c)});
+  }
+
+  var bar=d.getElementById('progress'),tick=false;
+  function upd(){
+    var h=d.documentElement.scrollHeight-innerHeight;
+    bar.style.transform='scaleX('+(h>0?Math.min(scrollY/h,1):0)+')';
+    tick=false;
+  }
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
+  upd();
+
+  var track=d.getElementById('ticker-track');
+  if(track&&track.firstElementChild&&!reduce){
+    track.appendChild(track.firstElementChild.cloneNode(true));
+  }
+
+  var stars=d.getElementById('stars');
+  if(stars&&!reduce){
+    for(var i=0;i<34;i++){
+      var s=d.createElement('i'),z=1+Math.random()*2;
+      s.style.left=(Math.random()*100)+'%';
+      s.style.top=(Math.random()*100)+'%';
+      s.style.width=s.style.height=z+'px';
+      s.style.setProperty('--t',(3+Math.random()*4)+'s');
+      s.style.setProperty('--dl',(-Math.random()*6)+'s');
+      stars.appendChild(s);
+    }
+  }
+
+  var terms=d.getElementById('condizioni');
+  [].slice.call(d.querySelectorAll('[data-terms]')).forEach(function(a){
+    a.addEventListener('click',function(ev){
+      ev.preventDefault();
+      terms.open=true;
+      terms.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
+    });
+  });
+
+  var params=new URLSearchParams(location.search), sent=params.get('sent'), box=d.getElementById('form-feedback');
+  if(sent && box){
+    box.style.display='block';
+    if(sent==='1'){box.style.background='#f6d9dd';box.style.color='#1b0c10';box.textContent='Grazie! La tua richiesta è stata inviata, ti ricontatteremo al più presto.';}
+    else{box.style.background='#f3d3cc';box.style.color='#7a1d10';box.textContent='Si è verificato un errore nell\'invio. Riprova o scrivici su WhatsApp al +39 338 266 6418.';}
+    d.getElementById('richiesta').scrollIntoView({behavior:'smooth'});
+  }
+})();
+</script>
+</body>
+</html>
