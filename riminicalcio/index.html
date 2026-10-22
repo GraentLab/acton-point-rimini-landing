@@ -117,7 +117,7 @@ html.js .reveal.in{opacity:1;animation:rise .85s cubic-bezier(.2,.7,.2,1) var(--
 .perk{position:relative;overflow:hidden;min-height:134px;border:2px solid var(--ink);background:#fff;padding:14px 18px 18px;box-shadow:6px 6px 0 var(--wine);transition:transform .25s ease,box-shadow .25s ease}
 .perk:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--wine)}
 .perk .art{position:absolute;right:6px;bottom:4px;width:34%;max-width:150px;height:auto;pointer-events:none;filter:drop-shadow(0 6px 6px rgba(27,12,16,.18))}
-.perk .mini-wm{height:16px;width:auto;display:inline-block}
+.perk .mini-wm{height:32px;width:auto;display:inline-block}
 .perk .upto{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none}
 .perk a.upto:hover{text-decoration:underline}
 .perk .big{display:inline-block;font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(36px,4vw,54px);line-height:1;color:var(--ink);margin-top:6px;font-variant-numeric:lining-nums tabular-nums;background:linear-gradient(transparent 62%,var(--lime) 62%);padding:0 .08em}
@@ -233,6 +233,7 @@ footer .stripes{margin-bottom:24px}
   .svc .ic{width:58px;height:58px}
   .svc strong{font-size:15px}.svc small{font-size:11.5px}
   .perk p{font-size:13px}
+  .perk .mini-wm{height:26px}
 }
 /* tablet e sotto */
 @media(max-width:1100px){
@@ -266,6 +267,7 @@ footer .stripes{margin-bottom:24px}
   .svc .ic{width:54px;height:54px}
   .perk .art{width:28%;max-width:110px}
   .perk p{max-width:calc(72% - 14px)}
+  .perk .mini-wm{height:26px}
   .svc strong{font-size:13px}.svc small{font-size:11px}
   .perks{grid-template-columns:1fr;gap:14px}
   .formcard{padding:26px 20px 24px;box-shadow:7px 7px 0 var(--wine)}
@@ -308,7 +310,7 @@ footer .stripes{margin-bottom:24px}
     <section class="hero">
       <div>
         <span class="eyebrow label reveal">Acton per Rimini Calcio</span>
-        <h1 class="reveal" style="--d:.1s"><span class="lockup"><img class="wordmark" src="assets/img/acton-wordmark.png" alt="Acton"><span class="per"><i>per</i><img src="assets/img/rimini-calcio-logo.png" alt="Rimini Calcio"></span></span><span class="words"><span class="w luce">Luce</span>, <span class="w gas">Gas</span> ed <span class="w eco">Eco</span></span></h1>
+        <h1 class="reveal" style="--d:.1s"><span class="lockup"><img class="wordmark" src="assets/img/acton-wordmark.png" alt="Acton"><span class="per"><i>per</i><img src="assets/img/rimini-calcio-logo.png" alt="Rimini Calcio"></span></span></h1>
         <p class="h1-sub reveal" style="--d:.2s">Scopri i vantaggi riservati ai tifosi del <b>Rimini Calcio</b>.</p>
         <div class="svcs">
           <div class="svc luce reveal" style="--d:.25s"><div class="ic"><img src="assets/img/icon-luce.png" alt="" width="46" height="62"></div><div><strong>Luce</strong><small>Energia per ogni giorno</small></div></div>

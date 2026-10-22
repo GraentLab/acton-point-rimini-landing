@@ -128,7 +128,7 @@ html.js .reveal.in{opacity:1;animation:rise .85s cubic-bezier(.2,.7,.2,1) var(--
 .perk{position:relative;overflow:hidden;min-height:134px;border:2px solid var(--ink);background:var(--paper2);padding:14px 18px 18px;box-shadow:6px 6px 0 var(--night);transition:transform .25s ease,box-shadow .25s ease}
 .perk:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--night)}
 .perk .art{position:absolute;right:6px;bottom:4px;width:34%;max-width:150px;height:auto;pointer-events:none;filter:drop-shadow(0 6px 6px rgba(22,20,15,.18))}
-.perk .mini-wm{height:16px;width:auto;display:inline-block}
+.perk .mini-wm{height:32px;width:auto;display:inline-block}
 .perk .upto{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:14px;color:var(--blue);text-decoration:none}
 .perk a.upto:hover{text-decoration:underline}
 .perk .big{display:block;font-family:'Syncopate',sans-serif;font-weight:700;font-size:clamp(30px,3.4vw,44px);line-height:1.05;color:var(--night);margin-top:2px;font-variant-numeric:tabular-nums}
@@ -245,6 +245,7 @@ footer{position:relative;z-index:2;background:var(--deep);color:#fff;border-top:
   .svc .ic{width:58px;height:58px}
   .svc small{font-size:11.5px}
   .perk p{font-size:13px}
+  .perk .mini-wm{height:26px}
 }
 @media(max-width:960px){
   .hero h1 .wordmark{width:clamp(260px,46vw,420px)}
@@ -269,6 +270,7 @@ footer{position:relative;z-index:2;background:var(--deep);color:#fff;border-top:
   .svc strong{font-size:11.5px}.svc small{font-size:11.5px}
   .perk .art{width:28%;max-width:110px}
   .perk p{max-width:calc(72% - 14px)}
+  .perk .mini-wm{height:26px}
   .perks{grid-template-columns:1fr;gap:14px}
   .formcard{padding:26px 20px 24px;box-shadow:7px 7px 0 var(--night)}
   .form{grid-template-columns:1fr}
@@ -312,7 +314,7 @@ footer{position:relative;z-index:2;background:var(--deep);color:#fff;border-top:
       <span class="cross hide-narrow" style="right:496px;bottom:30px" aria-hidden="true"></span>
       <div>
         <span class="eyebrow type reveal">Acton per DHUNE</span>
-        <h1 class="reveal" style="--d:.1s"><span class="lockup"><img class="wordmark" src="assets/img/acton-wordmark.png" alt="Acton"><span class="per"><i>per</i><span class="logo-fx"><img src="assets/img/dune-logo.png" alt="DHUNE"></span></span></span><span class="words"><span class="w luce">Luce</span>, <span class="w gas">Gas</span> ed <span class="w eco">Eco</span></span></h1>
+        <h1 class="reveal" style="--d:.1s"><span class="lockup"><img class="wordmark" src="assets/img/acton-wordmark.png" alt="Acton"><span class="per"><i>per</i><span class="logo-fx"><img src="assets/img/dune-logo.png" alt="DHUNE"></span></span></span></h1>
         <p class="h1-sub type reveal" style="--d:.2s">Scopri i vantaggi riservati ai clienti del <b>DHUNE</b>.</p>
         <div class="svcs">
           <div class="svc luce reveal" style="--d:.25s"><div class="ic"><img src="assets/img/icon-luce.png" alt="" width="46" height="62"></div><div><strong>Luce</strong><small class="type">Energia per ogni giorno</small></div></div>
