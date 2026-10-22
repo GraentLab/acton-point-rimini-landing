@@ -12,12 +12,12 @@
   gtag('js', new Date());
   gtag('config', 'AW-18480237940');
 </script>
-<title>Scopri i vantaggi di essere tifoso del Rimini Calcio | Acton Point Rimini</title>
-<meta name="description" content="Tifosi del Rimini Calcio: compila il form e ricevi subito 5 euro di buono carburante! Passando ad Acton fino a 100 euro di buoni. Acton Point Rimini ti ricontatta.">
+<title>Acton per il Rimini Calcio: Luce, Gas ed Eco | Acton Point Rimini</title>
+<meta name="description" content="Acton, insieme al Rimini Calcio: Luce, Gas ed Eco. Tifosi, compilate il form e ricevete subito 5 euro di buono carburante! Passando ad Acton fino a 100 euro di buoni.">
 <link rel="canonical" href="https://riminicalcio.actonpoint.it/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Scopri i vantaggi di essere tifoso del Rimini Calcio">
-<meta property="og:description" content="Richiedi informazioni ad Acton Point Rimini: un consulente ti ricontatta.">
+<meta property="og:title" content="Acton per il Rimini Calcio: Luce, Gas ed Eco">
+<meta property="og:description" content="Acton, insieme al Rimini Calcio: scopri i vantaggi riservati ai tifosi. Richiedi informazioni ad Acton Point Rimini.">
 <meta property="og:url" content="https://riminicalcio.actonpoint.it/">
 <meta property="og:image" content="https://riminicalcio.actonpoint.it/assets/img/rimini-calcio-logo.png">
 <meta property="og:locale" content="it_IT">
@@ -39,6 +39,11 @@
   --cream:#f3ebe8;
   --ink:#1b0c10;
   --muted:#6b5a5e;
+  --lime:#a9e719;
+  --dark:#11140f;
+  --luce:#ffad00;
+  --gas:#16a9f5;
+  --eco:#7cc41a;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;background:var(--paper)}
@@ -64,30 +69,39 @@ img{max-width:100%;display:block}
 html.js .reveal{opacity:0}
 html.js .reveal.in{opacity:1;animation:rise .85s cubic-bezier(.2,.7,.2,1) var(--d,0s) backwards}
 
+/* fascia co-marketing */
+.copromo{background:var(--dark);color:#fff;text-align:center;padding:9px 16px;font-weight:800;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;line-height:1.5}
+.copromo b{color:var(--lime);font-weight:800}
+.copromo i{font-style:normal;color:#ff6f7e}
+.copromo span{opacity:.55;margin:0 8px}
+
 .topbar{background:#fff}
-.topbar .inner{height:104px;display:flex;align-items:center;justify-content:center;gap:34px}
-.logo-acton{height:54px;width:auto}
-.logo-plus{font-family:'Playfair Display',serif;font-size:34px;line-height:1;color:var(--red)}
+.topbar .inner{height:128px;display:flex;align-items:center;justify-content:center;gap:30px}
+.logo-acton{height:88px;width:auto}
+.partner{display:flex;align-items:center;gap:18px;padding-left:30px;border-left:2px solid var(--ink)}
+.partner small{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:18px;line-height:1.1;color:var(--muted);max-width:74px}
 .logo-club{height:78px;width:auto}
 
 .hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:64px;align-items:center;padding:58px 0 72px}
 .eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--red)}
 .eyebrow:before{content:"";width:34px;height:2px;background:var(--red)}
-.hero h1{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:clamp(22px,2.7vw,36px);line-height:1.2;margin-top:18px}
+.hero h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(36px,4.3vw,72px);line-height:1.02;margin-top:16px;letter-spacing:-.005em}
+.hero h1 .brand{display:inline-block;background:var(--lime);padding:0 .14em;margin-left:-.04em;transform:rotate(-1.5deg)}
+.hero h1 .w{display:inline;background:linear-gradient(transparent 80%,var(--c) 80% 92%,transparent 92%)}
+.hero h1 .w.luce{--c:var(--luce)}.hero h1 .w.gas{--c:var(--gas)}.hero h1 .w.eco{--c:var(--eco)}
+.hero h1 .words{display:block;margin-top:.04em}
+.h1-sub{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(20px,2.1vw,27px);line-height:1.35;color:var(--ink);margin-top:16px;max-width:560px}
+.h1-sub b{color:var(--red);font-weight:700}
 
-/* stemma + titolo del club */
-.club{display:flex;align-items:center;gap:26px;margin-top:22px}
-.crest{position:relative;flex:none;width:clamp(120px,15vw,170px);animation:float 7s ease-in-out infinite}
-.crest img{width:100%;height:auto;filter:drop-shadow(0 14px 18px rgba(74,11,22,.28));animation:crestIn 1.6s cubic-bezier(.2,.75,.2,1) .2s both}
-.crest:after{content:"";position:absolute;inset:0;pointer-events:none;
-  -webkit-mask:url(assets/img/rimini-calcio-logo.png) center/100% 100% no-repeat;mask:url(assets/img/rimini-calcio-logo.png) center/100% 100% no-repeat;
-  background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.95) 50%,transparent 62%);
-  background-size:320% 100%;background-position:130% 0;animation:glint 12s ease-in-out 3.4s infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-@keyframes crestIn{from{opacity:0;transform:scale(.82) rotate(-5deg)}to{opacity:1;transform:none}}
-@keyframes glint{0%{background-position:130% 0}42%,100%{background-position:-35% 0}}
-.club-name{font-family:'Playfair Display',serif;font-weight:800;text-transform:uppercase;font-size:clamp(34px,4.6vw,62px);line-height:.95;letter-spacing:.01em;color:var(--ink)}
-.since{display:block;font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(54px,8vw,104px);line-height:.9;color:transparent;-webkit-text-stroke:1.6px var(--red);margin-top:8px;letter-spacing:.02em}
+/* servizi Acton */
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.svc{display:flex;align-items:center;gap:12px;background:#fff;border:2px solid var(--ink);padding:12px 14px;transition:transform .25s ease,box-shadow .25s ease}
+.svc:hover{transform:translateY(-4px);box-shadow:5px 5px 0 var(--c)}
+.svc .ic{width:46px;height:46px;border-radius:50%;border:2px solid var(--c);color:var(--c);display:grid;place-items:center;flex:none;box-shadow:0 0 14px color-mix(in srgb,var(--c) 45%,transparent)}
+.svc .ic svg{width:26px;height:26px}
+.svc strong{display:block;font-size:15px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;line-height:1.1}
+.svc small{display:block;font-size:11.5px;line-height:1.3;color:var(--muted);font-weight:600;margin-top:3px}
+.svc.luce{--c:var(--luce)}.svc.gas{--c:var(--gas)}.svc.eco{--c:var(--eco)}
 
 /* vantaggi */
 .perks{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
@@ -95,7 +109,7 @@ html.js .reveal.in{opacity:1;animation:rise .85s cubic-bezier(.2,.7,.2,1) var(--
 .perk:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--wine)}
 .perk .upto{display:block;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);text-decoration:none}
 .perk a.upto:hover{text-decoration:underline}
-.perk .big{display:block;font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(36px,4vw,54px);line-height:1;color:var(--red);margin-top:6px;font-variant-numeric:lining-nums tabular-nums}
+.perk .big{display:inline-block;font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(36px,4vw,54px);line-height:1;color:var(--ink);margin-top:6px;font-variant-numeric:lining-nums tabular-nums;background:linear-gradient(transparent 62%,var(--lime) 62%);padding:0 .08em}
 .perk p{font-size:14px;line-height:1.5;font-weight:700;margin-top:10px}
 
 /* condizioni a tendina */
@@ -113,9 +127,6 @@ html.js .reveal.in{opacity:1;animation:rise .85s cubic-bezier(.2,.7,.2,1) var(--
 .tagline{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(20px,2vw,26px);line-height:1.4;color:var(--red);margin-top:28px}
 .hero-copy{font-size:16px;line-height:1.7;font-weight:500;color:#4d3d41;max-width:520px;margin-top:14px}
 .hero-copy b{font-weight:800;color:var(--ink)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
-.chip{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:1.5px solid var(--ink);padding:7px 12px;background:#fff;transition:background .2s,color .2s,transform .2s}
-.chip:hover{background:var(--red);border-color:var(--red);color:#fff;transform:translateY(-2px)}
 
 .formcard{position:relative;background:#fff;border:2px solid var(--ink);padding:34px 32px 30px;box-shadow:10px 10px 0 var(--wine);transition:box-shadow .3s ease}
 .formcard:hover,.formcard:focus-within{box-shadow:14px 14px 0 var(--wine)}
@@ -130,8 +141,8 @@ html.js .reveal.in{opacity:1;animation:rise .85s cubic-bezier(.2,.7,.2,1) var(--
 .consent input{width:20px;height:20px;margin-top:1px;flex:none;accent-color:var(--red)}
 .consent a{font-weight:700;color:var(--red)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;padding:19px 28px;border:2px solid var(--ink);cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
-.btn-red{position:relative;overflow:hidden;background:var(--red);color:#fff}
-.btn-red:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);animation:shine 4.4s ease-in-out 1.5s infinite}
+.btn-go{position:relative;overflow:hidden;background:var(--lime);color:var(--dark)}
+.btn-go:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);animation:shine 4.4s ease-in-out 1.5s infinite}
 @keyframes shine{0%{left:-60%}35%,100%{left:140%}}
 .btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
 .form .btn{grid-column:1/-1;margin-top:6px;width:100%}
@@ -143,9 +154,9 @@ html.js .reveal.in{opacity:1;animation:rise .85s cubic-bezier(.2,.7,.2,1) var(--
 .steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:30px}
 .steps li{background:#fff;border:1.5px solid var(--ink);padding:22px 20px 24px;display:flex;flex-direction:column;gap:14px;transition:transform .25s ease,box-shadow .25s ease}
 .steps li:hover{transform:translateY(-5px);box-shadow:6px 6px 0 var(--wine)}
-.steps .num{position:relative;width:44px;height:44px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:800;font-size:22px;line-height:1;flex:none}
+.steps .num{position:relative;width:44px;height:44px;border-radius:50%;background:var(--lime);color:var(--dark);border:1.5px solid var(--dark);display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:800;font-size:22px;line-height:1;flex:none}
 .steps li.in .num{animation:pop .7s cubic-bezier(.3,1.7,.5,1) calc(var(--d,0s) + .35s) backwards}
-.steps .num:after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1.5px solid var(--red);opacity:0}
+.steps .num:after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1.5px solid var(--lime);opacity:0}
 .steps li.in .num:after{animation:ring 2.8s ease-out calc(var(--d,0s) + 1s) infinite}
 @keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
 @keyframes ring{0%{transform:scale(.8);opacity:.9}70%,100%{transform:scale(1.5);opacity:0}}
@@ -153,13 +164,14 @@ html.js .reveal.in{opacity:1;animation:rise .85s cubic-bezier(.2,.7,.2,1) var(--
 
 /* striscia scorrevole */
 .ticker-wrap{position:relative;z-index:3;padding:6px 0 0;margin-bottom:-34px;overflow:hidden}
-.ticker{background:var(--red);color:#fff;transform:rotate(-1.3deg);margin:0 -3%;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);overflow:hidden;box-shadow:0 10px 0 var(--wine)}
+.ticker{background:var(--dark);color:#fff;transform:rotate(-1.3deg);margin:0 -3%;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);overflow:hidden;box-shadow:0 10px 0 var(--wine)}
 .ticker-track{display:flex;width:max-content;padding:15px 0}
 html.js .ticker-track{animation:marquee 34s linear infinite}
 .tg{display:flex;align-items:center;flex:none}
 .tg span{font-weight:800;font-size:14px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;padding:0 22px}
-.tg span em{font-style:normal;font-family:'Playfair Display',serif;font-size:19px;color:var(--pink)}
-.tg b{font-weight:400;font-size:14px;color:var(--pink);line-height:1}
+.tg span em{font-style:normal;font-family:'Playfair Display',serif;font-size:19px;color:var(--lime)}
+.tg span i{font-style:normal;color:#ff6f7e}
+.tg b{font-weight:400;font-size:14px;color:var(--red);line-height:1}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
 /* contatti: serata allo stadio */
@@ -196,12 +208,19 @@ footer .stripes{margin-bottom:24px}
 .footer-inner small{color:#d9c6c9}
 .footer-inner a{color:#fff;font-weight:700}
 .footer-logos{display:flex;align-items:center;gap:20px}
-.footer-logos .fa{height:24px;width:auto}
-.footer-logos .fc{height:46px;width:auto}
+.footer-logos .fa{height:40px;width:auto}
+.footer-logos .fc{height:44px;width:auto}
+.footer-logos .fx{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:#d9c6c9}
 
 .whatsapp-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.3);z-index:999;transition:transform .2s ease}
 .whatsapp-float:hover{transform:scale(1.07)}
 
+/* tablet orizzontale: colonna sinistra stretta */
+@media(min-width:961px) and (max-width:1220px){
+  .svc{flex-direction:column;align-items:flex-start;gap:8px;padding:10px 12px}
+  .svc .ic{width:38px;height:38px}.svc .ic svg{width:21px;height:21px}
+  .svc strong{font-size:13px}.svc small{font-size:11px}
+}
 /* tablet e sotto */
 @media(max-width:1100px){
   .steps{grid-template-columns:1fr;gap:12px}
@@ -216,10 +235,14 @@ footer .stripes{margin-bottom:24px}
 /* mobile */
 @media(max-width:700px){
   .wrap{width:min(100% - 30px,1160px)}
-  .topbar .inner{height:88px;gap:20px}
-  .logo-acton{height:40px}.logo-club{height:62px}
-  .hero h1{font-size:21px}
-  .club{gap:18px}
+  .copromo{font-size:10px;letter-spacing:.12em;padding:8px 10px}
+  .topbar .inner{height:96px;gap:14px}
+  .logo-acton{height:56px}.logo-club{height:56px}
+  .partner{gap:10px;padding-left:14px}.partner small{font-size:14px;max-width:58px}
+  .hero h1{font-size:clamp(36px,11vw,46px)}
+  .svcs{gap:8px}.svc{flex-direction:column;align-items:flex-start;gap:8px;padding:10px}
+  .svc .ic{width:38px;height:38px}.svc .ic svg{width:21px;height:21px}
+  .svc strong{font-size:13px}.svc small{font-size:11px}
   .perks{grid-template-columns:1fr;gap:14px}
   .formcard{padding:26px 20px 24px;box-shadow:7px 7px 0 var(--wine)}
   .formcard h2{font-size:25px}
@@ -232,7 +255,7 @@ footer .stripes{margin-bottom:24px}
   .clist{grid-template-columns:1fr}
   .beams i{width:70vmax;margin-left:-35vmax;opacity:.7}
 }
-@media(max-width:380px){.club{flex-direction:column;align-items:flex-start}.crest{width:110px}.terms summary{font-size:12px}}
+@media(max-width:380px){.terms summary{font-size:12px}.logo-acton{height:48px}.logo-club{height:50px}.partner small{display:none}}
 
 @media(prefers-reduced-motion:reduce){
   *,*:before,*:after{animation:none!important;transition:none!important}
@@ -244,11 +267,14 @@ footer .stripes{margin-bottom:24px}
 <body>
 <div class="progress" id="progress" aria-hidden="true"></div>
 
+<div class="copromo"><b>Acton</b> per <i>Rimini Calcio</i><span>&bull;</span>Insieme per i tifosi<span>&bull;</span>Luce, Gas ed Eco</div>
 <header class="topbar">
   <div class="wrap inner">
     <img class="logo-acton" src="assets/img/acton-logo-green.png" alt="Acton Gas Power Eco">
-    <span class="logo-plus" aria-hidden="true">+</span>
-    <img class="logo-club" src="assets/img/rimini-calcio-logo.png" alt="Rimini Calcio">
+    <div class="partner">
+      <small>insieme a</small>
+      <img class="logo-club" src="assets/img/rimini-calcio-logo.png" alt="Rimini Calcio">
+    </div>
   </div>
   <div class="stripes"></div>
 </header>
@@ -257,15 +283,17 @@ footer .stripes{margin-bottom:24px}
   <div class="wrap">
     <section class="hero">
       <div>
-        <span class="eyebrow label reveal">Io, Noi Siamo Rimini</span>
-        <h1 class="reveal" style="--d:.1s">Scopri i vantaggi di essere tifoso del</h1>
-        <div class="club">
-          <div class="crest"><img src="assets/img/rimini-calcio-logo.png" alt="Stemma del Rimini Calcio"></div>
-          <div class="club-name">Rimini<br>Calcio<span class="since" aria-hidden="true">1912</span></div>
+        <span class="eyebrow label reveal">Acton per Rimini Calcio</span>
+        <h1 class="reveal" style="--d:.1s"><span class="brand">Acton</span><span class="words"><span class="w luce">Luce</span>, <span class="w gas">Gas</span> ed <span class="w eco">Eco</span></span></h1>
+        <p class="h1-sub reveal" style="--d:.2s">Scopri i vantaggi riservati ai tifosi del <b>Rimini Calcio</b>.</p>
+        <div class="svcs">
+          <div class="svc luce reveal" style="--d:.25s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M28 4 11 27h12l-3 17 17-24H25z"/></svg></div><div><strong>Luce</strong><small>Energia per ogni giorno</small></div></div>
+          <div class="svc gas reveal" style="--d:.35s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M25 5c2 10-11 13-11 26a11 11 0 0 0 22 0c0-8-5-14-11-26Z"/><path d="M26 20c1 5-5 7-5 13a5 5 0 0 0 10 0c0-4-2-8-5-13Z"/></svg></div><div><strong>Gas</strong><small>Soluzioni per la tua casa</small></div></div>
+          <div class="svc eco reveal" style="--d:.45s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 39C9 20 21 8 40 8c0 19-11 31-27 31"/><path d="M9 41 27 23"/></svg></div><div><strong>Eco</strong><small>Un futuro pi&ugrave; sostenibile</small></div></div>
         </div>
         <div class="perks">
-          <div class="perk reveal" style="--d:.15s"><a class="upto" href="#condizioni" data-terms>ricevi subito*</a><span class="big" data-count="5">5&euro;</span><p>di buono carburante!</p></div>
-          <div class="perk reveal" style="--d:.3s"><span class="upto">fino a</span><span class="big" data-count="100">100&euro;</span><p>Passando ad Acton puoi arrivare fino a 100&euro; di buoni.</p></div>
+          <div class="perk reveal" style="--d:.2s"><a class="upto" href="#condizioni" data-terms>Acton ti regala subito*</a><span class="big" data-count="5">5&euro;</span><p>di buono carburante!</p></div>
+          <div class="perk reveal" style="--d:.35s"><span class="upto">Con Acton, fino a</span><span class="big" data-count="100">100&euro;</span><p>Passando ad Acton puoi arrivare fino a 100&euro; di buoni.</p></div>
         </div>
         <details class="terms reveal" id="condizioni" style="--d:.4s">
           <summary>* Condizioni del buono carburante da 5&euro;</summary>
@@ -273,13 +301,6 @@ footer .stripes{margin-bottom:24px}
         </details>
         <p class="tagline reveal" style="--d:.5s">Lascia i tuoi dati: ti ricontattiamo noi.</p>
         <p class="hero-copy reveal" style="--d:.6s">Richiedi informazioni ad <b>Acton Point Rimini</b>: un nostro consulente ti ricontatter&agrave; per illustrarti tutte le opportunit&agrave; a te dedicate.</p>
-        <div class="chips reveal" style="--d:.7s">
-          <span class="chip">Luce</span>
-          <span class="chip">Gas</span>
-          <span class="chip">Fotovoltaico</span>
-          <span class="chip">Fibra</span>
-          <span class="chip">Carta carburante</span>
-        </div>
       </div>
 
       <div class="formcard reveal" id="richiesta" style="--d:.25s">
@@ -292,7 +313,7 @@ footer .stripes{margin-bottom:24px}
           <div class="field full"><label for="email">Email *</label><input class="input" id="email" type="email" name="email" required autocomplete="email" placeholder="La tua email"></div>
           <div class="field full"><label for="telefono">Numero di telefono *</label><input class="input" id="telefono" type="tel" name="telefono" required autocomplete="tel" inputmode="tel" minlength="6" placeholder="Il tuo numero"></div>
           <label class="consent"><input type="checkbox" name="privacy" value="1" required><span>Dichiaro di aver letto l'<a href="https://www.iubenda.com/privacy-policy/53951965" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei miei dati personali per essere ricontattato da Acton Point Rimini. *</span></label>
-          <button class="btn btn-red" type="submit">Invia richiesta <span aria-hidden="true">&rarr;</span></button>
+          <button class="btn btn-go" type="submit">Invia richiesta <span aria-hidden="true">&rarr;</span></button>
         </form>
         <div class="feedback" id="form-feedback"></div>
       </div>
@@ -315,14 +336,14 @@ footer .stripes{margin-bottom:24px}
     <div class="ticker">
       <div class="ticker-track" id="ticker-track">
         <div class="tg">
-          <span>Ricevi subito <em>5&euro;</em> di buono carburante*</span><b>&#9670;</b>
-          <span>Fino a <em>100&euro;</em> di buoni</span><b>&#9670;</b>
-          <span>Rimini Calcio <em>&times;</em> Acton</span><b>&#9670;</b>
-          <span>Io, Noi Siamo Rimini</span><b>&#9670;</b>
-          <span>Dal <em>1912</em></span><b>&#9670;</b>
+          <span><em>Acton</em> per <i>Rimini Calcio</i></span><b>&#9670;</b>
+          <span>Luce &middot; Gas &middot; Eco</span><b>&#9670;</b>
+          <span>Acton ti regala subito <em>5&euro;</em> di buono carburante*</span><b>&#9670;</b>
+          <span>Con Acton fino a <em>100&euro;</em> di buoni</span><b>&#9670;</b>
+          <span>Insieme per i tifosi</span><b>&#9670;</b>
           <span>Acton Point Rimini</span><b>&#9670;</b>
-          <span>Ricevi subito <em>5&euro;</em> di buono carburante*</span><b>&#9670;</b>
-          <span>Fino a <em>100&euro;</em> di buoni</span><b>&#9670;</b>
+          <span><em>Acton</em> per <i>Rimini Calcio</i></span><b>&#9670;</b>
+          <span>Luce &middot; Gas &middot; Eco</span><b>&#9670;</b>
         </div>
       </div>
     </div>
@@ -358,6 +379,7 @@ footer .stripes{margin-bottom:24px}
   <div class="wrap footer-inner">
     <div class="footer-logos">
       <img class="fa" src="assets/img/acton-logo-v2.png" alt="Acton Point" style="filter:brightness(0) invert(1)">
+      <span class="fx">per</span>
       <img class="fc" src="assets/img/rimini-calcio-logo.png" alt="Rimini Calcio">
     </div>
     <div><small>Acton Point Rimini &middot; Viale Tripoli 215 &middot; Lun&ndash;Ven 9:00&ndash;13:00 / 15:00&ndash;19:00</small></div>
