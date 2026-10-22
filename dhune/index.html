@@ -12,12 +12,12 @@
   gtag('js', new Date());
   gtag('config', 'AW-18480237940');
 </script>
-<title>Scopri i vantaggi di essere cliente del DHUNE | Acton Point Rimini</title>
-<meta name="description" content="Clienti DHUNE: compila il form e ricevi subito 5 euro di buono carburante! Passando ad Acton fino a 100 euro di buoni. Acton Point Rimini ti ricontatta.">
+<title>Acton per DHUNE: Luce, Gas ed Eco | Acton Point Rimini</title>
+<meta name="description" content="Acton, insieme a DHUNE: Luce, Gas ed Eco. Clienti, compilate il form e ricevete subito 5 euro di buono carburante! Passando ad Acton fino a 100 euro di buoni.">
 <link rel="canonical" href="https://dhune.actonpoint.it/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Scopri i vantaggi di essere cliente del DHUNE">
-<meta property="og:description" content="Richiedi informazioni ad Acton Point Rimini: un consulente ti ricontatta.">
+<meta property="og:title" content="Acton per DHUNE: Luce, Gas ed Eco">
+<meta property="og:description" content="Acton, insieme a DHUNE: scopri i vantaggi riservati ai clienti. Richiedi informazioni ad Acton Point Rimini.">
 <meta property="og:url" content="https://dhune.actonpoint.it/">
 <meta property="og:image" content="https://dhune.actonpoint.it/assets/img/dune-logo.png">
 <meta property="og:locale" content="it_IT">
@@ -40,6 +40,10 @@
   --ice:#8fb4ff;
   --lime:#a9e719;
   --muted:#5b574d;
+  --dark:#11140f;
+  --luce:#ffad00;
+  --gas:#16a9f5;
+  --eco:#7cc41a;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;background:var(--paper)}
@@ -66,16 +70,44 @@ html.js .reveal.in{opacity:1;animation:rise .85s cubic-bezier(.2,.7,.2,1) var(--
 .cross:after{top:50%;left:0;right:0;height:1.5px;transform:translateY(-50%)}
 @keyframes spin{to{transform:rotate(360deg)}}
 
+/* fascia co-marketing */
+.copromo{background:var(--dark);color:#fff;text-align:center;padding:9px 16px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;line-height:1.5}
+.copromo b{color:var(--lime);font-weight:400}
+.copromo i{font-style:normal;color:var(--ice)}
+.copromo span{opacity:.5;margin:0 8px}
+
 .topbar{border-bottom:1.5px solid var(--ink)}
-.topbar .inner{height:92px;display:flex;align-items:center;justify-content:center;gap:34px}
-.logo-acton{height:56px;width:auto}
-.logo-plus{font-size:28px;font-weight:400;line-height:1;opacity:.7}
-.logo-dune{height:34px;width:auto}
+.topbar .inner{height:124px;display:flex;align-items:center;justify-content:center;gap:30px}
+.logo-acton{height:88px;width:auto}
+.partner{display:flex;align-items:center;gap:16px;padding-left:30px;border-left:1.5px solid var(--ink)}
+.partner small{font-size:15px;color:var(--muted);line-height:1.1;max-width:70px}
+.logo-dune{height:36px;width:auto}
 
 .hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:64px;align-items:center;padding:64px 0 72px}
 .eyebrow{display:inline-block;font-size:14px;color:var(--blue);letter-spacing:.04em}
 .eyebrow:before{content:"+ "}
-.hero h1{font-family:'Syncopate',sans-serif;font-weight:700;font-size:clamp(20px,2.5vw,32px);line-height:1.25;text-transform:uppercase;letter-spacing:.02em;margin-top:20px}
+.hero h1{font-family:'Syncopate',sans-serif;font-weight:700;font-size:clamp(18px,2.4vw,38px);line-height:1.2;text-transform:uppercase;letter-spacing:.02em;margin-top:20px}
+.hero h1 .lockup{display:flex;flex-wrap:wrap;align-items:flex-end;gap:14px 16px}
+.hero h1 .wordmark{width:clamp(210px,27vw,400px);height:auto;flex:none;animation:wmIn 1s cubic-bezier(.2,.75,.2,1) .15s both}
+.hero h1 .per{display:flex;align-items:flex-end;gap:10px;padding-bottom:6px}
+.hero h1 .per i{font-family:'Special Elite','Courier New',monospace;font-style:normal;font-weight:400;font-size:clamp(16px,1.8vw,24px);line-height:1;color:var(--blue);text-transform:none;letter-spacing:0;padding-bottom:2px}
+.hero h1 .per .logo-fx{width:clamp(120px,13vw,190px);margin-top:0}
+.hero h1 .words{display:block;margin-top:.7em}
+.hero h1 .w{display:inline;background:linear-gradient(transparent 82%,var(--c) 82% 94%,transparent 94%)}
+.hero h1 .w.luce{--c:var(--luce)}.hero h1 .w.gas{--c:var(--gas)}.hero h1 .w.eco{--c:var(--eco)}
+@keyframes wmIn{from{opacity:0;transform:translateY(16px) scale(.96)}to{opacity:1;transform:none}}
+.h1-sub{font-size:clamp(17px,1.7vw,21px);line-height:1.5;color:var(--blue);margin-top:18px;max-width:560px}
+.h1-sub b{color:var(--ink);font-weight:400;border-bottom:1.5px solid var(--ink)}
+
+/* servizi Acton */
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.svc{display:flex;align-items:center;gap:12px;background:var(--paper2);border:1.5px solid var(--ink);padding:12px 14px;transition:transform .25s ease,box-shadow .25s ease}
+.svc:hover{transform:translateY(-4px);box-shadow:5px 5px 0 var(--c)}
+.svc .ic{width:46px;height:46px;border-radius:50%;border:2px solid var(--c);color:var(--c);display:grid;place-items:center;flex:none;box-shadow:0 0 14px color-mix(in srgb,var(--c) 45%,transparent)}
+.svc .ic svg{width:26px;height:26px}
+.svc strong{display:block;font-family:'Syncopate',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.1}
+.svc small{display:block;font-size:12.5px;line-height:1.3;color:var(--muted);margin-top:4px}
+.svc.luce{--c:var(--luce)}.svc.gas{--c:var(--gas)}.svc.eco{--c:var(--eco)}
 
 /* logo DHUNE: rivelazione + riflesso luminoso */
 .logo-fx{position:relative;width:min(100%,520px);margin-top:26px}
@@ -113,9 +145,6 @@ html.js .reveal.in{opacity:1;animation:rise .85s cubic-bezier(.2,.7,.2,1) var(--
 .tagline{font-size:clamp(17px,1.7vw,21px);line-height:1.5;color:var(--blue);margin-top:28px}
 .hero-copy{font-size:16px;line-height:1.7;font-weight:500;color:#3a372f;max-width:520px;margin-top:16px}
 .hero-copy b{font-weight:800;color:var(--ink)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
-.chip{font-size:13px;border:1.5px solid var(--ink);border-radius:2px;padding:6px 12px;background:rgba(246,242,233,.7);transition:background .2s,color .2s,transform .2s}
-.chip:hover{background:var(--night);color:#fff;transform:translateY(-2px)}
 
 .formcard{position:relative;background:var(--paper2);border:2px solid var(--ink);padding:34px 32px 30px;box-shadow:10px 10px 0 var(--night);transition:box-shadow .3s ease}
 .formcard:hover,.formcard:focus-within{box-shadow:14px 14px 0 var(--night)}
@@ -159,6 +188,7 @@ html.js .ticker-track{animation:marquee 34s linear infinite}
 .tg{display:flex;align-items:center;flex:none}
 .tg span{font-size:15px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;padding:0 22px}
 .tg span em{font-style:normal;color:var(--ice)}
+.tg span u{text-decoration:none;color:var(--lime)}
 .tg b{font-weight:400;font-size:20px;color:var(--lime);line-height:1}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
@@ -193,7 +223,9 @@ footer{position:relative;z-index:2;background:var(--deep);color:#fff;border-top:
 .footer-inner small{color:#c9c4b8}
 .footer-inner a{color:#fff;font-weight:700}
 .footer-logos{display:flex;align-items:center;gap:18px}
-.footer-logos img{height:24px;width:auto}
+.footer-logos .fa{height:40px;width:auto}
+.footer-logos .fd{height:24px;width:auto}
+.footer-logos .fx{font-size:14px;color:#c9c4b8}
 
 .whatsapp-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.3);z-index:999;transition:transform .2s ease}
 .whatsapp-float:hover{transform:scale(1.07)}
@@ -203,7 +235,13 @@ footer{position:relative;z-index:2;background:var(--deep);color:#fff;border-top:
   .steps{grid-template-columns:1fr;gap:12px}
   .steps li{flex-direction:row;align-items:center;gap:18px;padding:16px 20px}
 }
+@media(min-width:961px) and (max-width:1220px){
+  .svc{flex-direction:column;align-items:flex-start;gap:8px;padding:10px 12px}
+  .svc .ic{width:38px;height:38px}.svc .ic svg{width:21px;height:21px}
+  .svc small{font-size:11.5px}
+}
 @media(max-width:960px){
+  .hero h1 .wordmark{width:clamp(260px,46vw,420px)}
   .hide-narrow{display:none}
   .hero{grid-template-columns:1fr;gap:44px;padding:44px 0 56px}
   .formcard{max-width:640px;width:100%;margin:0 auto}
@@ -213,9 +251,16 @@ footer{position:relative;z-index:2;background:var(--deep);color:#fff;border-top:
 /* mobile */
 @media(max-width:700px){
   .wrap{width:min(100% - 30px,1160px)}
-  .topbar .inner{height:76px;gap:20px}
-  .logo-acton{height:42px}.logo-dune{height:24px}
-  .hero h1{font-size:18px}
+  .copromo{font-size:10.5px;letter-spacing:.08em;padding:8px 10px}
+  .topbar .inner{height:92px;gap:14px}
+  .logo-acton{height:54px}.logo-dune{height:22px}
+  .partner{gap:8px;padding-left:14px}.partner small{font-size:12px;max-width:50px}
+  .hero h1{font-size:clamp(18px,5.4vw,24px)}
+  .hero h1 .wordmark{width:70vw}
+  .hero h1 .per .logo-fx{width:150px}
+  .svcs{gap:8px}.svc{flex-direction:column;align-items:flex-start;gap:8px;padding:10px}
+  .svc .ic{width:38px;height:38px}.svc .ic svg{width:21px;height:21px}
+  .svc strong{font-size:11.5px}.svc small{font-size:11.5px}
   .perks{grid-template-columns:1fr;gap:14px}
   .formcard{padding:26px 20px 24px;box-shadow:7px 7px 0 var(--night)}
   .form{grid-template-columns:1fr}
@@ -227,7 +272,7 @@ footer{position:relative;z-index:2;background:var(--deep);color:#fff;border-top:
   .clist{grid-template-columns:1fr}
   .beams i{width:70vmax;margin-left:-35vmax;opacity:.7}
 }
-@media(max-width:380px){.perk .big{font-size:28px}.terms summary{font-size:13px}}
+@media(max-width:380px){.perk .big{font-size:28px}.terms summary{font-size:13px}.logo-acton{height:46px}.logo-dune{height:19px}.partner small{display:none}}
 
 @media(prefers-reduced-motion:reduce){
   *,*:before,*:after{animation:none!important;transition:none!important}
@@ -241,11 +286,14 @@ footer{position:relative;z-index:2;background:var(--deep);color:#fff;border-top:
 <body>
 <div class="progress" id="progress" aria-hidden="true"></div>
 
+<div class="copromo type"><b>Acton</b> per <i>DHUNE</i><span>&bull;</span>Riservato ai clienti<span>&bull;</span>Luce, Gas ed Eco</div>
 <header class="topbar">
   <div class="wrap inner">
     <img class="logo-acton" src="assets/img/acton-logo-green.png" alt="Acton Gas Power Eco">
-    <span class="logo-plus" aria-hidden="true">+</span>
-    <img class="logo-dune" src="assets/img/dune-logo.png" alt="DHUNE">
+    <div class="partner">
+      <small class="type">insieme a</small>
+      <img class="logo-dune" src="assets/img/dune-logo.png" alt="DHUNE">
+    </div>
   </div>
 </header>
 
@@ -255,12 +303,17 @@ footer{position:relative;z-index:2;background:var(--deep);color:#fff;border-top:
       <span class="cross" style="right:0;top:14px" aria-hidden="true"></span>
       <span class="cross hide-narrow" style="right:496px;bottom:30px" aria-hidden="true"></span>
       <div>
-        <span class="eyebrow type reveal">riservato ai clienti</span>
-        <h1 class="reveal" style="--d:.1s">Scopri i vantaggi di essere cliente del</h1>
-        <div class="logo-fx"><img src="assets/img/dune-logo.png" alt="DHUNE"></div>
+        <span class="eyebrow type reveal">Acton per DHUNE</span>
+        <h1 class="reveal" style="--d:.1s"><span class="lockup"><img class="wordmark" src="assets/img/acton-wordmark.png" alt="Acton"><span class="per"><i>per</i><span class="logo-fx"><img src="assets/img/dune-logo.png" alt="DHUNE"></span></span></span><span class="words"><span class="w luce">Luce</span>, <span class="w gas">Gas</span> ed <span class="w eco">Eco</span></span></h1>
+        <p class="h1-sub type reveal" style="--d:.2s">Scopri i vantaggi riservati ai clienti del <b>DHUNE</b>.</p>
+        <div class="svcs">
+          <div class="svc luce reveal" style="--d:.25s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M28 4 11 27h12l-3 17 17-24H25z"/></svg></div><div><strong>Luce</strong><small class="type">Energia per ogni giorno</small></div></div>
+          <div class="svc gas reveal" style="--d:.35s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M25 5c2 10-11 13-11 26a11 11 0 0 0 22 0c0-8-5-14-11-26Z"/><path d="M26 20c1 5-5 7-5 13a5 5 0 0 0 10 0c0-4-2-8-5-13Z"/></svg></div><div><strong>Gas</strong><small class="type">Soluzioni per la tua casa</small></div></div>
+          <div class="svc eco reveal" style="--d:.45s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 39C9 20 21 8 40 8c0 19-11 31-27 31"/><path d="M9 41 27 23"/></svg></div><div><strong>Eco</strong><small class="type">Un futuro pi&ugrave; sostenibile</small></div></div>
+        </div>
         <div class="perks">
-          <div class="perk reveal" style="--d:.15s"><a class="upto type" href="#condizioni" data-terms>ricevi subito*</a><span class="big" data-count="5">5&euro;</span><p>di buono carburante!</p></div>
-          <div class="perk reveal" style="--d:.3s"><span class="upto type">fino a</span><span class="big" data-count="100">100&euro;</span><p>Passando ad Acton puoi arrivare fino a 100&euro; di buoni.</p></div>
+          <div class="perk reveal" style="--d:.2s"><a class="upto type" href="#condizioni" data-terms>Acton ti regala subito*</a><span class="big" data-count="5">5&euro;</span><p>di buono carburante!</p></div>
+          <div class="perk reveal" style="--d:.35s"><span class="upto type">Con Acton, fino a</span><span class="big" data-count="100">100&euro;</span><p>Passando ad Acton puoi arrivare fino a 100&euro; di buoni.</p></div>
         </div>
         <details class="terms reveal" id="condizioni" style="--d:.4s">
           <summary class="type">* Condizioni del buono carburante da 5&euro;</summary>
@@ -268,13 +321,6 @@ footer{position:relative;z-index:2;background:var(--deep);color:#fff;border-top:
         </details>
         <p class="tagline type reveal" style="--d:.5s">Lascia i tuoi dati: ti ricontattiamo noi.</p>
         <p class="hero-copy reveal" style="--d:.6s">Richiedi informazioni ad <b>Acton Point Rimini</b>: un nostro consulente ti ricontatter&agrave; per illustrarti tutte le opportunit&agrave; a te dedicate.</p>
-        <div class="chips type reveal" style="--d:.7s">
-          <span class="chip">Luce</span>
-          <span class="chip">Gas</span>
-          <span class="chip">Fotovoltaico</span>
-          <span class="chip">Fibra</span>
-          <span class="chip">Carta carburante</span>
-        </div>
       </div>
 
       <div class="formcard reveal" id="richiesta" style="--d:.25s">
@@ -310,14 +356,14 @@ footer{position:relative;z-index:2;background:var(--deep);color:#fff;border-top:
     <div class="ticker">
       <div class="ticker-track" id="ticker-track">
         <div class="tg">
-          <span class="type">Ricevi subito <em>5&euro;</em> di buono carburante*</span><b>+</b>
-          <span class="type">Fino a <em>100&euro;</em> di buoni</span><b>+</b>
-          <span class="type">DHUNE <em>&times;</em> ACTON</span><b>+</b>
+          <span class="type"><u>Acton</u> per DHUNE</span><b>+</b>
+          <span class="type">Luce &middot; Gas &middot; Eco</span><b>+</b>
+          <span class="type">Acton ti regala subito <em>5&euro;</em> di buono carburante*</span><b>+</b>
+          <span class="type">Con Acton fino a <em>100&euro;</em> di buoni</span><b>+</b>
+          <span class="type">Riservato ai clienti</span><b>+</b>
           <span class="type">Acton Point Rimini</span><b>+</b>
-          <span class="type">Luce &middot; Gas &middot; Fibra</span><b>+</b>
-          <span class="type">Ricevi subito <em>5&euro;</em> di buono carburante*</span><b>+</b>
-          <span class="type">Fino a <em>100&euro;</em> di buoni</span><b>+</b>
-          <span class="type">DHUNE <em>&times;</em> ACTON</span><b>+</b>
+          <span class="type"><u>Acton</u> per DHUNE</span><b>+</b>
+          <span class="type">Luce &middot; Gas &middot; Eco</span><b>+</b>
         </div>
       </div>
     </div>
@@ -352,8 +398,9 @@ footer{position:relative;z-index:2;background:var(--deep);color:#fff;border-top:
 <footer>
   <div class="wrap footer-inner">
     <div class="footer-logos">
-      <img src="assets/img/acton-logo-v2.png" alt="Acton Point" style="filter:brightness(0) invert(1)">
-      <img src="assets/img/dune-logo-white.png" alt="DHUNE">
+      <img class="fa" src="assets/img/acton-logo-v2.png" alt="Acton Point" style="filter:brightness(0) invert(1)">
+      <span class="fx type">per</span>
+      <img class="fd" src="assets/img/dune-logo-white.png" alt="DHUNE">
     </div>
     <div><small>Acton Point Rimini &middot; Viale Tripoli 215 &middot; Lun&ndash;Ven 9:00&ndash;13:00 / 15:00&ndash;19:00</small></div>
     <a href="https://www.iubenda.com/privacy-policy/53951965" target="_blank" rel="noopener">Informativa privacy</a>
