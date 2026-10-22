@@ -86,10 +86,15 @@ html.js .reveal.in{opacity:1;animation:rise .85s cubic-bezier(.2,.7,.2,1) var(--
 .eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--red)}
 .eyebrow:before{content:"";width:34px;height:2px;background:var(--red)}
 .hero h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(36px,4.3vw,72px);line-height:1.02;margin-top:16px;letter-spacing:-.005em}
-.hero h1 .brand{display:inline-block;background:var(--lime);padding:0 .14em;margin-left:-.04em;transform:rotate(-1.5deg)}
+.hero h1 .lockup{display:flex;align-items:flex-end;gap:16px}
+.hero h1 .wordmark{width:clamp(210px,27vw,400px);height:auto;flex:none;animation:wmIn 1s cubic-bezier(.2,.75,.2,1) .15s both}
+.hero h1 .per{display:flex;align-items:flex-end;gap:10px;padding-bottom:4px}
+.hero h1 .per i{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(18px,2vw,26px);line-height:1;color:var(--muted);padding-bottom:6px}
+.hero h1 .per img{height:clamp(58px,6.4vw,88px);width:auto;animation:wmIn 1s cubic-bezier(.2,.75,.2,1) .45s both}
+@keyframes wmIn{from{opacity:0;transform:translateY(16px) scale(.96)}to{opacity:1;transform:none}}
 .hero h1 .w{display:inline;background:linear-gradient(transparent 80%,var(--c) 80% 92%,transparent 92%)}
 .hero h1 .w.luce{--c:var(--luce)}.hero h1 .w.gas{--c:var(--gas)}.hero h1 .w.eco{--c:var(--eco)}
-.hero h1 .words{display:block;margin-top:.04em}
+.hero h1 .words{display:block;margin-top:.22em}
 .h1-sub{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(20px,2.1vw,27px);line-height:1.35;color:var(--ink);margin-top:16px;max-width:560px}
 .h1-sub b{color:var(--red);font-weight:700}
 
@@ -227,6 +232,9 @@ footer .stripes{margin-bottom:24px}
   .steps li{flex-direction:row;align-items:center;gap:18px;padding:16px 20px}
 }
 @media(max-width:960px){
+  .hero h1 .wordmark{width:clamp(260px,46vw,420px)}
+  .hero h1 .per i{font-size:24px}
+  .hero h1 .per img{height:84px}
   .hero{grid-template-columns:1fr;gap:44px;padding:44px 0 56px}
   .formcard{max-width:640px;width:100%;margin:0 auto}
   .night .inner{grid-template-columns:1fr;gap:34px}
@@ -240,6 +248,11 @@ footer .stripes{margin-bottom:24px}
   .logo-acton{height:56px}.logo-club{height:56px}
   .partner{gap:10px;padding-left:14px}.partner small{font-size:14px;max-width:58px}
   .hero h1{font-size:clamp(36px,11vw,46px)}
+  .hero h1 .lockup{gap:12px}
+  .hero h1 .wordmark{width:58vw}
+  .hero h1 .per{gap:8px}
+  .hero h1 .per i{font-size:17px}
+  .hero h1 .per img{height:54px}
   .svcs{gap:8px}.svc{flex-direction:column;align-items:flex-start;gap:8px;padding:10px}
   .svc .ic{width:38px;height:38px}.svc .ic svg{width:21px;height:21px}
   .svc strong{font-size:13px}.svc small{font-size:11px}
@@ -284,7 +297,7 @@ footer .stripes{margin-bottom:24px}
     <section class="hero">
       <div>
         <span class="eyebrow label reveal">Acton per Rimini Calcio</span>
-        <h1 class="reveal" style="--d:.1s"><span class="brand">Acton</span><span class="words"><span class="w luce">Luce</span>, <span class="w gas">Gas</span> ed <span class="w eco">Eco</span></span></h1>
+        <h1 class="reveal" style="--d:.1s"><span class="lockup"><img class="wordmark" src="assets/img/acton-wordmark.png" alt="Acton"><span class="per"><i>per</i><img src="assets/img/rimini-calcio-logo.png" alt="Rimini Calcio"></span></span><span class="words"><span class="w luce">Luce</span>, <span class="w gas">Gas</span> ed <span class="w eco">Eco</span></span></h1>
         <p class="h1-sub reveal" style="--d:.2s">Scopri i vantaggi riservati ai tifosi del <b>Rimini Calcio</b>.</p>
         <div class="svcs">
           <div class="svc luce reveal" style="--d:.25s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><path d="M28 4 11 27h12l-3 17 17-24H25z"/></svg></div><div><strong>Luce</strong><small>Energia per ogni giorno</small></div></div>
