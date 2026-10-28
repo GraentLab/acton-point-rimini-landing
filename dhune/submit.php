@@ -58,6 +58,11 @@ require $files[2];
 
 $smtp = require $files[3];
 
+$sheet = $root . '/lib/sheet.php';
+if (file_exists($sheet)) {
+    require $sheet;
+}
+
 $corpo  = "Nuova richiesta di informazioni dalla landing clienti DHUNE (dhune.actonpoint.it)\n\n";
 $corpo .= "Nome: " . $nome . " " . $cognome . "\n";
 $corpo .= "Email: " . $email . "\n";
@@ -88,6 +93,19 @@ try {
     $inviata = true;
 } catch (PHPMailer\PHPMailer\Exception $e) {
     $inviata = false;
+}
+
+// Registra il contatto nel foglio Google condiviso (se configurato)
+if (function_exists('sheet_log')) {
+    sheet_log($smtp, array(
+        'type'     => 'lead',
+        'landing'  => 'dhune',
+        'nome'     => $nome,
+        'cognome'  => $cognome,
+        'email'    => $email,
+        'telefono' => $telefono,
+        'mail'     => $inviata ? 'si' : 'no',
+    ));
 }
 
 redirect_con_esito($inviata ? '1' : '0');

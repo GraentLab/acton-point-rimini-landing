@@ -18,6 +18,8 @@ jobs:
       - name: Write SMTP config
         env:
           SMTP_APP_PASSWORD: ${{ secrets.SMTP_APP_PASSWORD }}
+          SHEET_WEBHOOK_URL: ${{ secrets.SHEET_WEBHOOK_URL }}
+          SHEET_TOKEN: ${{ secrets.SHEET_TOKEN }}
         run: |
           cat > smtp-config.php <<PHP
           <?php
@@ -26,6 +28,8 @@ jobs:
               'port'     => 587,
               'username' => 'comunicazioni@forini.com',
               'password' => '${SMTP_APP_PASSWORD}',
+              'sheet_url'   => '${SHEET_WEBHOOK_URL}',
+              'sheet_token' => '${SHEET_TOKEN}',
           ];
           PHP
 
@@ -42,6 +46,7 @@ jobs:
             **/.git*/**
             **/node_modules/**
             **/README.md
+            tools/**
             dhune/**
             riminicalcio/**
 

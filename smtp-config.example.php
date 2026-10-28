@@ -13,4 +13,7 @@ return [
     'port'     => 587,
     'username' => 'comunicazioni@forini.com',
     'password' => 'INSERISCI-QUI-APP-PASSWORD',
+    // Foglio Google condiviso (opzionale): URL della web app Apps Script e token
+    'sheet_url'   => '',
+    'sheet_token' => '',
 ];
