@@ -8,8 +8,11 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {analytics_storage: 'denied'});
+  if (/(?:^|; )cookie_analytics=granted/.test(document.cookie)) gtag('consent', 'update', {analytics_storage: 'granted'});
   gtag('js', new Date());
   gtag('config', 'AW-18480237940');
+  gtag('config', 'G-CRZFQ49EY8');
 </script>
 <title>Acton Point Rimini</title>
 <meta name="description" content="Acton Point Rimini: Luce, Gas, Fotovoltaico, Fibra e Carta Carburante in un unico punto vendita a Rimini.">
@@ -302,11 +305,31 @@ footer{margin-top:42px;padding:26px 0 22px;background:#0e110d;color:#fff;border-
 <a class="whatsapp-float" href="https://wa.me/393382666418" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp">
   <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12.004 2c-5.523 0-10 4.477-10 10 0 1.767.464 3.496 1.345 5.016L2 22l5.117-1.317c1.47.805 3.137 1.232 4.887 1.232 5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.155c-1.553 0-3.067-.42-4.388-1.213l-.315-.188-3.028.78.807-2.95-.206-.323a8.138 8.138 0 0 1-1.268-4.26c0-4.513 3.675-8.188 8.198-8.188 2.191 0 4.252.855 5.798 2.407a8.15 8.15 0 0 1 2.398 5.78c0 4.513-3.675 8.155-8.196 8.155z"/><path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
 </a>
-<footer><div class="wrap footer-inner"><div><b>ACTON POINT RIMINI</b><br><small>Viale Tripoli 215, Rimini</small></div><div><small>Lun–Ven 9:00–13:00 / 15:00–19:00</small></div><a href="https://actonenergia.forini.com/" style="color:#fff;text-decoration:none;font-weight:800">actonenergia.forini.com</a></div></footer>
+<footer><div class="wrap footer-inner"><div><b>ACTON POINT RIMINI</b><br><small>Viale Tripoli 215, Rimini</small></div><div><small>Lun–Ven 9:00–13:00 / 15:00–19:00</small></div><a href="https://actonenergia.forini.com/" style="color:#fff;text-decoration:none;font-weight:800">actonenergia.forini.com</a><a href="#" id="ccx-open" style="color:#fff;font-size:13px">Preferenze cookie</a></div></footer>
 <script>
 (function(){
   const params=new URLSearchParams(location.search), sent=params.get('sent'), box=document.getElementById('form-feedback');
+  if(sent==='1' && window.gtag) gtag('event','generate_lead');
   if(sent && box){box.style.display='block';box.style.background=sent==='1'?'#c7f531':'#f5d7d7';box.style.color=sent==='1'?'#111':'#8a2222';box.textContent=sent==='1'?'Grazie! Il tuo messaggio è stato inviato, ti risponderemo al più presto.':'Si è verificato un errore nell\'invio. Riprova o scrivici direttamente.';document.getElementById('contatti').scrollIntoView({behavior:'smooth'});}
+})();
+</script>
+<style>.ccx{position:fixed;left:12px;right:12px;bottom:12px;z-index:2147483000;max-width:720px;margin:0 auto;background:#1b1b1b;color:#fff;border-radius:12px;padding:14px 16px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-shadow:0 8px 30px rgba(0,0,0,.35)}.ccx[hidden]{display:none}.ccx p{margin:0;flex:1 1 280px}.ccx a{color:#fff;text-decoration:underline}.ccx-b{display:flex;gap:8px;flex:0 0 auto}.ccx button{font:inherit;font-weight:600;padding:10px 18px;min-height:44px;border-radius:8px;border:2px solid #fff;background:#fff;color:#1b1b1b;cursor:pointer}@media(max-width:520px){.ccx-b{width:100%}.ccx-b button{flex:1}}</style>
+<div id="ccx" class="ccx" role="dialog" aria-label="Preferenze cookie" hidden><p>Usiamo un cookie di analisi (Google Analytics) per contare le visite a questa pagina, solo se accetti. <a href="https://www.iubenda.com/privacy-policy/53951965/cookie-policy" target="_blank" rel="noopener">Cookie policy</a></p><div class="ccx-b"><button type="button" id="ccx-no">Rifiuta</button><button type="button" id="ccx-ok">Accetta</button></div></div>
+<script>
+(function(){
+  var b=document.getElementById('ccx'); if(!b) return;
+  function saved(){ return /(?:^|; )cookie_analytics=(granted|denied)/.test(document.cookie); }
+  function save(v){
+    var dom=/(^|\.)actonpoint\.it$/.test(location.hostname)?'; domain=.actonpoint.it':'';
+    document.cookie='cookie_analytics='+v+'; max-age=15552000; path=/; SameSite=Lax'+dom+(location.protocol==='https:'?'; Secure':'');
+    gtag('consent','update',{analytics_storage:v});
+    b.hidden=true;
+  }
+  if(!saved()) b.hidden=false;
+  document.getElementById('ccx-ok').addEventListener('click',function(){save('granted');});
+  document.getElementById('ccx-no').addEventListener('click',function(){save('denied');});
+  var o=document.getElementById('ccx-open');
+  if(o) o.addEventListener('click',function(e){e.preventDefault();b.hidden=false;});
 })();
 </script>
 </body>
